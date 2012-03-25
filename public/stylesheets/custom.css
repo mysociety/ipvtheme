@@ -1363,8 +1363,7 @@ margin:0 0 0 10px;
 }
 
 #frontpage_splash {
-/*background:url(../images/banner_bcg.png) no-repeat 0px top;*/
-/*background-image:url(../images/banner_bcg.png)*/
+background: none;
 height:390px;
 width:100%;
 }
