@@ -1,7 +1,7 @@
 # Install hook code here
 
 plugin_path = File.expand_path(File.join(File.dirname(__FILE__), "public"))
-main_app_path = File.join(RAILS_ROOT, 'public', 'alavetelitheme')
+main_app_path = File.join(RAILS_ROOT, 'public', 'ipvtheme')
 
 # If the symlink to be created exists, warn the user and do nothing
 if File.exists?(main_app_path)
@@ -12,6 +12,6 @@ else # Create symlink
 		File.symlink(plugin_path, main_app_path)
 		puts "done"
 	rescue NotImplementedError
-		puts "failed: symbolic links not supported"	
+		puts "failed: symbolic links not supported"
 	end
 end
