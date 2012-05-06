@@ -1,0 +1,196 @@
+<% @title = "Vznesení dotazu" %>
+
+<%= render :partial => 'sidebar' %>
+<div id="left_column_flip">
+
+<h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a> </h1>
+<dl>
+
+<dt id="which_authority">Jak zjistím, koho se zeptat?<a href="#which_authority">#</a> </dt>
+
+<dd>
+  <p>Zorientovat se ve složité struktuře státních institucí a najít tu správnou, která vám poskytne požadované informace, může být často obtížné.</p>
+  <p>IPV nabízí jednodušší způsob:</p>
+  <ul>
+    <li>Projděte si již jednou vznesené dotazy ostatních uživatelů na stránkách IPV vyhledáváním klíčových slov ve formuláři nebo po rozkliknutí  "všechny dotazy" pomocí fulltextového hledání (CTRL+F, respektive ⌘ + F).  Podobný dotaz totiž může být již zodpovězený.</li>
+    <li>Pokud váš dotaz ještě nebyl vznesen nebo není zodpovězený, přejděte na odkaz "vznést dotaz".</li>
+    <li>Vyberte instituci ze seznamu. Automaticky se zobrazí odkaz na jejich stránky a povinně uveřejňované informace podle zákona č. 106/1999 Sb. ve znění pozdějších předpisů. Ověřte si působnost dané instituce na jejích stránkách. Zda vámi požadovaný typ informace poskytují, můžete zjistit i telefonicky či e-mailem. Stejnou cestou můžete i svůj dotaz vznést, zde ale nemůžete uplatnt odvolání a také neplatí zákonná lhůta. Nezapomeňte uvést, že se jedná dotaz podle zákona č. 106/1999 Sb. ve znění pozdějších předpisů.</li>
+    <li>Nebojte se vznést dotaz, i když si nejste úplně jisti. Pokud se nestrefíte na správnou instituci, měli by vám poradit, která jiná instituce má danou problematiku v působnosti a doporučit, kam se s dotazem obrátit.</li>
+  </ul>
+  <p>Pokud si ani teď nejste jisti, <a href="/help/contact">KONTAKUJTE</a> nás.</p>
+</dd>
+
+
+
+<dt id="missing_body">V IPV seznamu nemohu najít instituci, které chci poslat svou žádost.<a href="#missing_body">#</a> </dt>
+
+<dd>
+  <p><a href="/help/contact">KONTAKTUJTE</a> nás a pokud možno, uveďte celý název instituce, adresu jejího sídla a e-mailovou adresu. Co nejdříve ji vložíme do seznamu institucí, který neustále rozšiřujeme</p>
+  <p>Pokud nám chcete pomoci s vkládáním adres a zpřesňování naší databáze, <a href="/help/contact">KONTAKTUJTE</a> nás.</p>
+</dd>
+
+<dt id="how_to_get_response">Jak vznést dotaz, aby byl zodpovězen?<a href="#how_to_get_response">#</a></dt>
+<dd>
+<p>Uveďte ve svém požadavku pouze to, co je skutečně potřeba, aby pracovník dané instituce mohl rychle zjistit, o jaké informace žádáte. Doplňte, že se jedná o dotaz podle zákona č. 106/1999 Sb. ve znění pozdějších předpis</p>
+<p>Co uvádět nemusíte</p>
+<ul>
+  <li>Argumenty o své způsobilosti a zdůvodnění, proč a na co informace potřebujete.</li>
+  <li>Urážlivé výroky či tvrzení, která by mohla být považována za pomluvu (myslete na to, že i na druhé straně vám odpovídá člověk, i když pod hlavičkou instituce). Pokud do své žádosti uvedete urážlivé výroky, vaše žádost bude ze stránek IPV smazána. </li>
+  <li>Nepleťte si žádost se stížností. Stránky IPV jsou určeny pro všechny, kteří se chtějí něco od institucí dozvědět. </li>
+  <li>Pamatujte také na to, že IPV zde není pro popularizaci vašich myšlenek, či pro propagaci politické či občanské kampaně. Na tu si založte vlastní blog, nebo se realizujte na některé ze sociálních sítí. </li>
+</ul>
+</dd>
+
+<dt id="authorities">Why do you include some authorities that aren't formally subject to FOI?<a href="#authorities">#</a> </dt>
+
+<dd>
+<p>WhatDoTheyKnow lets you make requests for information to a range of
+organisations:</p>
+
+<ul>
+  <li> Those formally subject to the FOI Act</li>
+  <li> Those formally subject to the Environmental Regulations (a less well
+  defined group)</li>
+  <li> Those which voluntarily comply with the FOI Act</li>
+  <li> Those which aren't subject to the Act but we think should be, on grounds
+  such as them having significant public responsibilities.
+  </li>
+</ul>
+
+<p>In the last case, we're using the site to lobby for expansion of the
+scope of the FOI Act. Even if an organisation is not legally obliged to respond
+to an FOI request, they can still do so voluntarily.
+</p>
+
+</dd>
+
+<dt id="focused">Why must I keep my request focused?<a href="#focused">#</a> </dt>
+
+<dd>
+
+<p>
+Please put in your request only what is needed so that someone can
+easily identify what information you are asking for. Please do
+<i>not</i> include any of the following:
+</p>
+
+<ul>
+<li>arguments about your cause</li>
+<li>statements that could defame or insult others</li>
+</ul>
+
+<p>
+If you do, we may have to remove your request to avoid problems with
+libel law, which is a pain for both you and us. Short, succinct messages
+make it easier for authorities to be clear what information you are
+requesting, which means you will get a reply more quickly.
+</p>
+
+<p>
+If you want information to support an argument or campaign, Freedom of
+Information is a powerful tool. Although you may not use this site to
+run your campaign, we encourage you to use it to get the information you
+need. We also encourage to run your campaign elsewhere - one effective
+and very easy way is to <%= link_to 'start your own blog',
+"http://wordpress.com/"%>. You are welcome to link to your campaign
+from this site in an annotation to your request (you can make
+annotations after submitting the request).
+</p>
+
+</dd>
+
+<dt id="fees">Kolik za zodpovězení dotazu zaplatím?<a href="#fees">#</a> </dt>
+
+<dd>
+  <p>Zodpovězení vzneseného dotazu je téměř vždy zdarma. Instituce má podle zákona právo účtovat si poplatek jen zatzv. „materiálové“ náklady, tj. cenu kopií, diskety, dále poštovné při zaslání informace (ne však při zaslání jiného sdělení) apod. Za vyhledání lze požadovat úhradu jen při mimořádně rozsáhlých žádostech. Poplatek lze vybírat i na dobírku. Instituce nemá právo účtovat si poplatek za čas strávený při zodpovídání vašeho dotazu. Pokud si myslíte, že účtovaný poplatek je protiprávní, požádejte o radu partnerskou organizaci www.otevrete.cz</p>
+  <p>Instituce je povinna oznámit žadateli písemnou formou výši poplatku za poskytnutí požadované informace před samotným poskytnutím dané informace. Neučiní-li tak, ztrácí instituce nárok na úhradu nákladů. Pokud vám instituce oznámí, že může požadovat nějaký poplatek za zodpovězení vašeho dotazu, ale není uvedena jeho výše ani způsob zaplacení, můžete tuto informaci ignorovat – nejedná se totiž o informování žadatele podle zákona</p>
+  <p>Instituce nemá právo požadovat zálohu</p>
+  <p>Může se stát, že pro uhrazení poplatku bude instituce vyžadovat kromě vašeho celého jména a kontaktní adresu i vaše datum narození. Je to kvůli evidenci poplatků za poskytnutí informací</p>
+
+</dd>
+
+
+
+<dt id="quickly_response">Jak rychle bude můj dotaz zodpovězen?<a href="#quickly_response">#</a> </dt>
+
+<dd>
+  <p>Podle zákona musí instituce odpovědět na váš dotaz co nejdříve, nejdéle však do 15 dní</p>
+  <p>Instituce může lhůtu prodloužit o 10 dní s odvoláním na zákon č. 106/1999 Sb. ve znění pozdějších předpisů</p>
+</dd>
+
+<dt id="get_answer">Jak zjistím, že mi instituce odpověděla?<a href="#get_answer">#</a></dt>
+
+<dd>
+  <p>Dostanete zprávu na uvedenou e-mnailovou adresu. Odpověď se zároveň objeví na stránkách IPV</p>
+</dd>
+
+<dt id="moderation">Mohu moderovat odpovědi na svůj dotaz?<a href="#moderation">#</a></dt>
+<dd>
+  <p>Nikoliv, odpovědi institucí se na stránkách IPV objevují automaticky a zůstávají k dispozici k nahlédnutí pro další uživatele.</p>
+</dd>
+
+<dt id="no_response">Co mám dělat když instituce neodpověděla v zákonné lhůtě?<a href="#no_response">#</a> </dt>
+
+<dd>
+<p>Existuje hned několik řešení.</p>
+<ul>
+  <li>Instituce dotaz neobdržela vzhledem k technické závadě. Zkuste dané instituci zatelefonovat a slušně se zeptat, zda váš dotaz obdrželi. Pokud nikoliv, vzneste jej znovu.</li>
+  <li>Instituce vyžaduje doplnění dotazu – v takovém případě vás informovala. zkontrolujte si proto prosím i e-mailové zprávy označené jako spam.</li>
+  <li>Dalším důvodem, proč instituce dotaz nemusela obdržet, jsou tzv. spam filtry, které blokují nevyžádané zprávy. I v takovém případě by vám pracovníci úřadu měli poradit, jakým způsobem dotaz vznést tak, aby byl v pořádku doručen.</li>
+  <li>Pokud vaše pátrání stále není úspěšné, můžete zažádat o přezkoumání. Přečtěte si XXX.</li>
+</ul>
+</dd>
+
+<dt id="refused">Co mám dělat, pokud instituce odmítla odpovědět?<a href="#refused">#</a></dt>
+<dd>
+  <p>Takovou odpověď na váš písemně vznesený (a to je i e-mailem) dotaz musí každá instituce dodat písemně. Proti této odpovědi se můžete odvolat, a to opět písemně (tedy i e-mailem)</p>
+</dd>
+
+<dt id="not_satifised">Co mám dělat, když nejsem s odpovědí spokojen/a?<a href="#not_satifised">#</a> </dt>
+<dd>
+  <p>Pokud jsou informace nekompletní, můžete dalším dotazem požádat instituci o doplnění</p>
+  <p>Pokud jste nezískali informace, které jste požadovali a instituce neuvedla právoplatný důvod k jejich neposkytnutí (tj. je důvěrná), přečtěte si XXX</p>
+  <p>Pokud vám instituce neodpověděla v zákonem dané lhůtě 15 dnů, přečtěte si Co mám dělat, pokud instituce osmítla odpovědět?</p>
+</dd>
+
+<dt id="court">Lze získat odpověď soudní cestou?<a href="#court">#</a></dt>
+<dd>
+  <p>Teoreticky ano. Žalobu můžete na správní soud, tedy na krajský soud, v jejichž obvodu má sídlo úřad jehož rozhodnutí jjste se rozhodli napadnout. Postupuje se podle zákona č. 150/2002 Sb., soudní řád správní (SŘS) a u tohoto soudu se můžete hájit sami nebo se nechat zastoupit advokátem anebo fyzickou osobou, která má způsobilost k právním úkonům v plném rozsahu. O kasační stížnosti (opravný prostředek proti rozhodnutí krajského soudu) rozhoduje Nejvyšší správní soud v Brně, tam je již povinné zastoupení advokátem.</p>
+  <p>Žaloba byste měli podat do dvou měsíců od doručení rozhodnutí o neposkytnutí odpovědi dané instituce. Zmeškání lhůty v tomto případě nelze prominout</p>
+  <p>Ano, v prvním stupni. Můžete být také zastoupena</p>
+</dd>
+
+<dt id="reuse">Má instituce právo mi zakázat další šíření informací, které jsem na základě svého dotazu získal/a?<a href="#reuse">#</a> </dt>
+<dd>
+  <p>Instituce němůže argumentovat tím, že danou informaci nemůžete poskytnout nikomu dalšímu, či můžete poskytnout jen určitou část či citovat jen určité části. Bylo by ale vhodné, abyste informace poskytovali dále v plném rozsahu – což vám instituce zakázat nemůže a jedině tak můžete předejít nedorozumění</p>
+  <p>Každá instituce má pak povinnost zveřejnit poskytnuté informace na základě vznesených dotazů na svých webových stránkách</p>
+</dd>
+
+<dt id="data_protection">Mohu vznést dotaz na informace o určité osobě, na příklad o sobě samém?<a href="#self_request">#</a></dt>
+<dd>
+  <p>Nikoliv, to možné není. Vznesený dotaz se může týkat pouze veřejných informací a do této kategorie informace o soukromých osobýách nespadají.</p>
+  <p>Při vznášení dotazu také dbejte na to, abyste neuváděli zbytečně podrobnosti, které k vyřízení dotazu nejsou nutné. Pamatujte, že dotazy vznesené přes stránky IPV jsou dostupné komukoliv, kdo si je bude chtít přečíst. Pokud máte pocit, že někdo takové informace (i nevědomky) o sobě uvádí v rámci vzneseného dotazu, upozorněte nás</p>
+  <p>Pokud budete chtít vznést dotaz týkající se vašich osobních informací, pak využijte XXX</p>
+</dd>
+
+
+<dt id="visibility">Je možné, aby můj dotaz nebyl pro ostatní viditelný?<a href="#visibility">#</a></dt>
+<dd>
+  <p>IPV je v současné době určen pouze pro veřejné dotazy. Všechny odpovědi, které jsme obdrželi, jsou publikovány podle zákona 106/199 Sb. ve znění pozdějších předpisů § 5 odst. 1, 2 a 3. Povinnost zveřejňovat další informace na webu však plyne také z § 18 a z dalších zákonů</p>
+  <p>Pokud nechcete, aby váš dotaz byl viditelný, obraťte se na danou instituci jinou cestou než přes stránky IPV</p>
+</dd>
+
+
+<dt id="multiple">Mohu vznést stejný dotaz na více institucí?<a href="#multiple_bodies">#</a></dt>
+<dd>
+  <p>To samozřejmě můžete, doporučujeme ale nejdříve dotaz vznést jen na některé a podle potřeby dotaz upřesnit. Stránky IPV umožňují odeslat vždy jen jeden dotaz</p>
+</dd>
+
+
+</dl>
+
+<p><strong>Dále</strong>, čtěte o <a href="/help/privacy">Vašem soukromí</a> --&gt;
+
+<div id="hash_link_padding"></div>
+
+</div>
