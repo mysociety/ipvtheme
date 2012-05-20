@@ -1,0 +1,41 @@
+msgid "Make and browse Freedom of Information (FOI) requests"
+msgstr "Vzneste a prohlížejte dotazy podle zákona o svobodném přístupu k informacím"
+
+msgid "This is an FOI request done via the {{site_name}} website. This footer has been overriden by the sample Alaveteli theme."
+msgstr "Toto je dotaz vznesený pomocí webových stránek {{site_name}}."
+
+msgid "Change your address"
+msgstr "Změňte svoji adresu"
+
+msgid "Change your DOB"
+msgstr "Změňte svoje datum narození"
+
+msgid "Change your address used on {{site_name}}"
+msgstr "Změňte adresu pro {{site_name}}"
+
+msgid "Change address on {{site_name}}"
+msgstr "Změnit adresu pro {{site_name}}"
+
+msgid "New address:"
+msgstr "Nová adresa:"
+
+msgid "You have now changed your address used on {{site_name}}."
+msgstr "Právě jste změnili svou adresu na {{site_name}}."
+
+msgid "Address"
+msgstr "Adresa"
+
+msgid "DOB"
+msgstr "Datum narození"
+
+msgid "Change your dob used on {{site_name}}"
+msgstr "Změňte datum narození pro {{site_name}}"
+
+msgid "Change dob on {{site_name}}"
+msgstr "Změnit datum narození pro {{site_name}}"
+
+msgid "New dob:"
+msgstr "Nové datum narození:"
+
+msgid "You have now changed your dob used on "
+msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
