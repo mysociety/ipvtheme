@@ -39,3 +39,6 @@ msgstr "Nové datum narození:"
 
 msgid "You have now changed your dob used on "
 msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
+
+msgid "Done"
+msgstr "Hotovo"
