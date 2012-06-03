@@ -19,8 +19,8 @@ msgstr "Změnit adresu pro {{site_name}}"
 msgid "New address:"
 msgstr "Nová adresa:"
 
-msgid "You have now changed your address used on {{site_name}}."
-msgstr "Právě jste změnili svou adresu na {{site_name}}."
+msgid "You have now changed your address used on {{site_name}}"
+msgstr "Právě jste změnili svou adresu na {{site_name}}"
 
 msgid "Address"
 msgstr "Adresa"
@@ -37,7 +37,7 @@ msgstr "Změnit datum narození pro {{site_name}}"
 msgid "New dob:"
 msgstr "Nové datum narození:"
 
-msgid "You have now changed your dob used on "
+msgid "You have now changed your dob used on {{site_name}}"
 msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
 
 msgid "Done"
