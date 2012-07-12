@@ -6,11 +6,12 @@
 #
 require 'dispatcher'
 Dispatcher.to_prepare do
-    OutgoingMessage.class_eval do
-        # Add intro paragraph to new request template
-        def default_letter
-            return nil if self.message_type == 'followup'
-            #"If you uncomment this line, this text will appear as default text in every message"    
+    User.class_eval do
+        validate :validate_dob
+        def validate_dob
+            if !dob.is_a? Date
+                errors.add(:dob, _("DOB is not a valid date - must be in YYYY-MM-DD format")) if ((DateTime.parse(dob) rescue ArgumentError) == ArgumentError)
+            end
         end
     end        
 end

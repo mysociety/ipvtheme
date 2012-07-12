@@ -4,14 +4,10 @@
 require 'dispatcher'
 Dispatcher.to_prepare do
     ActionController::Routing::Routes.draw do |map|
-        # brand new controller example
-        map.with_options :controller => 'general' do |general|
-            general.mycontroller '/mycontroller', :action => 'mycontroller'
+        map.with_options :controller => 'user' do |user|
+            user.signchangeaddress '/profile/change_address',      :action => 'signchangeaddress'
+            user.signchangedob '/profile/change_dob',      :action => 'signchangedob'
         end    
 
-        # Additional help page example
-        map.with_options :controller => 'help' do |help|
-            help.help_out '/help/help_out', :action => 'help_out'
-        end
     end
 end

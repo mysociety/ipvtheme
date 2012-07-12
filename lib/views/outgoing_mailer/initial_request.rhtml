@@ -2,7 +2,13 @@
 
 -------------------------------------------------------------------
 
-<%= _('This is an FOI request done via the {{site_name}} website. This footer has been overriden by the sample Alaveteli theme.', :site_name => site_name) %>
+This is a request for access to information under XXX law of the Czech Republic, or Regulation X of Law Y, which has been sent via <%= site_name %> on behalf of:
+
+===================================================================
+# Name: <%= @outgoing_message.info_request.user.name %>
+# DOB:  <%= @outgoing_message.info_request.user.dob %>
+<%= @outgoing_message.info_request.user.address.gsub(/^/, "# Address: ") %>
+===================================================================
 
 <%= render :partial => 'followup_footer' %>
 
