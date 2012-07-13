@@ -1,1 +1,17 @@
 @import url(http://www.davidnevaril.com/IPV/Homepage_files/main.css);
+
+#navigation_search input#navigation_search_button {
+background: url(/images/search-button.png) no-repeat center center;
+width: 30px;
+height: 30px;
+color: transparent;
+font-size: 0;
+margin: 0;
+padding: 0;
+border: 0;
+box-shadow: none;
+}
+
+#navigation_search input#navigation_search_button {
+ background: url(/ipvtheme/images/search-button.png) no-repeat center center;
+}
