@@ -1,69 +1,66 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Translators:
-# Hana Huntova <>, 2012.
-# Jana Kneschke <>, 2012.
-#   <josef.pospisil@laststar.eu>, 2012.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ipvtheme\n"
-"Report-Msgid-Bugs-To: http://github.com/pepe/ipvtheme/issues\n"
+"Project-Id-Version: alaveteli\n"
 "POT-Creation-Date: 2012-07-16 13:21+0100\n"
-"PO-Revision-Date: 2012-07-16 11:49+0000\n"
-"Last-Translator: sebbacon <seb.bacon@gmail.com>\n"
-"Language-Team: LANGUAGE <alaveteli-dev@googlegroups.com>\n"
-"Language: cs\n"
+"PO-Revision-Date: 2011-10-09 01:10+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 msgid "Make and browse Freedom of Information (FOI) requests"
-msgstr "Vzneste a prohlížejte dotazy podle zákona o svobodném přístupu k informacím"
+msgstr ""
 
 msgid "This is an FOI request done via the {{site_name}} website. This footer has been overriden by the sample Alaveteli theme."
-msgstr "Toto je dotaz vznesený pomocí webových stránek {{site_name}}."
+msgstr ""
 
 msgid "Change your address"
-msgstr "Změňte svoji adresu"
+msgstr ""
 
 msgid "Change your DOB"
-msgstr "Změňte svoje datum narození"
+msgstr ""
 
 msgid "Change your address used on {{site_name}}"
-msgstr "Změňte adresu pro {{site_name}}"
+msgstr ""
 
 msgid "Change address on {{site_name}}"
-msgstr "Změnit adresu pro {{site_name}}"
+msgstr ""
 
 msgid "New address:"
-msgstr "Nová adresa:"
+msgstr ""
 
 msgid "You have now changed your address used on {{site_name}}"
-msgstr "Právě jste změnili svou adresu na {{site_name}}"
+msgstr ""
 
 msgid "Address"
-msgstr "Adresa"
+msgstr ""
 
 msgid "DOB"
-msgstr "Datum narození"
+msgstr ""
 
 msgid "Change your dob used on {{site_name}}"
-msgstr "Změňte datum narození pro {{site_name}}"
+msgstr ""
 
 msgid "Change dob on {{site_name}}"
-msgstr "Změnit datum narození pro {{site_name}}"
+msgstr ""
 
 msgid "New dob:"
-msgstr "Nové datum narození:"
+msgstr ""
 
 msgid "You have now changed your dob used on {{site_name}}"
-msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
+msgstr ""
 
 msgid "Done"
-msgstr "Hotovo"
+msgstr ""
 
 #: vendor/plugins/ipvtheme/lib/controller_patches.rb:44
 msgid "Then you can change your address used on {{site_name}}"
