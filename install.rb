@@ -37,7 +37,7 @@ def column_exists?(table, column)
 end
 
 if !column_exists?(:users, :dob) || !column_exists?(:users, :address)
-    require File.expand_path '../../db/migrate/ipvtheme_add_address_and_dob_to_user', __FILE__
+    require File.expand_path '../db/migrate/ipvtheme_add_address_and_dob_to_user', __FILE__
     IpvthemeAddAddressAndDobToUser.up
 end
 
