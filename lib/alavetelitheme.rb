@@ -31,7 +31,7 @@ for patch in ['controller_patches.rb',
     require File.expand_path "../#{patch}", __FILE__
 end
 
-$alaveteli_route_extensions << 'custom-routes.rb'
+$alaveteli_route_extensions << "ipvtheme-routes.rb"
 
 # migration-type stuff
 
