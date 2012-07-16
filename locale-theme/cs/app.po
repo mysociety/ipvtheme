@@ -42,3 +42,28 @@ msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
 
 msgid "Done"
 msgstr "Hotovo"
+
+#: vendor/plugins/ipvtheme/lib/controller_patches.rb:44
+msgid "Then you can change your address used on {{site_name}}"
+msgstr ""
+
+#: vendor/plugins/ipvtheme/lib/model_patches.rb:13
+msgid "DOB is not a valid date"
+msgstr ""
+
+#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:63
+msgid "Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website."
+msgstr ""
+
+#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:59
+msgid "Your DOB:"
+msgstr ""
+
+#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:55
+msgid "Your address will be sent to authorities when you make a request.  We will not reveal your address on the website."
+msgstr ""
+
+#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:51
+msgid "Your address:"
+msgstr ""
+

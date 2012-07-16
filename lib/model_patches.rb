@@ -10,7 +10,7 @@ Dispatcher.to_prepare do
         validate :validate_dob
         def validate_dob
             if !dob.is_a? Date
-                errors.add(:dob, _("DOB is not a valid date - must be in YYYY-MM-DD format")) if ((DateTime.parse(dob) rescue ArgumentError) == ArgumentError)
+                errors.add(:dob, _("DOB is not a valid date")) if ((DateTime.parse(dob) rescue ArgumentError) == ArgumentError)
             end
         end
     end        

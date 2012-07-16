@@ -63,9 +63,9 @@ Dispatcher.to_prepare do
 
         def signchangedob
             if not authenticated?(
-                    :web => _("To change your DOB used on {{site_name}}",:site_name=>site_name),
-                    :email => _("Then you can change your DOB used on {{site_name}}",:site_name=>site_name),
-                    :email_subject => _("Change your DOB used on {{site_name}}",:site_name=>site_name)
+                    :web => _("To change your dob used on {{site_name}}",:site_name=>site_name),
+                    :email => _("Then you can change your dob used on {{site_name}}",:site_name=>site_name),
+                    :email_subject => _("Change your dob used on {{site_name}}",:site_name=>site_name)
                    )
                 # "authenticated?" has done the redirect to signin page for us
                 return
