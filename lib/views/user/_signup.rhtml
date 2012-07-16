@@ -1,3 +1,24 @@
+<script type="text/javascript">
+  $(function() {
+     $(".dob-datepicker").datepicker(
+            {changeMonth: true,
+             changeYear: true,
+             closeText: '<%= _("Done") %>',
+             prevText: '<%= _("Prev") %>',
+             nextText: '<%= _("Next") %>',
+             currentText: '<%= _("Today") %>',
+             monthNames: <%= I18n.translate('date.month_names')[1..-1].to_json %>,
+             monthNamesShort: <%= I18n.translate('date.abbr_month_names')[1..-1].to_json %>,
+             dayNames: <%= I18n.translate('date.day_names').to_json %>,
+             dayNamesShort: <%= I18n.translate('date.abbr_day_names').to_json %>,
+             dayNamesMin: <%= I18n.translate('date.abbr_day_names').collect{|x| x[0..0]}.to_json %>,
+             weekHeader: '<%= _("Wk") %>',
+             dateFormat: '<%= I18n.translate('date.formats.default').sub("%Y", "yy").sub("%m", "mm").sub("%d", "dd").gsub("-", "/") %>'}
+  );
+  });
+</script>
+
+
 <div id="signup">
 
 <% form_tag({:action => "signup"}, {:id => "signup_form"}) do %>
@@ -36,7 +57,7 @@
 
     <p>
         <label class="form_label" for="user_signup_dob"><%= _('Your DOB:')%></label>
-        <%= text_field 'user_signup', 'dob', { :size => 20 } %>
+        <%= text_field 'user_signup', 'dob', { :size => 20, :class => 'dob-datepicker' } %>
     </p>
     <div class="form_item_note">
         <%= _('Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website.') %>
