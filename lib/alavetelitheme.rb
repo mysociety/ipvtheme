@@ -27,10 +27,11 @@ end
 for patch in ['controller_patches.rb', 
               'model_patches.rb', 
               'patch_mailer_paths.rb', 
-              'config/custom-routes.rb', 
               'gettext_setup.rb']
     require File.expand_path "../#{patch}", __FILE__
 end
+
+$alaveteli_route_extensions << 'custom-routes.rb'
 
 # migration-type stuff
 
