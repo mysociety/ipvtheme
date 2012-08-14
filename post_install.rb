@@ -17,10 +17,11 @@ regexp = '([^=]*)={8,}.*\n(?:.*?#.*?: ?.*\n){3,}.*={8,}'
 rule = CensorRule.find_by_text(regexp)
 if rule.nil?
     Rails.logger.info("Creating new censor rule: /#{regexp}/")
-    CensorRule.create(:text => regexp,
-                      :replacement => '\1[redacted]',
-                      :regexp => true,
-                      :last_edit_editor => 'system',
-                      :last_edit_comment => 'Added automatically by ipvtheme')
+    CensorRule.create!(:text => regexp,
+                       :allow_global => true,
+                       :replacement => '\1[redacted]',
+                       :regexp => true,
+                       :last_edit_editor => 'system',
+                       :last_edit_comment => 'Added automatically by ipvtheme')
 end
 
