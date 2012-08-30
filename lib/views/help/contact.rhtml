@@ -14,7 +14,7 @@
   <h2>složky státní správy přímo</h2>
 
   <ul>
-    <li><a href="http://www.napistejim.cz">Napište svému zastupiteli, tedy poslanci nebo senátorovi</a>prostřednictvím spřáteleného projektu NapišteJim.cz, který funguje jako živá brána emailové konverzace mezi občany a politiky..</li>
+    <li><a href="http://www.napistejim.cz">Napište svému zastupiteli, tedy poslanci nebo senátorovi</a> prostřednictvím spřáteleného projektu NapišteJim.cz, který funguje jako živá brána emailové konverzace mezi občany a politiky..</li>
     <li>Vznést dotaz na instituci můžete také přímo, pokud nechcete, aby byl váš dotaz zveřejněn na stránkách Informace pro všechny.</li>
   </ul>
 
@@ -58,15 +58,15 @@
 <% if !@last_request.nil? %>
 <p>
 <label class="form_label" for="contact_message">Přidejte odkaz k dotazu:</label>
-<%=request_link(@last_request) %>
-<%= submit_tag "remove", :name => 'remove' %>
+<%= request_link(@last_request) %>
+<%= submit_tag "odstranit", :name => 'remove' %>
 </p>
 <% end %>
 <% if !@last_body.nil? %>
 <p>
 <label class="form_label" for="contact_message">Přidejte odkaz na instituce:</label>
 <%=public_body_link(@last_body) %>
-<%= submit_tag "remove", :name => 'remove' %>
+<%= submit_tag "odstranit", :name => 'remove' %>
 </p>
 <% end %>
 
