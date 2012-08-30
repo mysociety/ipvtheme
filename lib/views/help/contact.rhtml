@@ -29,3 +29,57 @@
   </ul>
 
 </div>
+
+<% form_for :contact do |f| %>
+
+<% if not @user %>
+<p>
+<label class="form_label" for="contact_name">Jméno</label>
+<%= f.text_field :name, :size => 20 %>
+(nebo <%= link_to "se přihlašte", signin_url(:r => request.request_uri) %>)
+</p>
+
+<p>
+<label class="form_label" for="contact_email">Email:</label>
+<%= f.text_field :email, :size => 20 %>
+</p>
+<% end %>
+
+<p>
+<label class="form_label" for="contact_subject">Předmět:</label>
+<%= f.text_field :subject, :size => 50 %>
+</p>
+
+<p>
+<label class="form_label" for="contact_message">Zpráva pro tým stránek IPV:</label>
+<%= f.text_area :message, :rows => 10, :cols => 60 %>
+</p>
+
+<% if !@last_request.nil? %>
+<p>
+<label class="form_label" for="contact_message">Přidejte odkaz k dotazu:</label>
+<%=request_link(@last_request) %>
+<%= submit_tag "remove", :name => 'remove' %>
+</p>
+<% end %>
+<% if !@last_body.nil? %>
+<p>
+<label class="form_label" for="contact_message">Přidejte odkaz na instituce:</label>
+<%=public_body_link(@last_body) %>
+<%= submit_tag "remove", :name => 'remove' %>
+</p>
+<% end %>
+
+<p class="form_note">
+  Jsme schopni vám pomoci <strong>pouze s technickými potížemi</strong> nebo s dotazem, který se týká svobodného přístupu k informacím.
+</P>
+
+
+<div class="form_button">
+<%= hidden_field_tag(:submitted_contact_form, 1) %>
+<%= submit_tag "Odeslat dotaz týmu stránek Informace pro všechny" %>
+&lt;-- tuto stránku spravuje občanské sdružení Informace pro všechny, nikoliv státní správa.
+</div>
+
+<p>Pokud jste poskytovatel informací a považujete naši službu za užitečnou, požádejte své IT nebo oddělení spravující vaše webové stránky o propojení se stránkami Informace pro všechny – ideálně tam, kde uveřejňujete povinné informace.</p>
+<% end %>
