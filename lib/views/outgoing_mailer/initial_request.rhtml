@@ -7,9 +7,9 @@ Povinný subjekt:
 Žadatel:
 <%-# !!!IF YOU CHANGE THE FORMAT OF THE BLOCK BELOW, ADD A NEW CENSOR RULE!!! -%>
 ===================================================================
-# Name: <%= @outgoing_message.info_request.user.name %>
-# DOB:  <%= @outgoing_message.info_request.user.dob %>
-<%= @outgoing_message.info_request.user.address.gsub(/^/, "# Address: ") %>
+# Jméno: <%= @outgoing_message.info_request.user.name %>
+# Datum narození:  <%= @outgoing_message.info_request.user.dob %>
+<%= @outgoing_message.info_request.user.address.gsub(/^/, "# Adresa: ") %>
 ===================================================================
 
 Žádám o následující informaci:
