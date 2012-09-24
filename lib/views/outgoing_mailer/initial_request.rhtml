@@ -1,14 +1,30 @@
-<%= @outgoing_message.body.strip %>
+Žádost o zpřístupnění informace ve smyslu zákona č. 106/1999 Sb., o svobodném přístupu k
+informacím.
 
--------------------------------------------------------------------
+Povinný subjekt:
+<%= @outgoing_message.info_request.public_body.name %>
 
-This is a request for access to information under XXX law of the Czech Republic, or Regulation X of Law Y, which has been sent via <%= site_name %> on behalf of:
+Žadatel:
 <%-# !!!IF YOU CHANGE THE FORMAT OF THE BLOCK BELOW, ADD A NEW CENSOR RULE!!! -%>
 ===================================================================
 # Name: <%= @outgoing_message.info_request.user.name %>
 # DOB:  <%= @outgoing_message.info_request.user.dob %>
 <%= @outgoing_message.info_request.user.address.gsub(/^/, "# Address: ") %>
 ===================================================================
+
+Žádám o následující informaci:
+
+<%= @outgoing_message.body.strip %>
+
+Informaci poskytněte elektronicky na email: <%= @outgoing_message.info_request.incoming_email %>
+
+Řádným a včasným zpřístupněním informace na základě této žádosti nebo jiným posouzením
+žádosti podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím, beru na vědomí, že
+jste splnili svou povinnosti podle výše uvedeného zákona.
+Datum podání:
+
+<%= simple_date(Time.now) %>
+-------------------------------------------------------------------
 
 <%= render :partial => 'followup_footer' %>
 
