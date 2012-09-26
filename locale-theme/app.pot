@@ -6,8 +6,8 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: alaveteli\n"
-"POT-Creation-Date: 2012-07-16 13:21+0100\n"
+"Project-Id-Version: version 0.0.1\n"
+"POT-Creation-Date: 2012-09-26 16:35+0100\n"
 "PO-Revision-Date: 2011-10-09 01:10+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,72 +17,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-msgid "Make and browse Freedom of Information (FOI) requests"
-msgstr ""
-
-msgid "This is an FOI request done via the {{site_name}} website. This footer has been overriden by the sample Alaveteli theme."
-msgstr ""
-
-msgid "Change your address"
-msgstr ""
-
-msgid "Change your DOB"
-msgstr ""
-
-msgid "Change your address used on {{site_name}}"
-msgstr ""
-
-msgid "Change address on {{site_name}}"
-msgstr ""
-
-msgid "New address:"
-msgstr ""
-
-msgid "You have now changed your address used on {{site_name}}"
+msgid "<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
 msgstr ""
 
 msgid "Address"
 msgstr ""
 
-msgid "DOB"
-msgstr ""
-
-msgid "Change your dob used on {{site_name}}"
+msgid "Change address on {{site_name}}"
 msgstr ""
 
 msgid "Change dob on {{site_name}}"
 msgstr ""
 
+msgid "Change your DOB"
+msgstr ""
+
+msgid "Change your address"
+msgstr ""
+
+msgid "Change your address used on {{site_name}}"
+msgstr ""
+
+msgid "Change your dob used on {{site_name}}"
+msgstr ""
+
+msgid "DOB"
+msgstr ""
+
+msgid "DOB is not a valid date"
+msgstr ""
+
+msgid "Help pages"
+msgstr ""
+
+msgid "New address:"
+msgstr ""
+
 msgid "New dob:"
+msgstr ""
+
+msgid "Then you can change your address used on {{site_name}}"
+msgstr ""
+
+msgid "Then you can change your dob used on {{site_name}}"
+msgstr ""
+
+msgid "To change your address used on {{site_name}}"
+msgstr ""
+
+msgid "To change your dob used on {{site_name}}"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Wk"
+msgstr ""
+
+msgid "You have now changed your address used on {{site_name}}"
 msgstr ""
 
 msgid "You have now changed your dob used on {{site_name}}"
 msgstr ""
 
-msgid "Done"
-msgstr ""
-
-#: vendor/plugins/ipvtheme/lib/controller_patches.rb:44
-msgid "Then you can change your address used on {{site_name}}"
-msgstr ""
-
-#: vendor/plugins/ipvtheme/lib/model_patches.rb:13
-msgid "DOB is not a valid date"
-msgstr ""
-
-#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:63
 msgid "Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website."
 msgstr ""
 
-#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:59
 msgid "Your DOB:"
 msgstr ""
 
-#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:55
 msgid "Your address will be sent to authorities when you make a request.  We will not reveal your address on the website."
 msgstr ""
 
-#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:51
 msgid "Your address:"
 msgstr ""
 

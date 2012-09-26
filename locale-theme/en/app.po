@@ -8,9 +8,9 @@
 #   <josef.pospisil@laststar.eu>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: ipvtheme\n"
+"Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: http://github.com/pepe/ipvtheme/issues\n"
-"POT-Creation-Date: 2012-07-16 13:21+0100\n"
+"POT-Creation-Date: 2012-09-26 16:35+0100\n"
 "PO-Revision-Date: 2012-07-16 11:49+0000\n"
 "Last-Translator: sebbacon <seb.bacon@gmail.com>\n"
 "Language-Team: LANGUAGE <alaveteli-dev@googlegroups.com>\n"
@@ -20,72 +20,88 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
-msgid "Make and browse Freedom of Information (FOI) requests"
-msgstr "Vzneste a prohlížejte dotazy podle zákona o svobodném přístupu k informacím"
-
-msgid "This is an FOI request done via the {{site_name}} website. This footer has been overriden by the sample Alaveteli theme."
-msgstr "Toto je dotaz vznesený pomocí webových stránek {{site_name}}."
-
-msgid "Change your address"
-msgstr "Změňte svoji adresu"
-
-msgid "Change your DOB"
-msgstr "Změňte svoje datum narození"
-
-msgid "Change your address used on {{site_name}}"
-msgstr "Změňte adresu pro {{site_name}}"
-
-msgid "Change address on {{site_name}}"
-msgstr "Změnit adresu pro {{site_name}}"
-
-msgid "New address:"
-msgstr "Nová adresa:"
-
-msgid "You have now changed your address used on {{site_name}}"
-msgstr "Právě jste změnili svou adresu na {{site_name}}"
+msgid "<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
+msgstr ""
 
 msgid "Address"
 msgstr "Adresa"
 
-msgid "DOB"
-msgstr "Datum narození"
-
-msgid "Change your dob used on {{site_name}}"
-msgstr "Změňte datum narození pro {{site_name}}"
+msgid "Change address on {{site_name}}"
+msgstr "Změnit adresu pro {{site_name}}"
 
 msgid "Change dob on {{site_name}}"
 msgstr "Změnit datum narození pro {{site_name}}"
 
+msgid "Change your DOB"
+msgstr "Změňte svoje datum narození"
+
+msgid "Change your address"
+msgstr "Změňte svoji adresu"
+
+msgid "Change your address used on {{site_name}}"
+msgstr "Změňte adresu pro {{site_name}}"
+
+msgid "Change your dob used on {{site_name}}"
+msgstr "Změňte datum narození pro {{site_name}}"
+
+msgid "DOB"
+msgstr "Datum narození"
+
+msgid "DOB is not a valid date"
+msgstr ""
+
+msgid "Help pages"
+msgstr ""
+
+msgid "New address:"
+msgstr "Nová adresa:"
+
 msgid "New dob:"
 msgstr "Nové datum narození:"
+
+msgid "Then you can change your address used on {{site_name}}"
+msgstr ""
+
+#, fuzzy
+msgid "Then you can change your dob used on {{site_name}}"
+msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
+
+#, fuzzy
+msgid "To change your address used on {{site_name}}"
+msgstr "Změňte adresu pro {{site_name}}"
+
+#, fuzzy
+msgid "To change your dob used on {{site_name}}"
+msgstr "Změňte datum narození pro {{site_name}}"
+
+msgid "Today"
+msgstr ""
+
+msgid "Wk"
+msgstr ""
+
+msgid "You have now changed your address used on {{site_name}}"
+msgstr "Právě jste změnili svou adresu na {{site_name}}"
 
 msgid "You have now changed your dob used on {{site_name}}"
 msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
 
-msgid "Done"
-msgstr "Hotovo"
-
-#: vendor/plugins/ipvtheme/lib/controller_patches.rb:44
-msgid "Then you can change your address used on {{site_name}}"
+msgid ""
+"Your <strong>name will appear publicly</strong> \n"
+"        (<a href=\"%s\">why?</a>)\n"
+"        on this website and in search engines. If you\n"
+"        are thinking of using a pseudonym, please \n"
+"        <a href=\"%s\">read this first</a>."
 msgstr ""
 
-#: vendor/plugins/ipvtheme/lib/model_patches.rb:13
-msgid "DOB is not a valid date"
-msgstr ""
-
-#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:63
 msgid "Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website."
 msgstr ""
 
-#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:59
 msgid "Your DOB:"
 msgstr ""
 
-#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:55
 msgid "Your address will be sent to authorities when you make a request.  We will not reveal your address on the website."
 msgstr ""
 
-#: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:51
 msgid "Your address:"
 msgstr ""
-
