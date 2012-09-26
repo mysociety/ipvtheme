@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+#   <appukonrad@gmail.com>, 2012.
 # Hana Huntova <>, 2012.
 # Jana Kneschke <>, 2012.
 #   <josef.pospisil@laststar.eu>, 2012.
@@ -11,19 +12,21 @@ msgstr ""
 "Project-Id-Version: ipvtheme\n"
 "Report-Msgid-Bugs-To: http://github.com/pepe/ipvtheme/issues\n"
 "POT-Creation-Date: 2012-07-16 13:21+0100\n"
-"PO-Revision-Date: 2012-07-16 11:49+0000\n"
-"Last-Translator: sebbacon <seb.bacon@gmail.com>\n"
-"Language-Team: LANGUAGE <alaveteli-dev@googlegroups.com>\n"
-"Language: cs\n"
+"PO-Revision-Date: 2012-08-30 09:10+0000\n"
+"Last-Translator: jui <appukonrad@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 msgid "Make and browse Freedom of Information (FOI) requests"
 msgstr "Vzneste a prohlížejte dotazy podle zákona o svobodném přístupu k informacím"
 
-msgid "This is an FOI request done via the {{site_name}} website. This footer has been overriden by the sample Alaveteli theme."
+msgid ""
+"This is an FOI request done via the {{site_name}} website. This footer has "
+"been overriden by the sample Alaveteli theme."
 msgstr "Toto je dotaz vznesený pomocí webových stránek {{site_name}}."
 
 msgid "Change your address"
@@ -67,25 +70,28 @@ msgstr "Hotovo"
 
 #: vendor/plugins/ipvtheme/lib/controller_patches.rb:44
 msgid "Then you can change your address used on {{site_name}}"
-msgstr ""
+msgstr "Poté můžete změnit vaši adresu použitou na {{SITE_NAME}}"
 
 #: vendor/plugins/ipvtheme/lib/model_patches.rb:13
 msgid "DOB is not a valid date"
-msgstr ""
+msgstr "Datum narození, není platné datum"
 
 #: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:63
-msgid "Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website."
-msgstr ""
+msgid ""
+"Your DOB will also be sent to authorities when you make a request.  We will "
+"not reveal your DOB on the website."
+msgstr "Váš datum narození bude také zasláno orgánům při podání žádosti. Nebudeme však odhalovat vaše datum narození na webových stránkách."
 
 #: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:59
 msgid "Your DOB:"
-msgstr ""
+msgstr "Vaše datum narození:"
 
 #: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:55
-msgid "Your address will be sent to authorities when you make a request.  We will not reveal your address on the website."
-msgstr ""
+msgid ""
+"Your address will be sent to authorities when you make a request.  We will "
+"not reveal your address on the website."
+msgstr "Vaše adresa bude zaslána orgánům při podání žádosti. Nebudeme však odhalovat vaši adresu na webových stránkách."
 
 #: vendor/plugins/ipvtheme/lib/views/user/_signup.rhtml:51
 msgid "Your address:"
-msgstr ""
-
+msgstr "Vaše adresa:"
