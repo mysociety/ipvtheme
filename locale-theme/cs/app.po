@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 #   <appukonrad@gmail.com>, 2012.
 # Hana Huntova <>, 2012.
@@ -9,20 +9,22 @@
 #   <josef.pospisil@laststar.eu>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: version 0.0.1\n"
-"Report-Msgid-Bugs-To: http://github.com/pepe/ipvtheme/issues\n"
+"Project-Id-Version: alaveteli\n"
+"Report-Msgid-Bugs-To: http://github.com/sebbacon/alaveteli/issues\n"
 "POT-Creation-Date: 2012-09-26 16:35+0100\n"
-"PO-Revision-Date: 2012-08-30 09:10+0000\n"
-"Last-Translator: jui <appukonrad@gmail.com>\n"
+"PO-Revision-Date: 2012-10-16 09:46+0000\n"
+"Last-Translator: Hana Huntova <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-msgid "<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
-msgstr ""
+msgid ""
+"<strong>Learn more</strong> from the help for <a href=\"%s\">FOI "
+"officers</a>"
+msgstr "<strong>Další informace</strong> z nápovědy pro <a href=\"%s\">FOI úředníky</a>"
 
 msgid "Address"
 msgstr "Adresa"
@@ -52,7 +54,7 @@ msgid "DOB is not a valid date"
 msgstr "Datum narození, není platné datum"
 
 msgid "Help pages"
-msgstr ""
+msgstr "Stránky nápovědy"
 
 msgid "New address:"
 msgstr "Nová adresa:"
@@ -63,23 +65,20 @@ msgstr "Nové datum narození:"
 msgid "Then you can change your address used on {{site_name}}"
 msgstr "Poté můžete změnit vaši adresu použitou na {{SITE_NAME}}"
 
-#, fuzzy
 msgid "Then you can change your dob used on {{site_name}}"
-msgstr "Poté můžete změnit vaši adresu použitou na {{SITE_NAME}}"
+msgstr "Poté můžete změnit své datum narození používané na {{site_name}}"
 
-#, fuzzy
 msgid "To change your address used on {{site_name}}"
-msgstr "Změňte adresu pro {{site_name}}"
+msgstr "Chcete-li změnit vaši adresu použitou na {{site_name}}"
 
-#, fuzzy
 msgid "To change your dob used on {{site_name}}"
-msgstr "Změňte datum narození pro {{site_name}}"
+msgstr "Chcete-li změnit vaše datum narození použité na {{site_name}}"
 
 msgid "Today"
-msgstr ""
+msgstr "Dnes"
 
 msgid "Wk"
-msgstr ""
+msgstr "Týden"
 
 msgid "You have now changed your address used on {{site_name}}"
 msgstr "Právě jste změnili svou adresu na {{site_name}}"
@@ -87,13 +86,17 @@ msgstr "Právě jste změnili svou adresu na {{site_name}}"
 msgid "You have now changed your dob used on {{site_name}}"
 msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
 
-msgid "Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website."
+msgid ""
+"Your DOB will also be sent to authorities when you make a request.  We will "
+"not reveal your DOB on the website."
 msgstr "Váš datum narození bude také zasláno orgánům při podání žádosti. Nebudeme však odhalovat vaše datum narození na webových stránkách."
 
 msgid "Your DOB:"
 msgstr "Vaše datum narození:"
 
-msgid "Your address will be sent to authorities when you make a request.  We will not reveal your address on the website."
+msgid ""
+"Your address will be sent to authorities when you make a request.  We will "
+"not reveal your address on the website."
 msgstr "Vaše adresa bude zaslána orgánům při podání žádosti. Nebudeme však odhalovat vaši adresu na webových stránkách."
 
 msgid "Your address:"
