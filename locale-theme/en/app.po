@@ -62,15 +62,12 @@ msgstr "Nové datum narození:"
 msgid "Then you can change your address used on {{site_name}}"
 msgstr ""
 
-#, fuzzy
 msgid "Then you can change your dob used on {{site_name}}"
 msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
 
-#, fuzzy
 msgid "To change your address used on {{site_name}}"
 msgstr "Změňte adresu pro {{site_name}}"
 
-#, fuzzy
 msgid "To change your dob used on {{site_name}}"
 msgstr "Změňte datum narození pro {{site_name}}"
 
