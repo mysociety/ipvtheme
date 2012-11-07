@@ -16,7 +16,7 @@ end
 rules_data = [{:text => 'Vaše evidenční údaje / Your name and address: .*$',
                :replacement => 'Vaše evidenční údaje / Your name and address: [Adresa]\n',
                :regexp => true,
-               :info_request => PublicBody.find_by_url_name('ministerstvo_prmyslu_a_obchodu'),
+               :public_body => PublicBody.find_by_url_name('ministerstvo_prmyslu_a_obchodu'),
                :last_edit_editor => 'system',
                :last_edit_comment => 'Added automatically by ipvtheme'}]
 rules_data.each do |d|
