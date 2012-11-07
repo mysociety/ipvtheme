@@ -14,7 +14,7 @@ if rule.nil?
 end
 
 rules_data = [{:text => 'Vaše evidenční údaje / Your name and address: .*$',
-               :replacement => 'Vaše evidenční údaje / Your name and address: [Adresa]\n',
+               :replacement => 'Vaše evidenční údaje / Your name and address: [Adresa]',
                :regexp => true,
                :public_body => PublicBody.find_by_url_name('ministerstvo_prmyslu_a_obchodu'),
                :last_edit_editor => 'system',
