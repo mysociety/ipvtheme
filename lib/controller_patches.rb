@@ -6,6 +6,31 @@
 #
 require 'dispatcher'
 Dispatcher.to_prepare do
+
+    RequestController.class_eval do
+
+        def authenticate_attachment
+            # Test for hidden
+            incoming_message = IncomingMessage.find(params[:incoming_message_id])
+            body = incoming_message.get_body_for_html_display
+            raise ActiveRecord::RecordNotFound.new("Message not found") if incoming_message.nil?
+            # This line is a temporary measure to prevent display of attachments that include
+            # the requester's physical address - if the body looks like it contains an address,
+            # hide the attachment.
+            raise ActiveRecord::RecordNotFound.new("Attachment is hidden") if body =~ /Your name and address: /
+            if !incoming_message.info_request.user_can_view?(authenticated_user)
+                @info_request = incoming_message.info_request # used by view
+                render :template => 'request/hidden', :status => 410 # gone
+            end
+            # Is this a completely public request that we can cache attachments for
+            # to be served up without authentication?
+            if incoming_message.info_request.all_can_view?
+                @files_can_be_cached = true
+            end
+        end
+
+    end
+
     # Example adding an instance variable to the frontpage controller
     UserController.class_eval do
 
