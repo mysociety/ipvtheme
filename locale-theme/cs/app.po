@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 #   <appukonrad@gmail.com>, 2012.
 # Hana Huntova <>, 2012.
@@ -63,7 +63,7 @@ msgid "New dob:"
 msgstr "Nové datum narození:"
 
 msgid "Then you can change your address used on {{site_name}}"
-msgstr "Poté můžete změnit vaši adresu použitou na {{SITE_NAME}}"
+msgstr "Poté můžete změnit vaši adresu použitou na {{site_name}}"
 
 msgid "Then you can change your dob used on {{site_name}}"
 msgstr "Poté můžete změnit své datum narození používané na {{site_name}}"
