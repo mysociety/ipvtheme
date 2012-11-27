@@ -1,7 +1,9 @@
 <div id="footer">
+    <div id="footer-logos">
     <%= image_tag('/ipvtheme/images/OSF.jpg') %>
     <%= image_tag('/ipvtheme/images/otevrete.jpg') %>
     <%= image_tag('/ipvtheme/images/FOM.jpg') %>
+    </div>
     <%= link_to _("Contact {{site_name}}", :site_name => site_name), help_contact_url %>
 | <img src="/images/twitter-16.png" alt="twitter icon" class="twitter-icon"> <a href="https://twitter.com/<%= Configuration::twitter_username %>"><%= _("Follow us on twitter") %></a>
 <%= render :partial => 'general/credits' %>
