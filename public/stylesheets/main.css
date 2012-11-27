@@ -943,8 +943,16 @@ padding:0.8em 0;
 text-align:center;
 }
 
+#footer-logos{
+  text-align:left;
+  padding: 3em 0;
+  border-top:1px solid #DDDDDD;
+}
+
 #footer-logo-text{
+  padding-bottom: 1em;
   font-size: 1.5em;
+  font-weight: bold;
 }
 
 .after-footer {display:block;
