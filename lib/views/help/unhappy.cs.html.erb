@@ -1,0 +1,73 @@
+<% @title = "Nespokojeni s odpovědi na vznesený dotaz?" %>
+
+
+<% if !@info_request.nil? %>
+<h1>Nejste spokojeni s odpovědí na svůj dotaz '<%=request_link(@info_request) %>'?
+</h1>
+<% else %>
+<h1>Nejste spokojeni se zaslanou odpovědí?</h1>
+<% end %>
+
+<p>Pokud ...</p>
+
+<ul>
+<li>jste nedostali odpověď během 15 dnů (zákonná lhůta),</li>
+<li>jste nedostali veškeré požadované informace,<strong>or</strong></li>
+<li>nesouhlasíte s výší poplatku, který instituce požaduje pro zodpovězení dotazu<strong>or</strong></li>
+<li>či zodpovězení dotazu bylo zadmítnuto bez uvedení zákonného důvodu,</li>
+</ul>
+
+<p>pak můžete</p>
+
+<ol>
+<li><strong> doplnit dotaz</strong>.</li>
+<li><strong>nebo také můžete podat stížnost, odvolání nebo žalobu.</strong>.</li>
+<li>Před podáním stížnosti, odvolání či žaloby <strong>prověřte všechny nekonfliktní dostupné metody,</strong> jak získat odpověď na svůj dotaz. Jaké všechny fáze může mít zodpovězení dotazu, můžete zjistit z grafu na stránkách Otevřete.cz.</li>
+</ol>
+
+<h1 id="internal_review"> Doplnění dotazu <a class="hover_a" href="#internal_review">#</a> </h1>
+
+<p>
+<% if !@info_request.nil? %>
+    <%= link_to "Request an internal review", show_response_no_followup_url(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup", :class => 'link_button_green' %> Pokud si instituce sama nevyžádá doplnění předem, můžete v případě neúplné odpovědi zaslat žádost na danou instituci.
+<% else %>
+    Na konci stránky s vaším dotazem <%= site_name %> vyberte volbu "Požádat o doplnění dotazu"
+    "request an internal review". Poté sepište žádost, která konkrétně odkazuje na chybějící informace. Link na žádost včetně všech potřebných osobních údajů doplní systém stránek IPV.
+<% end %>
+</p>
+
+<p>Může se také stát, že <strong>instituce pošle výzvu k doplnění údajů</strong>, a to ve lhůtě 7 dní od podání žádosti a vy jako tazatel máte 30 dní od doručení výzvy, jinak instituce zodpovězení dotazu odloží. Zodpovězení takto doplněného dotazu pak probíhá ve lhůtě nezbytné k  k opatření údajů podle § 6 odst. 2 pro vydání rozhodnutí (zákon tedy určitou lhůtu přímo nestanovuje).
+</p>
+
+<p>Instituce také může zaslat <strong>oznámení, že pro vypracování odpovědi požaduje poplatek</strong>. Instituce musí ve zprávě uvést přesnou částku (a ta musí být uveřejněna i v ceníku instituce na jejích stránkách jako jednu z povinných informací podle zákona 106/2000, Sb.).  Pokud s výší poplatku nesouhlasíte, můžete instituci např. poskytnout scanner, který nepoužíváte (začasto se pak jeden na instituci objeví a zodpovězení dotazu je tak rázem méně finančně náročnější), nebo můžete podat stížnost do 30 dnů od doručení oznámení.
+</p>
+
+<h1 id="complaining">2. Podání stížnosti <a class="hover_a" href="#complaining">#</a> </h1>
+
+<p>Pokud vám instituce neodpověděla v zákonem dané lhůtě nebo jste s obsahem odpovědi nespokojeni a nezískali jste žádné doplňující informace, můžete podat stížnost, odvolání nebo žalobu. Pokud tak učiníte, připište ke svému dotazu na stránkách IPV stručnou poznámku o průběhu.
+Avšak dříve, než podáte stížnost, odvolání nebo žalobu, pokuste se získat informace všemi jinými dostupnými cestami – může vám pomoci návod na stránkách Otevřete.cz.
+Nicméně efektivnější než soudní cesta je získání informace přes sdružení, která se stejným tématem zabývají, sepsání petice nebo vytvoření hnutí.
+</p>
+
+<p>Prosíme vezměte na vědomí, že stránky IPV vám neposkytnují právní servis při podávání stížnosti, odvolání či žaloby – tyto kroky již konzultujte se svým advokátem. Stránky IPV zde slouží ke komunikaci mezi občany a institucemi a nejsou místem pro řešení občansko-správních sporů.
+</p>
+
+<strong>Rozdíl mezi stížností, odvoláním a žalobou</strong>
+
+<p>
+<strong>Stížnost</strong>
+Řeší neposkytnutí informace bez vydání rozhodnutí/ nespokojenost s poskytnutou informací.
+Podává se po uplynutí lhůty pro poskytnutí informace, anebo po obdržení sdělení, s nímž tazatel nesouhlasí (odkázání na již zveřejněnou informaci, neúplné zodpovězení), či není-li sdělení správné, nebo po sdělení že požadované informace se nevztahují k působnosti instituce a dotaz odkládá, nebo sdělení o výši požadované úhrady, s níž tazatel nesouhlasí.
+Rozhoduje nadřízený orgán.
+</p>
+
+<p>
+<strong>Odvolání</strong>
+Řeší odmítnutí vzneseného dotazu Rozhodnutím o odmítnutí žádosti.
+Podává se po doručení Rozhodnutí. O odvolání rozhoduje nadřízený orgán.</p>
+
+
+<p>
+<strong>Žaloba</strong>
+Řeší Rozhodnutí o odvolání nadřízeného orgánu. Rozhoduje soud dle Soudního řádu správního. Více informací o podání žaloby pak najdete zde.</p>
+
