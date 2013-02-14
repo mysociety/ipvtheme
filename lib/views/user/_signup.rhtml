@@ -8,13 +8,13 @@
              prevText: '<%= _("Prev") %>',
              nextText: '<%= _("Next") %>',
              currentText: '<%= _("Today") %>',
-             monthNames: <%= I18n.translate('date.month_names')[1..-1].to_json %>,
-             monthNamesShort: <%= I18n.translate('date.abbr_month_names')[1..-1].to_json %>,
-             dayNames: <%= I18n.translate('date.day_names').to_json %>,
-             dayNamesShort: <%= I18n.translate('date.abbr_day_names').to_json %>,
-             dayNamesMin: <%= I18n.translate('date.abbr_day_names').collect{|x| x[0..0]}.to_json %>,
+             monthNames: <%= raw I18n.translate('date.month_names')[1..-1].to_json %>,
+             monthNamesShort: <%= raw I18n.translate('date.abbr_month_names')[1..-1].to_json %>,
+             dayNames: <%= raw I18n.translate('date.day_names').to_json %>,
+             dayNamesShort: <%= raw I18n.translate('date.abbr_day_names').to_json %>,
+             dayNamesMin: <%= raw I18n.translate('date.abbr_day_names').collect{|x| x[0..0]}.to_json %>,
              weekHeader: '<%= _("Wk") %>',
-             dateFormat: '<%= I18n.translate('date.formats.default').sub("%Y", "yy").sub("%m", "mm").sub("%d", "dd").gsub("-", "/") %>'}
+             dateFormat: '<%= raw I18n.translate('date.formats.default').sub("%Y", "yy").sub("%m", "mm").sub("%d", "dd").gsub("-", "/") %>'}
   );
   });
 </script>
@@ -33,7 +33,7 @@
     </p>
     <div class="form_item_note">
         <%= _('We will not reveal your email address to anybody unless you or
-        the law tell us to (<a href="%s">details</a>). ') %[help_privacy_path] %>
+        the law tell us to (<a href="%s">details</a>). ', :url => help_privacy_path) %>
     </div>
 
     <p>
@@ -41,11 +41,11 @@
         <%= text_field 'user_signup', 'name', { :size => 20 } %>
     </p>
     <div class="form_item_note">
-         <%= _('Your <strong>name will appear publicly</strong> 
+         <%= raw(_('Your <strong>name will appear publicly</strong>
         (<a href="%s">why?</a>)
         on this website and in search engines. If you
-        are thinking of using a pseudonym, please 
-        <a href="%s">read this first</a>.') % [help_privacy_path+"#public_request", help_privacy_path+"#real_name"] %>
+        are thinking of using a pseudonym, please
+        <a href="%s">read this first</a>.') % [help_privacy_path+"#public_request", help_privacy_path+"#real_name"]) %>
     </div>
 
     <p>

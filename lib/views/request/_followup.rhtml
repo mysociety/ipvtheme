@@ -44,9 +44,9 @@
     <% else %>
         <% if @internal_review %>
             <p>
-            <%= _('If you are dissatisfied by the response you got from
-            the public authority, you have the right to
-            complain (<a href="%s">details</a>).') % "http://foiwiki.com/foiwiki/index.php/Internal_reviews" %>
+              <%= _('If you are dissatisfied by the response you got from
+              the public authority, you have the right to
+              complain (<a href="%s">details</a>).', :url => "http://foiwiki.com/foiwiki/index.php/Internal_reviews".html_safe) %>
             </p>
         <% end %>
 
