@@ -7,6 +7,50 @@
 require 'dispatcher'
 Dispatcher.to_prepare do
 
+
+    AdminRequestController.class_eval do
+
+        def generate_upload_url
+            info_request = InfoRequest.find(params[:id])
+
+            if params[:incoming_message_id]
+                incoming_message = IncomingMessage.find(params[:incoming_message_id])
+                email = incoming_message.from_email
+                name = incoming_message.safe_mail_from || info_request.public_body.name
+            else
+                email = info_request.public_body.request_email
+                name = info_request.public_body.name
+            end
+
+            user = User.find_user_by_email(email)
+            if not user
+                user = User.new(:name => name,
+                                :email => email,
+                                :password => PostRedirect.generate_random_token,
+                                :dob => '1/1/1900')
+                user.save!
+            end
+
+            if !info_request.public_body.is_foi_officer?(user)
+                flash[:notice] = user.email + " is not an email at the domain @" + info_request.public_body.foi_officer_domain_required + ", so won't be able to upload."
+                redirect_to request_admin_url(info_request)
+                return
+            end
+
+            # Bejeeps, look, sometimes a URL is something that belongs in a controller, jesus.
+            # XXX hammer this square peg into the round MVC hole - should be calling main_url(upload_response_url())
+            post_redirect = PostRedirect.new(
+                :uri => main_url(upload_response_url(:url_title => info_request.url_title, :only_path => true)),
+                :user_id => user.id)
+            post_redirect.save!
+            url = main_url(confirm_url(:email_token => post_redirect.email_token, :only_path => true))
+
+            flash[:notice] = 'Send "' + name + '" &lt;<a href="mailto:' + email + '">' + email + '</a>&gt; this URL: <a href="' + url + '">' + url + "</a> - it will log them in and let them upload a response to this request.".html_safe
+            redirect_to request_admin_url(info_request)
+        end
+
+    end
+
     RequestController.class_eval do
 
         def authenticate_attachment
