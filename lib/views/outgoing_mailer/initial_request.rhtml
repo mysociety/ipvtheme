@@ -1,29 +1,28 @@
 Žádost o zpřístupnění informace ve smyslu zákona č. 106/1999 Sb., o svobodném přístupu k
 informacím.
 
-Povinný subjekt:
-<%= @outgoing_message.info_request.public_body.name %>
+Povinný subjekt: <%= @outgoing_message.info_request.public_body.name %>
 
-Žadatel:
-<%-# !!!IF YOU CHANGE THE FORMAT OF THE BLOCK BELOW, ADD A NEW CENSOR RULE!!! -%>
-===================================================================
-# Jméno: <%= @outgoing_message.info_request.user.name %>
-# Datum narození:  <%= @outgoing_message.info_request.user.dob %>
-<%= @outgoing_message.info_request.user.address.gsub(/^/, "# Adresa: ") %>
+Žadatel: <%-# !!!IF YOU CHANGE THE FORMAT OF THE BLOCK BELOW, ADD A NEW CENSOR RULE!!! -%>
+=================================================================== # Jméno: <%=
+@outgoing_message.info_request.user.name %> # Datum narození:  <%=
+@outgoing_message.info_request.user.dob %> <%=
+@outgoing_message.info_request.user.address.gsub(/^/, "# Adresa: ") %>
 ===================================================================
 
 Žádám o následující informaci:
 
 <%= @outgoing_message.body.strip %>
 
-Informaci poskytněte elektronicky na email: <%= @outgoing_message.info_request.incoming_email %>
+Informaci poskytněte elektronicky na email: <%=
+@outgoing_message.info_request.incoming_email %>
 
 
-Vámi poskytnutá informace bude zveřejněna na stránkách www.informaceprovsechny.cz. Vzhledem k tomu, že účelem těchto stránek je umožnit komukoliv svobodný přístup k informacím, je nutné, abyste ve své odpovědi nikde neuváděli mé osobní údaje (například adresu nebo datum narození). Pokud takové údaje do své odpovědi zahrnete, porušujete zákon 101/2000 Sb., o ochraně osobních údajů.
+Vámi poskytnutá informace bude zveřejněna na stránkách www.informaceprovsechny.cz. Účelem této služby je umožnit komukoliv svobodný přístup k informacím. DŮRAZNĚ VÁS ŽÁDÁME, ABYSTE VE SVÉ ODPOVĚDI ANI DO PŘÍLOH NEUVÁDĚLI ŽÁDNÉ OSOBNÍ ÚDAJE TAZATELE (ADRESU NEBO DATUM NAROZENÍ). Pokud osobní údaje do odpovědi zahrnete, porušíte Zákon 101/2000 Sb., o ochraně osobních údajů. Děkujeme.
 
 Řádným a včasným zpřístupněním informace na základě této žádosti nebo jiným posouzením
-žádosti podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím, beru na vědomí, že jste splnili svou povinnosti podle výše uvedeného zákona.
-Datum podání:
+žádosti podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím, beru na vědomí,
+že jste splnili svou povinnosti podle výše uvedeného zákona. Datum podání:
 
 <%= simple_date(Time.now) %>
 -------------------------------------------------------------------
