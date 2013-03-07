@@ -1,5 +1,5 @@
 # if not already created, make a CensorRule that hides personal information
-regexp = '={8,}.*\n(?:.*?#.*?: ?.*\n){3,}.*={8,}'
+regexp = '={67}\s*\n(?:.*?#.*?: ?.*\n){3}.*={67}'
 rule = CensorRule.find_by_text(regexp)
 if rule.nil?
     Rails.logger.info("Creating new censor rule: /#{regexp}/")
