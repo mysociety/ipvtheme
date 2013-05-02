@@ -1,9 +1,8 @@
 # Here you can override or add to the pages in the core website
 
-ActionController::Routing::Routes.draw do |map|
-    map.with_options :controller => 'user' do |user|
-        user.signchangeaddress '/profile/change_address',      :action => 'signchangeaddress'
-        user.signchangedob '/profile/change_dob',      :action => 'signchangedob'
-    end    
-
+Rails.application.routes.draw do
+    scope '/profile' do
+        match '/change_address' => 'user#signchangeaddress', :as => :signchangeaddress
+        match '/change_dob' => 'user#signchangedob', :as => :signchangedob
+    end
 end
