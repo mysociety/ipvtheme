@@ -80,7 +80,7 @@ Rails.configuration.to_prepare do
         # Create new account form.  Completely override core form
         def signup
             work_out_post_redirect
-            @request_from_foreign_country = country_from_ip != Configuration::iso_country_code
+            @request_from_foreign_country = country_from_ip != AlaveteliConfiguration::iso_country_code
             # Make the user and try to save it
             @user_signup = User.new(params[:user_signup])
             error = false
