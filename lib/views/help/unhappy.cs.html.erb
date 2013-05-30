@@ -29,7 +29,7 @@
 
 <p>
 <% if !@info_request.nil? %>
-    <%= link_to "Request an internal review", show_response_no_followup_url(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup", :class => 'link_button_green' %> Pokud si instituce sama nevyžádá doplnění předem, můžete v případě neúplné odpovědi zaslat žádost na danou instituci.
+    <%= link_to "Požádat o doplnění dotazu", show_response_no_followup_url(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup", :class => 'link_button_green' %> Pokud si instituce sama nevyžádá doplnění předem, můžete v případě neúplné odpovědi zaslat žádost na danou instituci.
 <% else %>
     Na konci stránky s vaším dotazem <%= site_name %> vyberte volbu "Požádat o doplnění dotazu"
     "request an internal review". Poté sepište žádost, která konkrétně odkazuje na chybějící informace. Link na žádost včetně všech potřebných osobních údajů doplní systém stránek IPV.
