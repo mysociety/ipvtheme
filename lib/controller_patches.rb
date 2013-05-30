@@ -39,10 +39,10 @@ Rails.configuration.to_prepare do
             # Bejeeps, look, sometimes a URL is something that belongs in a controller, jesus.
             # XXX hammer this square peg into the round MVC hole - should be calling main_url(upload_response_url())
             post_redirect = PostRedirect.new(
-                :uri => main_url(upload_response_url(:url_title => info_request.url_title, :only_path => true)),
+                :uri => upload_response_url(:url_title => info_request.url_title, :only_path => true),
                 :user_id => user.id)
             post_redirect.save!
-            url = main_url(confirm_url(:email_token => post_redirect.email_token, :only_path => true))
+            url = confirm_url(:email_token => post_redirect.email_token, :only_path => true)
 
             flash[:notice] = ('Send "' + name + '" &lt;<a href="mailto:' + email + '">' + email + '</a>&gt; this URL: <a href="' + url + '">' + url + "</a> - it will log them in and let them upload a response to this request.").html_safe
             redirect_to request_admin_url(info_request)
