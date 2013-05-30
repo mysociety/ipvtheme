@@ -6,9 +6,9 @@
             <% if @is_you %>
                 (<%= link_to _("edit text about you"), set_profile_about_me_path %>)
             <% end %>
-	  <% if @is_you %>
+    <% if @is_you %>
             <h4><%= _("Address") %><h4>
-            <pre><%=h @display_user.address if !@display_user.address.nil?  %></pre>
+            <pre><%= @display_user.address if !@display_user.address.nil?  %></pre>
             <h4><%= _("DOB") %><h4>
             <pre><%=l @display_user.dob if !@display_user.dob.nil? %></pre>
           <% end %>
