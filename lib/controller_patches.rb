@@ -4,8 +4,7 @@
 # classes are reloaded, but initialization is not run each time.
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
-require 'dispatcher'
-Dispatcher.to_prepare do
+Rails.configuration.to_prepare do
 
 
     AdminRequestController.class_eval do
@@ -33,20 +32,18 @@ Dispatcher.to_prepare do
 
             if !info_request.public_body.is_foi_officer?(user)
                 flash[:notice] = user.email + " is not an email at the domain @" + info_request.public_body.foi_officer_domain_required + ", so won't be able to upload."
-                redirect_to request_admin_url(info_request)
+                redirect_to admin_request_show_url(info_request)
                 return
             end
 
-            # Bejeeps, look, sometimes a URL is something that belongs in a controller, jesus.
-            # XXX hammer this square peg into the round MVC hole - should be calling main_url(upload_response_url())
             post_redirect = PostRedirect.new(
-                :uri => main_url(upload_response_url(:url_title => info_request.url_title, :only_path => true)),
+                :uri => upload_response_url(:url_title => info_request.url_title, :only_path => true),
                 :user_id => user.id)
             post_redirect.save!
-            url = main_url(confirm_url(:email_token => post_redirect.email_token, :only_path => true))
+            url = confirm_url(:email_token => post_redirect.email_token, :only_path => true)
 
             flash[:notice] = ('Send "' + name + '" &lt;<a href="mailto:' + email + '">' + email + '</a>&gt; this URL: <a href="' + url + '">' + url + "</a> - it will log them in and let them upload a response to this request.").html_safe
-            redirect_to request_admin_url(info_request)
+            redirect_to admin_request_show_url(info_request)
         end
 
     end
@@ -81,7 +78,7 @@ Dispatcher.to_prepare do
         # Create new account form.  Completely override core form
         def signup
             work_out_post_redirect
-            @request_from_foreign_country = country_from_ip != Configuration::iso_country_code
+            @request_from_foreign_country = country_from_ip != AlaveteliConfiguration::iso_country_code
             # Make the user and try to save it
             @user_signup = User.new(params[:user_signup])
             error = false

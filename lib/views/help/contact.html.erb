@@ -30,13 +30,13 @@
 
 </div>
 
-<% form_for :contact do |f| %>
+<%= form_for :contact do |f| %>
 
 <% if not @user %>
 <p>
 <label class="form_label" for="contact_name">Jméno</label><br/>
 <%= f.text_field :name, :size => 20 %>
-(nebo <%= link_to "se přihlašte", signin_url(:r => request.request_uri) %>)
+(nebo <%= link_to "se přihlašte", signin_url(:r => request.fullpath) %>)
 </p>
 
 <p>
