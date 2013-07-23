@@ -1,5 +1,5 @@
 #!/bin/env ruby
-#encoding: utf8
+#encoding: utf-8
 
 # if not already created, make a CensorRule that hides personal information
 regexp = '={67}\s*\n(?:.*?#.*?: ?.*\n){3}.*={67}'
