@@ -1,3 +1,6 @@
+#!/bin/env ruby
+#encoding: utf-8
+
 # if not already created, make a CensorRule that hides personal information
 regexp = '={67}\s*\n(?:.*?#.*?: ?.*\n){3}.*={67}'
 rule = CensorRule.find_by_text(regexp)
