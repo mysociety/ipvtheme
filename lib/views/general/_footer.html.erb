@@ -1,14 +1,14 @@
-
 <div id="footer">
-      <div id="footer-logos">
-      <div id="footer-logo-text">Partneři projektu informaceprovsechny.cz</div>
-      <a href="http://www.osf.cz/"><%= image_tag('/ipvtheme/images/OSF.jpg') %></a>
-      <a href="http://www.otevrete.cz/"><%= image_tag('/ipvtheme/images/otevrete.jpg') %></a>
-      <a href="http://www.osf.cz/fond-otakara-motejla-rozvoj-pravniho-statu/fond-otakara-motejla"><%= image_tag('/ipvtheme/images/FOM.jpg') %></a>
-      <a href="http://www.nasstat.cz"><%= image_tag('/ipvtheme/images/nas-stat.png') %></a>
-      </div>
+  <div id="footer-logos">
+    <div id="footer-logo-text">Partneři projektu informaceprovsechny.cz</div>
+    <a href="http://www.osf.cz/"><%= image_tag('/ipvtheme/images/OSF.jpg') %></a>
+    <a href="http://www.otevrete.cz/"><%= image_tag('/ipvtheme/images/otevrete.jpg') %></a>
+    <a href="http://www.osf.cz/fond-otakara-motejla-rozvoj-pravniho-statu/fond-otakara-motejla"><%= image_tag('/ipvtheme/images/FOM.jpg') %></a>
+    <a href="http://www.nasstat.cz"><%= image_tag('/ipvtheme/images/nas-stat.png') %></a>
+  </div>
     <%= link_to _("Contact {{site_name}}", :site_name => site_name), help_contact_url %>
-| <img src="/images/twitter-16.png" alt="twitter icon" class="twitter-icon"> <a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>"><%= _("Follow us on twitter") %></a>
-<%= render :partial => 'general/credits' %>
+    | <img src="/ipvtheme/images/facebook-16.png" alt="facebook icon" class="facebook-icon"> <a href="https://facebook.com/pages/Informace-pro-všechny/370310206316115">Přidejte se k nám na faceboku</a>
+  | <img src="/images/twitter-16.png" alt="twitter icon" class="twitter-icon"> <a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>"><%= _("Follow us on twitter") %></a>
+  <%= render :partial => 'general/credits' %>
 </div>
 <div class="after-footer">&nbsp;</div>
