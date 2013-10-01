@@ -1,3 +1,6 @@
+#!/bin/env ruby
+# encoding: utf-8
+
 # Add a callback - to be executed before each request in development,
 # and at startup in production - to patch existing app classes.
 # Doing so in init/environment.rb wouldn't work in development, since
@@ -152,6 +155,69 @@ Rails.configuration.to_prepare do
                     redirect_to user_url(@user)
                 end
             end
+        end
+    end
+    
+    PublicBodyController.class_eval do
+        def list
+            long_cache
+            # XXX move some of these tag SQL queries into has_tag_string.rb
+            @query = "%#{params[:public_body_query].nil? ? "" : params[:public_body_query]}%"
+            @tag = params[:tag]
+            @locale = self.locale_from_params()
+            @czech_alphabet = self.get_czech_alphabet()
+            default_locale = I18n.default_locale.to_s
+            locale_condition = "(upper(public_body_translations.name) LIKE upper(?)
+                                OR upper(public_body_translations.notes) LIKE upper (?))
+                                AND public_body_translations.locale = ?
+                                AND public_bodies.id <> #{PublicBody.internal_admin_body.id}"
+            if @tag.nil? or @tag == "all"
+                @tag = "all"
+                conditions = [locale_condition, @query, @query, default_locale]
+            elsif @tag == 'other'
+                category_list = PublicBodyCategories::get().tags().map{|c| "'"+c+"'"}.join(",")
+                conditions = [locale_condition + ' AND (select count(*) from has_tag_string_tags where has_tag_string_tags.model_id = public_bodies.id
+                    and has_tag_string_tags.model = \'PublicBody\'
+                    and has_tag_string_tags.name in (' + category_list + ')) = 0', @query, @query, default_locale]
+            elsif @tag.size == 1
+                @tag.upcase!
+                conditions = [locale_condition + ' AND public_body_translations.first_letter = ?', @query, @query, default_locale, @tag]
+            elsif @tag.include?(":")
+                name, value = HasTagString::HasTagStringTag.split_tag_into_name_value(@tag)
+                conditions = [locale_condition + ' AND (select count(*) from has_tag_string_tags where has_tag_string_tags.model_id = public_bodies.id
+                    and has_tag_string_tags.model = \'PublicBody\'
+                    and has_tag_string_tags.name = ? and has_tag_string_tags.value = ?) > 0', @query, @query, default_locale, name, value]
+            else
+                conditions = [locale_condition + ' AND (select count(*) from has_tag_string_tags where has_tag_string_tags.model_id = public_bodies.id
+                    and has_tag_string_tags.model = \'PublicBody\'
+                    and has_tag_string_tags.name = ?) > 0', @query, @query, default_locale, @tag]
+            end
+	
+            if @tag == "all"
+                @description = ""
+            elsif @tag.size == 1
+                @description = _("beginning with ‘{{first_letter}}’", :first_letter=>@tag)
+            else
+                category_name = PublicBodyCategories::get().by_tag()[@tag]
+                if category_name.nil?
+                    @description = _("matching the tag ‘{{tag_name}}’", :tag_name=>@tag)
+                else
+                    @description = _("in the category ‘{{category_name}}’", :category_name=>category_name)
+                end
+            end
+            I18n.with_locale(@locale) do
+                @public_bodies = PublicBody.where(conditions).joins(:translations).order("public_body_translations.name").paginate(
+                  :page => params[:page], :per_page => 100
+                )
+                respond_to do |format|
+                    format.html { render :template => "public_body/list" }
+                end
+            end
+        end
+		        
+        def get_czech_alphabet
+    	    # incorporate PublicBody.none_starting_with_letter?() to get current, unpredicted state
+    	    ["A","B","C","Č","D","E","F","G","H","I","J","K","L","M","N","O","P","R","Ř","S","Š","T","U","Ú","V","W","Z"]
         end
     end
 end
