@@ -1,3 +1,4 @@
+# encoding: utf-8
 # Add a callback - to be executed before each request in development,
 # and at startup in production - to patch existing app classes.
 # Doing so in init/environment.rb wouldn't work in development, since
@@ -152,6 +153,16 @@ Rails.configuration.to_prepare do
                     redirect_to user_url(@user)
                 end
             end
+        end
+    end
+
+    PublicBodyController.class_eval do
+
+        before_filter :get_czech_alphabet, :only => [:list]
+
+        def get_czech_alphabet
+            # incorporate PublicBody.none_starting_with_letter?() to get current, unpredicted state
+            @czech_alphabet = ["A","B","C","Č","D","E","F","G","H","I","J","K","L","M","N","O","P","R","Ř","S","Š","T","U","Ú","V","W","Z"]
         end
     end
 end
