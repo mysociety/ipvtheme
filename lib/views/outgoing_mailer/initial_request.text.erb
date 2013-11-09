@@ -1,4 +1,4 @@
-Žádost o zpřístupnění informace ve smyslu zákona č. 106/1999 Sb., o svobodném přístupu k
+Žádost o poskytnutí informace ve smyslu zákona č. 106/1999 Sb., o svobodném přístupu k
 informacím.
 
 Povinný subjekt:
@@ -12,18 +12,17 @@ Povinný subjekt:
 <%= @outgoing_message.info_request.user.address.gsub(/^/, "# Adresa: ") %>
 ===================================================================
 
-Žádám o následující informaci:
-
 <%= @outgoing_message.body.strip %>
 
 Informaci poskytněte elektronicky na email: <%= @outgoing_message.info_request.incoming_email %>
 
+Tato elektronická adresa je adresou pro doručování ve smyslu § 14 odst. 2 zákona o svobodném přístupu k informacím. Na tuto adresu žádám i o doručení do vlastních rukou (rozhodnutí o odmítnutí žádosti) postupem podle § 19 odst. 8 Správního řádu. Řádným a včasným zpřístupněním informace na základě této žádosti beru na vědomí, že jste splnili svou povinnost podle zákona 106/1999 Sb.
 
-Vámi poskytnutá informace bude zveřejněna na stránkách www.informaceprovsechny.cz. Účelem této služby je umožnit komukoliv svobodný přístup k informacím. DŮRAZNĚ VÁS ŽÁDÁME, ABYSTE VE SVÉ ODPOVĚDI ANI DO PŘÍLOH NEUVÁDĚLI ŽÁDNÉ OSOBNÍ ÚDAJE TAZATELE (ADRESU NEBO DATUM NAROZENÍ). Pokud osobní údaje do odpovědi zahrnete, porušíte Zákon 101/2000 Sb., o ochraně osobních údajů. Děkujeme.
+Vámi poskytnutá informace bude automaticky zveřejněna na stránkách www.informaceprovsechny.cz. Použitím této služby žadatel s takovým zveřejněním vyjádřil souhlas.
 
-Řádným a včasným zpřístupněním informace na základě této žádosti nebo jiným posouzením
-žádosti podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím, beru na vědomí,
-že jste splnili svou povinnosti podle výše uvedeného zákona.
+Upozornění provozovatele služby:
+S ohledem na to, že Vaše odpověď a poskytnuté informace budou automaticky zveřejněny na internetu, žádáme, abyste do své odpovědi ani do příloh NEUVÁDĚLI ŽÁDNÉ OSOBNÍ ÚDAJE ŽADATELE (adresu nebo datum narození). Pokud osobní údaje do odpovědi zahrnete, porušíte Zákon 101/2000 Sb. o ochraně osobních údajů. Doporučujeme tedy, abyste např. svou odpověď uvedli pouze oslovením "Vážený pane, vážená paní".
+
 Datum podání:
 
 <%= simple_date(Time.now) %>
