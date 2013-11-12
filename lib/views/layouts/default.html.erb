@@ -67,7 +67,7 @@
 <% if is_admin? %>
   <%= render :partial => 'admin_general/admin_navbar' %>
 <% else %>
-    <iframe src="/podporte-nas/vyzva.html" width="100%"></iframe>
+    <iframe src="/podporte-nas/vyzva.html" width="100%" height="80px"></iframe>
 <% end %>
 <% popup_banner = render(:partial => "general/popup_banner").strip %>
 <% if popup_banner.present? %>
