@@ -1,5 +1,5 @@
 #navigation_search input#navigation_search_button {
-background: url(/images/search-button.png) no-repeat center center;
+background: image-url("search-button.png") no-repeat center center;
 width: 30px;
 height: 30px;
 color: transparent;
@@ -11,5 +11,5 @@ box-shadow: none;
 }
 
 #navigation_search input#navigation_search_button {
- background: url(/ipvtheme/images/search-button.png) no-repeat center center;
+ background: image-url("search-button.png") no-repeat center center;
 }
