@@ -11,6 +11,8 @@ THEME_NAME = File.split(THEME_DIR)[1]
     Rails.application.config.assets.paths.unshift theme_asset_path
 end
 
+Rails.application.config.assets.precompile.push ['vendor.css', 'vendor-print.css']
+
 class ActionController::Base
     # The following prepends the path of the current theme's views to
     # the "filter_path" that Rails searches when deciding which
