@@ -1,5 +1,3 @@
-@import url(/ipvtheme/stylesheets/blueprint/screen.css) screen;
-@import url(/ipvtheme/stylesheets/blueprint/print.css) print;
 /* @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,latin-ext); */
 @import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic&subset=latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic);
@@ -214,12 +212,12 @@ a.link_button_green, a.link_button_green:link, a.link_button_green:visited {
 }
 
 body.front {
-  background:url(../images/page_bcg.png) repeat-x 0px -1px !important;
+  background:image-url('page_bcg.png') repeat-x 0px -1px !important;
 }
 
 
 form input.use-datepicker[type=text] {
-background:url(/images/calendar.png) no-repeat 115px 3px;
+background:image-url('calendar.png') no-repeat 115px 3px;
 margin:0 !important;
 background-color:#FFFFFF !important;
 }
@@ -513,21 +511,21 @@ font-weight:700;
 
 .request_listing span.head /* full page request list only */ {
 min-height:32px;
-background-image:url(http://www.informaceprovsechny.cz/images/navimg/request-icon.png);
+background-image:image-url('navimg/request-icon.png');
 background-repeat:no-repeat;
 background-position:4px 0;
 }
 
 .body_listing span.head /* full page request list only */ {
 min-height:32px;
-background-image:url(../images/navimg/auth-icon.png);
+background-image:image-url('navimg/auth-icon.png');
 background-repeat:no-repeat;
 background-position:4px 0;
 }
 
 .user_listing span.head /* full page request list only */ {
 min-height:32px;
-background-image:url(http://www.informaceprovsechny.cz/images/navimg/user-icon.png);
+background-image:image-url('navimg/user-icon.png');
 background-repeat:no-repeat;
 background-position:4px 0;
 }
@@ -557,46 +555,46 @@ padding:8px 0 10px 42px;
 }
 
 .icon_waiting_response,.icon_waiting_classification,.icon_waiting_clarification {
-background-image:url(http://www.informaceprovsechny.cz/images/status-pending.png);
+background-image:image-url('status-pending.png');
 color:#A68C2E;
 }
 
 .icon_rejected {
-background-image:url(http://www.informaceprovsechny.cz/images/navimg/status-icons-fail.png);
+background-image:image-url('navimg/status-icons-fail.png');
 }
 
 .icon_not_held {
-background-image:url(http://www.informaceprovsechny.cz/images/status-not-held.png);
+background-image:image-url('status-not-held.png');
 color:#A68C2E;
 }
 
 .icon_successful,.icon_partially_successful {
-background-image:url(http://www.informaceprovsechny.cz/images/status-complete.png);
+background-image:image-url('status-complete.png');
 color:#69952F;
 }
 
 .icon_requires_admin,.icon_waiting_response_overdue,.icon_waiting_response_very_overdue {
-background-image:url(http://www.informaceprovsechny.cz/images/status-overdue.png);
+background-image:image-url('status-overdue.png');
 color:#C1272D;
 }
 
 .icon_gone_postal {
-background-image:url(http://www.informaceprovsechny.cz/images/status-gone-postal.png);
+background-image:image-url('status-gone-postal.png');
 color:#A68C2E;
 }
 
 .icon_error_message {
-background-image:url(http://www.informaceprovsechny.cz/images/status-error.png);
+background-image:image-url('status-error.png');
 color:#C1272D;
 }
 
 .icon_internal_review {
-background-image:url(http://www.informaceprovsechny.cz/images/status-internal-review.png);
+background-image:image-url('status-internal-review.png');
 color:#A68C2E;
 }
 
 .icon_user_withdrawn {
-background-image:url(http://www.informaceprovsechny.cz/images/status-withdrawn.png);
+background-image:image-url('status-withdrawn.png');
 color:#A68C2E;
 }
 
@@ -607,7 +605,7 @@ overflow:hidden;
 }
 .request_listing div.request_right span.desc
 /* full page request list only */ {
-background-image:url(http://www.informaceprovsechny.cz/images/navimg/quote-open.png);
+background-image:image-url('navimg/quote-open.png');
 background-repeat:no-repeat;
 background-position:0 0;;
 }
@@ -1135,7 +1133,7 @@ font-size:1.6em;
 }
 
 a {
-text-decoration:under.line;
+text-decoration:underline;
 }
 
 #banner_inner {
@@ -1242,7 +1240,7 @@ padding:3px 0 0 27px;
 }
 
 .icon_failed,.icon_rejected {
-background-image:url(http://www.informaceprovsechny.cz/images/status-denied.png);
+background-image:image-url('status-denied.png');
 color:#C1272D;
 }
 
@@ -1255,8 +1253,7 @@ color:#C1272D;
 }
 
 .request_listing span.desc {
-background:url(http://www.informaceprovsechny.cz/images/quote-marks.png) no-repeat;
-background-image-position:
+background:image-url('quote-marks.png') no-repeat;
 width:auto !important;
 color:#444;
 line-height:18px;
@@ -1518,7 +1515,7 @@ padding:5px 0;
 
 #frontpage_examples p.excerpt {
 cursor:pointer;
-/*background:url(http://www.informaceprovsechny.cz/images/quote-marks.png) no-repeat;*/
+/*background:image-url('quote-marks.png') no-repeat;*/
 color:#444;
 line-height:18px;
 min-height:30px;
@@ -1527,7 +1524,7 @@ padding:0 0 0 0px;
 }
 
 #set_photo {
-background:url(http://www.informaceprovsechny.cz/images/defaultprofilepic.png);
+background:image-url('defaultprofilepic.png');
 }
 
 div.outgoing.correspondence {
@@ -1591,7 +1588,7 @@ margin-bottom:10px;
   position:absolute;
   top:215px;
   left:0px;
-  background:url(../images/hp_button_bcg.png) no-repeat 0px 0px;
+  background:image-url('hp_button_bcg.png') no-repeat 0px 0px;
   width:339px;
   height:114px;
   padding:33px 0px 0px 10px;
@@ -1640,7 +1637,7 @@ color:#FFF;
 }
 
 #ui-datepicker-div .ui-icon-circle-triangle-w,#ui-datepicker-div .ui-icon-circle-triangle-e {
-background-image:url(http://www.informaceprovsechny.cz/images/ui-icons-theme.png);
+background-image:image-url('ui-icons-theme.png');
 }
 
 #ui-datepicker-div .ui-datepicker-prev-hover {
@@ -1695,7 +1692,7 @@ display:inline-block;
 border-radius:2px;
 -moz-border-radius:2px;
 cursor:pointer;
-background:url(http://www.informaceprovsechny.cz/images/small-white-cross.png) no-repeat;
+background:image-url('small-white-cross.png') no-repeat;
 width:15px;
 height:15px;
 border:solid 0 #FFF;
@@ -1731,7 +1728,7 @@ width:20px;
 margin-right:10px;
 letter-spacing:-1000em;
 overflow:hidden;
-background:url(http://www.informaceprovsechny.cz/images/link-icon.png) no-repeat;
+background:image-url('link-icon.png') no-repeat;
 }
 
 #to_public_body {
@@ -1836,7 +1833,7 @@ div.ff-icon-printfix,
 body.front #other-country-notice,
 #other-country-notice,
 #authority_preview .public-body-name-prefix,
-#authority_preview,
+#authority_preview #list-filter,
 #authority_preview h2.foi_results,
 #show_response_view p.event_actions {
 display:none;
@@ -1908,4 +1905,48 @@ text-decoration:none;
        core support for axis labels.  So, just use !important to make
        the axes black rather than transparent grey for the moment: */
     color: #000 !important;
+}
+
+#body_selection .body_list {
+  width: 45%;
+}
+
+#body_selection .body_list input[type='submit'] {
+   margin: 10px 0;
+   width: 45%;
+}
+
+#body_selection .body_list #body_select_all_button,
+#body_selection .body_list #body_deselect_button{
+  float: right;
+}
+
+#body_selection #body_candidates {
+  float: left;
+}
+
+#body_selection #body_selections {
+  float: right;
+}
+
+#body_selection #body_submission input[type='submit'] {
+  margin: 10px 0;
+  width:100%;
+}
+
+#body_selection .select_all_button {
+  display: none;
+}
+
+#body_selection .body_select {
+   width: 100%;
+}
+
+.batch_public_body_list {
+  margin-left: 110px;
+}
+
+.batch_public_body_toggle {
+  color: #0000EE;
+  font-size: 0.9em;
 }
