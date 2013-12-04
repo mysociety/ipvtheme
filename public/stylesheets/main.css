@@ -214,7 +214,8 @@ a.link_button_green, a.link_button_green:link, a.link_button_green:visited {
 }
 
 body.front {
-  background:url(../images/page_bcg.png) repeat-x 0px -1px !important;
+  background:url(../images/page_bcg.png) repeat-x 0px 84px !important;
+  z-index: 1;
 }
 
 
@@ -384,8 +385,6 @@ margin:0;
 
 #content {
 padding-top:20px;
-/*width:960px;*/
-/*padding:1em;*/
 }
 
 h1,h2,h3 {

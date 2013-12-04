@@ -15,3 +15,9 @@ box-shadow: none;
 #navigation_search input#navigation_search_button {
  background: url(/ipvtheme/images/search-button.png) no-repeat center center;
 }
+
+iframe#vyzva {
+display: block;
+width: 100%;
+height: 80px;
+}
