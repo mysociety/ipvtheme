@@ -117,8 +117,8 @@ form.inline p {margin-bottom:0;}
 .span-6 {width:230px;}
 .span-7,
 #request_list #header_right,
-#request_show #right_column, 
-#right_column_flip, 
+#request_show #right_column,
+#right_column_flip,
 #public_body_show #header_right,
 #general_blog #right_column {width:270px;}
 
@@ -132,12 +132,12 @@ form.inline p {margin-bottom:0;}
 #request_select_authorit #foi_results_section,
 #request_select_authority #header_left,
 #request_select_authority #header_right {
-	width:430px;
+  width:430px;
 }
 
 .span-12,
 input#public_body_query {
-	width:470px;
+  width:470px;
 }
 
 .span-13 {width:510px;}
@@ -146,14 +146,14 @@ input#public_body_query {
 .span-15,
 div.correspondence,
 #request_list #filter_requests_form input#query {
-	width:590px;
+  width:590px;
 }
 
-.span-16, 
-#request_list #header_left, 
+.span-16,
+#request_list #header_left,
 #request_show #left_column,
 .results_section,
-#left_column_flip, 
+#left_column_flip,
 #general_search #header_left,
 #public_body_show #header_left,
 #general_blog #left_column {width:630px !important;}
