@@ -214,7 +214,7 @@ a.link_button_green, a.link_button_green:link, a.link_button_green:visited {
 }
 
 body.front {
-  background:url(../images/page_bcg.png) repeat-x 0px 84px !important;
+  background:url(../images/page_bcg.png) repeat-x 0px 79px !important;
   z-index: 1;
 }
 
