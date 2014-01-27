@@ -1666,6 +1666,7 @@ z-index:999;
 display:block;
 position:absolute;
 top:0;
+left: 0;
 opacity:0.9;
 }
 
@@ -1904,4 +1905,38 @@ text-decoration:none;
        core support for axis labels.  So, just use !important to make
        the axes black rather than transparent grey for the moment: */
     color: #000 !important;
+}
+
+
+.popup {
+overflow:auto;
+text-align:center;
+margin-top:2px;
+}
+
+.popup .popup-content{
+margin:0.5em;
+width: 95%;
+float: left;
+}
+
+.popup p {
+margin: 0;
+}
+
+.popup .popup-close {
+color:#FFF;
+text-decoration:none;
+display:inline-block;
+border-radius:2px;
+-moz-border-radius:2px;
+cursor:pointer;
+background: image-url('small-white-cross.png') no-repeat 0;
+width:15px;
+height:15px;
+border:solid 0 #FFF;
+text-indent:-999px;
+overflow:hidden;
+float:right;
+padding:10px 0;
 }
