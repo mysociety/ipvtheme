@@ -11,7 +11,7 @@ THEME_NAME = File.split(THEME_DIR)[1]
     Rails.application.config.assets.paths.unshift theme_asset_path
 end
 
-Rails.application.config.assets.precompile.push ['vendor.css', 'vendor-print.css']
+Rails.application.config.assets.precompile += ['vendor.css', 'vendor-print.css']
 
 class ActionController::Base
     # The following prepends the path of the current theme's views to
@@ -35,8 +35,8 @@ end
 end
 
 # Monkey patch app code
-for patch in ['controller_patches.rb', 
-              'model_patches.rb', 
+for patch in ['controller_patches.rb',
+              'model_patches.rb',
               'patch_mailer_paths.rb']
     require File.expand_path "../#{patch}", __FILE__
 end
