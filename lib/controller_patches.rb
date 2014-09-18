@@ -125,6 +125,13 @@ Rails.configuration.to_prepare do
                 end
             end
         end
+
+        # Add our extra params to the sanitized list allowed at signup
+        def user_params(key = :user)
+            params[key].slice(:name, :email, :password, :password_confirmation, :dob, :address)
+        end
+
+
     end
 
     PublicBodyController.class_eval do
