@@ -1815,6 +1815,11 @@ margin-top:20px;
   display:block;
   float:left;
 }
+
+#filter_requests_form .list-filter-item {
+  float:none;
+}
+
 #authority_preview {padding:8px;}
 #request_select_authority .list-filter-item>label,
 #request_select_authority .list-filter-item>input {
