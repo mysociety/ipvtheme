@@ -5,12 +5,12 @@
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
 Rails.configuration.to_prepare do
-    User.class_eval do
-        validate :validate_dob
-        def validate_dob
-            if !dob.is_a? Date
-                errors.add(:dob, _("DOB is not a valid date")) if ((DateTime.parse(dob) rescue ArgumentError) == ArgumentError)
-            end
-        end
+  User.class_eval do
+    validate :validate_dob
+    def validate_dob
+      if !dob.is_a? Date
+        errors.add(:dob, _("DOB is not a valid date")) if ((DateTime.parse(dob) rescue ArgumentError) == ArgumentError)
+      end
     end
+  end
 end
