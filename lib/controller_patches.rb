@@ -61,13 +61,18 @@ Rails.configuration.to_prepare do
       # the requester's physical address - if the body looks like it contains an address,
       # hide the attachment.
       raise ActiveRecord::RecordNotFound.new("Attachment is hidden") if body =~ /Your name and address: /
+
       if !incoming_message.info_request.user_can_view?(authenticated_user)
         @info_request = incoming_message.info_request # used by view
-        render :template => 'request/hidden', :status => 410 # gone
+        return render_hidden
+      end
+      if !incoming_message.user_can_view?(authenticated_user)
+        @incoming_message = incoming_message # used by view
+        return render_hidden('request/hidden_correspondence')
       end
       # Is this a completely public request that we can cache attachments for
       # to be served up without authentication?
-      if incoming_message.info_request.all_can_view?
+      if incoming_message.info_request.all_can_view? && incoming_message.all_can_view?
         @files_can_be_cached = true
       end
     end
