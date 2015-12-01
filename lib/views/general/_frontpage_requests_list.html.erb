@@ -1,4 +1,4 @@
-<div id="examples_1">
+<div id="examples_1" class="latest-requests">
   <h3>
     <% if @request_events_all_successful %>
       <%= _("What information has been released?") %>
@@ -11,7 +11,7 @@
   :number_of_requests => number_with_delimiter(@number_of_requests)) %>
   <ul>
     <% @request_events.each do |event| %>
-      <li>
+      <li class="request-listing">
         <% if @request_events_all_successful %>
           <%= _("{{public_body_link}} answered a request about",
               :public_body_link => public_body_link(event.info_request.public_body)) %>
