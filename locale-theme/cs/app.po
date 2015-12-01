@@ -56,11 +56,30 @@ msgstr "Datum narození, není platné datum"
 msgid "Help pages"
 msgstr "Stránky nápovědy"
 
+msgid "Make a new<br/>\\n  <strong>Freedom <span>of</span><br/>\\n  Information<br/>\\n  request</strong>"
+msgstr ""
+"Zjistěte pomocí zákona<br/>\n"
+"o svobodném přístupu<br/>\n"
+"k informacím<br/>\n"
+"co dělají státní instituce"
+
+msgid "More requests..."
+msgstr "Více dotazů..."
+
+msgid "More successful requests..."
+msgstr "Zobrazit více úspěšně zodpovězených dotazů..."
+
 msgid "New address:"
 msgstr "Nová adresa:"
 
 msgid "New dob:"
 msgstr "Nové datum narození:"
+
+msgid "Search over<br/><strong>{{number_of_requests}} requests</strong> <span>and</span><br/><strong>{{number_of_authorities}} authorities</strong>"
+msgstr ""
+"Prohledávejte více než<br/>\n"
+"          <strong>{{number_of_requests}} dotazů</strong> <span>a</span><br/>\n"
+"          <strong>{{number_of_authorities}} institucí v adresáři</strong>"
 
 msgid "Then you can change your address used on {{site_name}}"
 msgstr "Poté můžete změnit vaši adresu použitou na {{site_name}}"
