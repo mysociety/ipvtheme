@@ -20,7 +20,7 @@
     <h1><%=h(@public_body.name)%></h1>
 
     <p class="subtitle">
-    <%=@public_body.type_of_authority(true)%><% if not @public_body.short_name.empty? %>,
+    <%= type_of_authority(@public_body) %><% if not @public_body.short_name.empty? %>,
     <%= _('also called {{public_body_short_name}}', :public_body_short_name =>  h(@public_body.short_name))%><% end %>
     <% if !@user.nil? && @user.admin_page_links? %>
     (<%= link_to _("admin"), admin_body_show_path(@public_body) %>)
@@ -52,11 +52,6 @@
         <%= @public_body.notes_as_html.html_safe %>
       <% end %>
 
-      <% if @public_body.override_request_email %>
-        <p>
-            <%= _("<strong>Note:</strong> Because we're testing, requests are being sent to {{email}} rather than to the actual authority.", :email => @public_body.override_request_email) %>
-        </p>
-      <% end %>
     </div>
   </div>
 
