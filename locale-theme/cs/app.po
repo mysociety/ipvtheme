@@ -75,6 +75,11 @@ msgstr "Nová adresa:"
 msgid "New dob:"
 msgstr "Nové datum narození:"
 
+msgid "Remember me</label> (keeps you signed in longer; do not use on a public computer) "
+msgstr ""
+"Zapamatovat mé údaje </label> (zašrktněte, pokud chcete být déle přihlášeni;\n"
+"nezaškrtávejte, pokud jste na veřejně přístupném počítači)."
+
 msgid "Search over<br/><strong>{{number_of_requests}} requests</strong> <span>and</span><br/><strong>{{number_of_authorities}} authorities</strong>"
 msgstr ""
 "Prohledávejte více než<br/>\n"
