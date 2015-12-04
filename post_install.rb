@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # This file is executed by the rails-post-deploy script in Alaveteli
 
 # migration-type stuff

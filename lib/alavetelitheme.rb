@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 THEME_DIR = File.expand_path("../..", __FILE__)
 ALAVETELI_DIR = File.expand_path("../../../", THEME_DIR)
 THEME_NAME = File.split(THEME_DIR)[1]

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Uninstall hook code here
 
 main_app_path = Rails.root.join('public', 'alavetelitheme')

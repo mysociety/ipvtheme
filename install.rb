@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Install hook code here
 
 plugin_path = File.expand_path(File.join(File.dirname(__FILE__), "public"))

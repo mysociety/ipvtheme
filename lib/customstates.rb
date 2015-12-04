@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # See `doc/THEMES.md` for more explanation of this file
 # This example adds a "transferred" state to requests.
 
