@@ -44,9 +44,10 @@
     <% else %>
         <% if @internal_review %>
             <p>
-              <%= _('If you are dissatisfied by the response you got from
-            the public authority, you have the right to
-            complain (<a href="{{url}}">details</a>).', :url => "http://foiwiki.com/foiwiki/index.php/Internal_reviews".html_safe) %>
+        <%= _('If you are dissatisfied by the response you got from the ' \
+              'public authority, you have the right to complain ' \
+              '(<a href="{{url}}">details</a>).',
+              :url => "http://foiwiki.com/foiwiki/index.php/Internal_reviews".html_safe) %>
             </p>
         <% end %>
 
@@ -56,16 +57,23 @@
 
         <% status = @info_request.calculate_status %>
         <% if status == 'waiting_response_overdue' %>
-            <p><%= _('The response to your request has been <strong>delayed</strong>.  You can say that,
-            by law, the authority should normally have responded
-            <strong>promptly</strong> and') %>
-            <% if @info_request.public_body.is_school? %>
-            <%= _('in term time') %>
-            <% end %>
-            <%= _('by <strong>{{date}}</strong>',:date=>simple_date(@info_request.date_response_required_by)) %>
-            (<%= link_to _('details'), "#{help_requesting_path}#quickly_response" %>).
+        <p>
+          <% if @info_request.public_body.is_school? %>
+            <%= _('The response to your request has been <strong>delayed</strong>. ' \
+                  'You can say that, by law, the authority should normally have ' \
+                  'responded <strong>promptly</strong> and in term time by ' \
+                  '<strong>{{date}}</strong>',
+                  :date=>simple_date(@info_request.date_response_required_by)) %>
+          <% else %>
+            <%= _('The response to your request has been <strong>delayed</strong>. ' \
+                  'You can say that, by law, the authority should normally have ' \
+                  'responded <strong>promptly</strong> and by ' \
+                  '<strong>{{date}}</strong>',
+                  :date=>simple_date(@info_request.date_response_required_by)) %>
+          <% end %>
 
-            </p>
+          (<%= link_to _('details'), "#{help_requesting_path}#quickly_response" %>).
+        </p>
         <% elsif status == 'waiting_response_very_overdue' %>
             <p>
             <%= _('The response to your request is <strong>long overdue</strong>.   You can say that, by
@@ -86,8 +94,10 @@
             <% end %>
 
             <% if @internal_review %>
-                <p><%= _('Edit and add <strong>more details</strong> to the message above,
-                explaining why you are dissatisfied with their response.') %>
+                <p>
+                <%= _('Edit and add <strong>more details</strong> to the message ' \
+                'above, explaining why you are dissatisfied with their ' \
+                'response.') %>
                 </p>
             <% end %>
 

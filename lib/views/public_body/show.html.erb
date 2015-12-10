@@ -37,8 +37,8 @@
       <% end %>
     <% else %>
       <% if @public_body.not_requestable_reason == 'not_apply' %>
-        <p><%= _('Freedom of Information law does not apply to this authority, so you cannot make
-        a request to it.')%></p>
+        <p><%= _('Freedom of Information law does not apply to this authority, so you ' \
+              'cannot make a request to it.')%></p>
       <% elsif @public_body.not_requestable_reason == 'defunct' %>
         <p><%= _('This authority no longer exists, so you cannot make a request to it.')%></p>
       <% else %>
