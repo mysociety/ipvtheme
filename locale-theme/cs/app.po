@@ -175,8 +175,3 @@ msgstr[2] ""
 msgid "{{reason}}, please sign in or make a new account."
 msgstr ""
 
-#~ msgid "Today"
-#~ msgstr "Dnes"
-
-#~ msgid "Wk"
-#~ msgstr "Týden"
