@@ -1,32 +1,14 @@
-Žádost o poskytnutí informace ve smyslu zákona č. 106/1999 Sb., o svobodném přístupu k
-informacím.
+<%= raw @outgoing_message.body.strip %>
 
-Povinný subjekt:
-<%= @outgoing_message.info_request.public_body.name %>
-
-Žadatel:
-<%-# !!!IF YOU CHANGE THE FORMAT OF THE BLOCK BELOW, ADD A NEW CENSOR RULE!!! -%>
-===================================================================
-# Jméno: <%= @outgoing_message.info_request.user.name %>
-# Datum narození:  <%= @outgoing_message.info_request.user.dob %>
-<%= @outgoing_message.info_request.user.address.gsub(/^/, "# Adresa: ") %>
-===================================================================
-
-<%= @outgoing_message.body.strip %>
-
-Informaci poskytněte elektronicky na email: <%= @outgoing_message.info_request.incoming_email %>
-
-Tato elektronická adresa je adresou pro doručování ve smyslu § 14 odst. 2 zákona o svobodném přístupu k informacím. Na tuto adresu žádám i o doručení do vlastních rukou (rozhodnutí o odmítnutí žádosti) postupem podle § 19 odst. 8 Správního řádu. Řádným a včasným zpřístupněním informace na základě této žádosti beru na vědomí, že jste splnili svou povinnost podle zákona 106/1999 Sb.
-
-Vámi poskytnutá informace bude automaticky zveřejněna na stránkách www.informaceprovsechny.cz. Použitím této služby žadatel s takovým zveřejněním vyjádřil souhlas.
-
-Upozornění provozovatele služby:
-S ohledem na to, že Vaše odpověď a poskytnuté informace budou automaticky zveřejněny na internetu, žádáme, abyste do své odpovědi ani do příloh NEUVÁDĚLI ŽÁDNÉ OSOBNÍ ÚDAJE ŽADATELE (adresu nebo datum narození). Pokud osobní údaje do odpovědi zahrnete, porušíte Zákon 101/2000 Sb. o ochraně osobních údajů. Doporučujeme tedy, abyste např. svou odpověď uvedli pouze oslovením "Vážený pane, vážená paní".
-
-Datum podání:
-
-<%= simple_date(Time.now) %>
 -------------------------------------------------------------------
+
+<%= _('This is an FOI request done via the {{site_name}} website. This footer has been overriden by the sample Alaveteli theme.', :site_name => site_name) %>
+
+<%= _('Please use this email address for all replies to this request:')%>
+<%= @info_request.incoming_email %>
+
+<%= _('Is {{email_address}} the wrong address for {{type_of_request}} requests to {{public_body_name}}? If so, please contact us using this form:', :email_address => @info_request.public_body.request_email, :type_of_request =>  @info_request.law_used_full, :public_body_name => @info_request.public_body.name)%>
+<%= new_change_request_url(:body => @info_request.public_body.url_name) %>
 
 <%= render :partial => 'followup_footer' %>
 
