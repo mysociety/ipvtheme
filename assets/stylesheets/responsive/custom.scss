@@ -160,6 +160,10 @@ input.use-datepicker[type=text] {
   color: $color_white;
   background-color: $button-bg;
   border: none;
+  &:link,
+  &:visited {
+    color: $color_white;
+  }
   &:hover,
   &:active,
   &:focus,
@@ -210,10 +214,29 @@ a.link_button_green_large {
 /* Popups */
 
 .popup {
-  background-color: desaturate(lighten($notice-color, 30%),10%);
-  border: 3px solid $notice-color;
+  background-color: $color_neutral_dark;
+  border: 0;
+  color: $color_neutral_light;
+  margin-top: 0;
+  a {
+    color: $color_secondary;
+  }
+  .popup-content {
+    margin: 0;
+    float: none;
+    width: 100%;
+    position: relative;
+  }
 }
 
+
+
+.popup-close {
+    float: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
 /* Header */
 
@@ -882,5 +905,29 @@ dt {
   color: transparentize($color_white, 0.2);
   @include ie8 {
     color: $color_white;
+  }
+}
+
+.top-message {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: left;
+  padding: 0 1em;
+}
+
+.top-message__message-body {
+  margin-bottom: 0;
+  color: $color_white;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    font-size: 1.5em;
+  }
+}
+
+.top-message__action-button {
+  @include button-primary();
+  display: inline-block;
+  margin-left: 1em;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    font-size: 0.6666667em;
   }
 }
