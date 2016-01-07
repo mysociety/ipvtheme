@@ -1,18 +1,17 @@
 $color_sand: #f3f1eb;
 $color_black: #333333;
-$color_orange: #f4a140;
-$color_blue: #4faded;
-$color_green: #62b356;
-$color_yellow: #ffd836;
-$color_red: #e04b4b;
-$color_violet: #a94ca6;
-$color_purple: #5c377f;
+$color_orange: #F3A224;
+$color_blue: #1E74BE;
+$color_blue_dark: #114480;
+$color_green: #3EBA38;
+$color_yellow: #FAE55A;
+$color_red: #EE2317;
 $color_white: #ffffff;
 
 $color_neutral_light: $color_sand;
 $color_neutral_dark: $color_black;
-$color_primary: $color_violet;
-$color_secondary: $color_orange;
+$color_primary: $color_blue_dark;
+$color_secondary: $color_red;
 
 $body-bg: $color_neutral_light;
 
@@ -174,7 +173,7 @@ input.use-datepicker[type=text] {
 @mixin button-secondary($args...) {
   @include button-base($args...);
   background-color: desaturate(darken($color_sand, 10%), 5%);
-  color: $color_black;
+  color: $color_black !important; //beat the specificity of the old a.link_button_green
   font-weight: normal;
   &:hover,
   &:active,
@@ -776,7 +775,7 @@ dt {
 .steps__step-number {
   height: 3.5em;
   width: 3.5em;
-  background-color: $color_primary;
+  background-color: $color_blue;
   box-shadow: 0 1px 2px transparentize($color_black, 0.75);
   padding: 1em;
   border-radius: 100%;
@@ -854,12 +853,12 @@ dt {
 
   .new-request__make-new-requests {
     @include button-base;
-    background-color: desaturate(darken($color_secondary, 10%), 5%);
+    background-color: $color_secondary;
     color: $color_white;
     &:hover,
     &:active,
     &:focus {
-      background-color: darken($color_secondary, 20%);
+      background-color: darken($color_secondary, 10%);
     }
   }
 }
