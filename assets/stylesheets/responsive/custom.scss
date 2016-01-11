@@ -585,6 +585,7 @@ a.link_button_green_large {
 #footer {
   background-color: $color_neutral_dark;
   color: darken($color_neutral_light, 10%);
+  margin-top: 0;
   a {
     text-decoration: none;
     color: $color_white;
@@ -606,6 +607,23 @@ a.link_button_green_large {
 .footer__final {
   .row {
     border-top: 1px solid lighten($color_neutral_dark, 6%);
+  }
+}
+
+.site-credits {
+  background-color: $color_white;
+  padding: 2em 0;
+  margin-top: 3em;
+  h2 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}
+
+.site-credits__logo {
+  @include grid-column(6);
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    @include grid-column(3);
   }
 }
 

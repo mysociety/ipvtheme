@@ -1,0 +1,57 @@
+<div class="site-credits">
+  <div class="row">
+    <h2><%= _('Our project partners')%></h2>
+    <div class="site-credits__logo">
+      <a href="http://www.osf.cz/"><img alt="Osf" src="/assets/osf-logo.png"></a>
+    </div>
+    <div class="site-credits__logo">
+      <a href="http://www.otevrete.cz/"><img alt="Otevrete" src="/assets/ote-logo.png"></a>
+    </div>
+    <div class="site-credits__logo">
+      <a href="http://www.osf.cz/fond-otakara-motejla-rozvoj-pravniho-statu/fond-otakara-motejla"><img alt="Fom" src="/assets/fond-logo.png"></a>
+    </div>
+    <div class="site-credits__logo">
+      <a href="http://www.nasstat.cz"><img alt="Nas-stat" src="/assets/nas-logo.png"></a>
+    </div>
+  </div>
+</div>
+<div class="footer" id="footer">
+  <div class="row">
+    <div class="footer__about">
+      <h2><%= site_name %></h2>
+      <%= render :partial => 'general/responsive_credits' %>
+      <ul class="about__contact-links">
+        <li>
+          <%= link_to _('Contact us'), help_contact_path %>
+        </li>
+        <li>
+          <%= link_to _('Help'), help_path %>
+        </li>
+        <li>
+          <%= link_to _('Privacy and cookies'), help_privacy_path %>
+        </li>
+        <li>
+          <%= link_to _('API'), help_api_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__final">
+    <div class="row">
+      <div class="final__social-links">
+        <ul>
+          <% unless AlaveteliConfiguration::twitter_username.blank? %>
+          <li>
+            <a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>" class="social-link social-link--twitter">@<%= AlaveteliConfiguration::twitter_username %></a>
+          </li>
+          <% end %>
+          <% unless AlaveteliConfiguration::facebook_username.blank? %>
+          <li>
+            <a href="https://facebook.com/<%= AlaveteliConfiguration::facebook_username %>" class="social-link social-link--facebook">/<%= AlaveteliConfiguration::facebook_username %></a>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
