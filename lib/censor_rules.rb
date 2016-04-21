@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #!/bin/env ruby
 #encoding: utf-8
 
@@ -5,15 +6,15 @@
 regexp = '={67}\s*\n(?:[^\n]*?#[^\n]*?: ?[^\n]*\n){3,10}[^\n]*={67}'
 rule = CensorRule.find_by_text(regexp)
 if rule.nil?
-    Rails.logger.info("Creating new censor rule: /#{regexp}/")
-    CensorRule.create!(:text => regexp,
-                       :allow_global => true,
-                       :replacement => '[redacted]',
-                       :regexp => true,
-                       :last_edit_editor => 'system',
-                       :last_edit_comment => 'Added automatically by ipvtheme')
+  Rails.logger.info("Creating new censor rule: /#{regexp}/")
+  CensorRule.create!(:text => regexp,
+                     :allow_global => true,
+                     :replacement => '[redacted]',
+                     :regexp => true,
+                     :last_edit_editor => 'system',
+                     :last_edit_comment => 'Added automatically by ipvtheme')
 
-    CensorRule
+  CensorRule
 end
 
 rules_data = [{:text => 'Vaše evidenční údaje / Your name and address: .*$',
@@ -23,11 +24,11 @@ rules_data = [{:text => 'Vaše evidenční údaje / Your name and address: .*$',
                :last_edit_editor => 'system',
                :last_edit_comment => 'Added automatically by ipvtheme'}]
 rules_data.each do |d|
-    rule = CensorRule.find_by_text(d[:text])
-    if rule.nil?
-        new_rule = CensorRule.new(d)
-        if new_rule.info_request || new_rule.public_body
-            new_rule.save!
-        end
+  rule = CensorRule.find_by_text(d[:text])
+  if rule.nil?
+    new_rule = CensorRule.new(d)
+    if new_rule.info_request || new_rule.public_body
+      new_rule.save!
     end
+  end
 end

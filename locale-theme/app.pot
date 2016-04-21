@@ -3,8 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+msgid ""
+msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2012-09-26 16:35+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-01 18:08+0000\n"
 "PO-Revision-Date: 2011-10-09 01:10+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +15,18 @@
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-msgid "<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
+msgid "- or -"
+msgstr ""
+
+msgid ""
+"<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
 msgstr ""
 
 msgid "Address"
+msgstr ""
+
+msgid "Authority has transferred your request to a different public body."
 msgstr ""
 
 msgid "Change address on {{site_name}}"
@@ -44,13 +53,61 @@ msgstr ""
 msgid "DOB is not a valid date"
 msgstr ""
 
+msgid "Follow this authority"
+msgstr ""
+
+msgid ""
+"For an unknown reason, it is not possible to make a request to this "
+"authority."
+msgstr ""
+
+msgid "Freedom of information requests to"
+msgstr ""
+
 msgid "Help pages"
+msgstr ""
+
+msgid ""
+"Make a new<br/>\\n  <strong>Freedom <span>of</span><br/>\\n  Information<br/>"
+"\\n  request</strong>"
+msgstr ""
+
+msgid "More requests..."
+msgstr ""
+
+msgid "More successful requests..."
 msgstr ""
 
 msgid "New address:"
 msgstr ""
 
 msgid "New dob:"
+msgstr ""
+
+msgid "Please sign in or make a new account."
+msgstr ""
+
+msgid ""
+"Remember me</label> (keeps you signed in longer; do not use on a public "
+"computer) "
+msgstr ""
+
+msgid "Search for words in:"
+msgstr ""
+
+msgid ""
+"Search within the {{count}} Freedom of Information requests to "
+"{{public_body_name}}"
+msgid_plural ""
+"Search within the {{count}} Freedom of Information requests made to "
+"{{public_body_name}}"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid ""
+"The response to your request is <strong>long overdue</strong>.   You can say "
+"that, by\\n            law, under all circumstances, the authority should "
+"have responded\\n            by now"
 msgstr ""
 
 msgid "Then you can change your address used on {{site_name}}"
@@ -65,10 +122,7 @@ msgstr ""
 msgid "To change your dob used on {{site_name}}"
 msgstr ""
 
-msgid "Today"
-msgstr ""
-
-msgid "Wk"
+msgid "Transferred."
 msgstr ""
 
 msgid "You have now changed your address used on {{site_name}}"
@@ -77,15 +131,32 @@ msgstr ""
 msgid "You have now changed your dob used on {{site_name}}"
 msgstr ""
 
-msgid "Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website."
+msgid ""
+"Your DOB will also be sent to authorities when you make a request.  We will "
+"not reveal your DOB on the website."
 msgstr ""
 
 msgid "Your DOB:"
 msgstr ""
 
-msgid "Your address will be sent to authorities when you make a request.  We will not reveal your address on the website."
+msgid ""
+"Your address will be sent to authorities when you make a request.  We will "
+"not reveal your address on the website."
 msgstr ""
 
 msgid "Your address:"
 msgstr ""
 
+msgid "{{count}} Freedom of Information request to {{public_body_name}}"
+msgid_plural ""
+"{{count}} Freedom of Information requests to {{public_body_name}}"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "{{count}} person is following this authority"
+msgid_plural "{{count}} people are following this authority"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "{{reason}}, please sign in or make a new account."
+msgstr ""
