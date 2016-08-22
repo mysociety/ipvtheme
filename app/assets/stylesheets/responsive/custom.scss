@@ -1,37 +1,3 @@
-$color_sand: #f4f4f4;
-$color_black: #333333;
-$color_orange: #F3A224;
-$color_blue: #11457E;
-$color_blue_dark: darken($color_blue, 5%);
-$color_green: #2B9E00;
-$color_yellow: #FFFDE8;
-$color_red: #EC1C23;
-$color_white: #ffffff;
-$color_pro_blue: #5A7687;
-
-$color_neutral_light: $color_white;
-$color_neutral_dark: $color_black;
-$color_primary: $color_blue_dark;
-$color_secondary: $color_red;
-
-$body-bg: $color_neutral_light;
-
-$body-font-color: $color_neutral_dark;
-$link-color: $color_blue;
-$font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$form_input-bg: $color_white;
-
-$button-bg: $color_red;
-$button-color: $color_white;
-
-$status-success: $color_green;
-$status-failure: $color_red;
-$status-pending: $color_orange;
-
-$notice-color: $color_green;
-$error-color: $color_red;
-$action-color: $color_orange;
-
 @import "responsive/houdini";
 
 /* Mixin styles */
