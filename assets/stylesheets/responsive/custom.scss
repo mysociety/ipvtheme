@@ -1,14 +1,14 @@
-$color_sand: #f3f1eb;
+$color_sand: #f4f4f4;
 $color_black: #333333;
 $color_orange: #F3A224;
-$color_blue: #1E74BE;
-$color_blue_dark: #114480;
-$color_green: #3EBA38;
+$color_blue: #11457E;
+$color_blue_dark: darken($color_blue, 5%);
+$color_green: #2B9E00;
 $color_yellow: #FAE55A;
 $color_red: #EE2317;
 $color_white: #ffffff;
 
-$color_neutral_light: $color_sand;
+$color_neutral_light: $color_white;
 $color_neutral_dark: $color_black;
 $color_primary: $color_blue_dark;
 $color_secondary: $color_red;
@@ -16,7 +16,7 @@ $color_secondary: $color_red;
 $body-bg: $color_neutral_light;
 
 $body-font-color: $color_neutral_dark;
-$link-color: darken($color_blue, 20%);
+$link-color: $color_blue_dark;
 $action-color: $color_green;
 $font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
@@ -217,11 +217,11 @@ a.link_button_green_large {
 /* Header */
 
 #banner_inner {
-  background-color: $color_primary;
+  background-color: $color_blue;
 }
 
 #topnav {
-  background-color: darken($color_primary, 10%);
+  background-color: $color_blue;
 }
 
 .site-title__logo {
@@ -241,6 +241,11 @@ a.link_button_green_large {
   border-bottom: none;
   a {
     @extend %menu-item;
+  }
+  li {
+    font-size: 0.9375em; //15px
+    text-transform: uppercase;
+    font-weight: 500; //semibold
   }
   /* Show which section is currently selected */
   li.selected a{
@@ -329,6 +334,7 @@ a.link_button_green_large {
     background-color: transparent;
     font-weight: normal;
     color: $color_white;
+    font-size: 0.8125em; //14px
     &:hover,
     &:active,
     &:focus {
@@ -356,7 +362,7 @@ a.link_button_green_large {
   @include respond-min($main_menu-mobile_menu_cutoff) {
     position: absolute;
     left: ($logo-width + 40px);
-    top: 2.2em;
+    top: 3.2em;
     right: auto;
   }
   .locale-list-trigger {
