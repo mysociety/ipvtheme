@@ -1,0 +1,39 @@
+<div class="footer" id="footer" role="contentinfo">
+
+  <div class="footer--light">
+    <div class="row">
+      <div class="footer__about__partners">
+        <h2><%=_("We work with") %></h2>
+        <%= image_tag 'otevrete.png', :alt => 'Otevřete.cz' %>
+      </div>
+      <div class="footer__about__support">
+        <h2><%=_("Support us") %></h2>
+        <div class="about__support__blurb">
+          <p><%= _('Do you want freedom of information for all? Support us')%></p>
+          <a href="#" class="support-button"><%= _('Support')%></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__final footer--dark">
+    <div class="row">
+      <div class="final__social-links">
+        <ul>
+          <li>
+            <%= link_to _('Contact us'), help_contact_path, :class => "social-link social-link--contact" %>
+          </li>
+          <% unless AlaveteliConfiguration::twitter_username.blank? %>
+          <li>
+            <a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>" class="social-link social-link--twitter" onclick="<%= track_analytics_event(AnalyticsEvent::Category::OUTBOUND, AnalyticsEvent::Action::TWITTER_EXIT, :label => "Footer link")%>">@<%= AlaveteliConfiguration::twitter_username %></a>
+          </li>
+          <% end %>
+          <% unless AlaveteliConfiguration::facebook_username.blank? %>
+          <li>
+            <a href="https://facebook.com/<%= AlaveteliConfiguration::facebook_username %>" class="social-link social-link--facebook" onclick="<%= track_analytics_event(AnalyticsEvent::Category::OUTBOUND, AnalyticsEvent::Action::FACEBOOK_EXIT, :label => "Footer link")%>">/<%= AlaveteliConfiguration::facebook_username %></a>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

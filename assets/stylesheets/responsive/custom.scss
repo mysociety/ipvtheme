@@ -4,8 +4,8 @@ $color_orange: #F3A224;
 $color_blue: #11457E;
 $color_blue_dark: darken($color_blue, 5%);
 $color_green: #2B9E00;
-$color_yellow: #FAE55A;
-$color_red: #EE2317;
+$color_yellow: #FFFDE8;
+$color_red: #EC1C23;
 $color_white: #ffffff;
 
 $color_neutral_light: $color_white;
@@ -17,11 +17,10 @@ $body-bg: $color_neutral_light;
 
 $body-font-color: $color_neutral_dark;
 $link-color: $color_blue_dark;
-$action-color: $color_green;
 $font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
 
-$button-bg: $action-color;
+$button-bg: $color_red;
 $button-color: $color_white;
 
 $status-success: $color_green;
@@ -95,6 +94,11 @@ a {
   }
 }
 
+h2 {
+  font-size: 1.75em;
+  font-weight: bold;
+}
+
 /* Square corners for text type inputs */
 form input[type="text"],
 form input[type="password"],
@@ -124,7 +128,7 @@ input.use-datepicker[type=text] {
 
 @mixin button-base($size: normal, $disabled: false) {
   padding: 0.5em 1.25em;
-  border-radius: 3px;
+  border-radius: 0;
   display: inline-block;
   font-weight: 600;
   text-decoration: none;
@@ -167,6 +171,7 @@ input.use-datepicker[type=text] {
   &:visited:focus {
     background-color: darken($button-bg, 10%);
     color: $color_white;
+    text-decoration: none;
   }
 }
 
@@ -569,8 +574,10 @@ a.link_button_green_large {
 
 /* Footer */
 #footer {
-  background-color: $color_neutral_dark;
-  color: darken($color_neutral_light, 10%);
+  background-color: transparent;
+  color: $color_black;
+  padding: 0;
+  border: 0;
   a {
     text-decoration: none;
     color: $color_white;
@@ -581,19 +588,102 @@ a.link_button_green_large {
       text-decoration: underline;
     }
   }
+  .support-button {
+    //this needs to next inside #footer, due to bad specificity in Alaveteli
+    @include button-primary();
+    font-weight: 500;
+    text-transform: uppercase;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color_white;
+      text-decoration: 0;
+    }
+  }
 }
 
-.footer__about {
+.footer--light {
+  background-color: $color_white;
   h2 {
-    color: $color_white;
+    color: $color_blue;
+  }
+  a {
+    text-decoration: none;
+    color: $link-color;
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($link-color, 10%);
+      text-decoration: underline;
+    }
   }
 }
 
-.footer__final {
+.footer--dark {
+  background-color: $color_blue;
+  color: $color_white;
+  padding: 1.5em;
+  a {
+    text-decoration: none;
+    color: $color_white;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      color: $color_white;
+      text-decoration: underline;
+    }
+  }
   .row {
-    border-top: 1px solid lighten($color_neutral_dark, 6%);
+    border: 0;
   }
 }
+
+.footer__about__partners {
+  @include grid-column(12);
+  @media (min-width: 32em) {
+    border-top: 1px solid #e9e9e9;
+    @include grid-column(6);
+    margin: 2em 0;
+    padding-top: 1.5em;
+  }
+}
+
+.footer__about__support {
+  @include grid-column(12);
+  @media (min-width: 32em) {
+    border-top: 1px solid #e9e9e9;
+    @include grid-column(6);
+    margin: 2em 0;
+    padding-top: 1.5em;
+  }
+}
+
+.about__support__blurb {
+  background-color: $color_yellow;
+  padding: 2em;
+  margin-bottom: 2em;
+  p {
+    font-weight: bold;
+    color: $color_blue_dark;
+  }
+}
+
+.social-link--contact {
+  background-image: url(/assets/contact.png);
+}
+
+.final__social-links {
+  text-align: center;
+  > ul li {
+    display: inline-block;
+    float: none;
+  }
+  a {
+
+  }
+}
+
 
 /* Request page */
 div.correspondence {
