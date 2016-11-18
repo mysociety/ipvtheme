@@ -94,6 +94,10 @@ a {
   }
 }
 
+h1 {
+  color: $color_blue_dark;
+}
+
 h2 {
   font-size: 1.75em;
   font-weight: bold;
@@ -688,27 +692,24 @@ a.link_button_green_large {
 /* Request page */
 div.correspondence {
   background-color: $color_white;
-  box-shadow: 0 2px 2px transparentize($color_black, 0.8);
+  box-shadow: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 0;
   margin-bottom: 2em;
-}
-
-.incoming.correspondence {
-  border-top: 8px solid $color_secondary;
-  a {
-    color: $color_secondary;
-  }
-  a.link_to_this {
-    background-color: $color_secondary;
-  }
-}
-
-.outgoing.correspondence {
-  border-top: 8px solid $color_primary;
   a.link_to_this {
     background-color: $color_primary;
   }
+  h2 {
+    text-align: left;
+  }
+}
+
+.incoming.correspondence {
+  background-color: #f6f6f6;
+}
+
+.outgoing.correspondence {
+  background-color: $color_yellow;
 }
 
 .describe_state_form input[type="radio"] + label {
@@ -735,6 +736,13 @@ a.link_to_this {
   .close-button {
     background-color: $color_secondary;
     float: right;
+  }
+}
+
+.after_actions {
+  font-size: 0.875em; //14px
+  h2 {
+    font-size: 1em; //14px
   }
 }
 
