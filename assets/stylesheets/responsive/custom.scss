@@ -16,7 +16,7 @@ $color_secondary: $color_red;
 $body-bg: $color_neutral_light;
 
 $body-font-color: $color_neutral_dark;
-$link-color: $color_blue_dark;
+$link-color: $color_blue;
 $font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
 
@@ -755,6 +755,19 @@ a.link_to_this {
 
 .feed_link_sidebar .link_button_green {
   @include button-primary();
+}
+
+.sidebar {
+  font-size: 0.875em; //14px
+  h2 {
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.142857143em; //16px
+  }
+  h3 {
+    font-size: 1em; //14px
+  }
+
 }
 
 .report-this-request {
