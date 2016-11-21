@@ -3,7 +3,7 @@ $color_black: #333333;
 $color_orange: #F3A224;
 $color_blue: #11457E;
 $color_blue_dark: darken($color_blue, 5%);
-$color_green: #2B9E00;
+$color_green: #7DD25D;
 $color_yellow: #FFFDE8;
 $color_red: #EC1C23;
 $color_white: #ffffff;
@@ -167,6 +167,8 @@ input.use-datepicker[type=text] {
   color: $color_white;
   background-color: $button-bg;
   border: none;
+  text-transform: uppercase;
+  font-weight: 500;
   &:hover,
   &:active,
   &:focus,
@@ -218,7 +220,7 @@ a.link_button_green_large {
 /* Popups */
 
 .popup {
-  background-color: desaturate(lighten($notice-color, 30%),10%);
+  background-color: desaturate(lighten($notice-color, 40%),10%);
   border: 3px solid $notice-color;
 }
 
@@ -298,7 +300,6 @@ a.link_button_green_large {
 /* Notices, errors */
 
 #notice, #error, .errorExplanation, #request_header_text, #hidden_request, .describe_state_form form, .undescribed_requests, .warning {
-  border-top: 10px solid;
   font-size: 1em;
   margin:1em 0;
   padding: 1.5em;
@@ -595,8 +596,6 @@ a.link_button_green_large {
   .support-button {
     //this needs to next inside #footer, due to bad specificity in Alaveteli
     @include button-primary();
-    font-weight: 500;
-    text-transform: uppercase;
     &:hover,
     &:active,
     &:focus {
@@ -1018,5 +1017,11 @@ dt {
   color: transparentize($color_white, 0.2);
   @include ie8 {
     color: $color_white;
+  }
+}
+
+.preview-pane {
+  .correspondence {
+    background-color: $color_yellow;
   }
 }
