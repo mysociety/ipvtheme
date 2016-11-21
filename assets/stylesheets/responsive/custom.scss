@@ -867,42 +867,47 @@ dt {
 }
 
 /* How it works section */
+
+.homepage-how-it-works {
+  border: 0;
+  padding: 1.5em 0;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    padding: 2.5em 0;
+  }
+}
+
+.homepage-how-it-works__hiw-content {
+  width: 100%;
+  margin-left: 0 !important;
+}
+
 .steps__list {
+  padding: 0;
   li {
     @include respond-min( $main_menu-mobile_menu_cutoff ){
-      width: 33.3333%;
+      width: 22.75%;
+      margin-right: 3%;
       margin-left: 0 !important;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
 
 .steps__step-box {
-  background-color: $color_white;
-  padding: 2em;
-  box-shadow: 0 1px 2px transparentize($color_black, 0.75);
+  text-align: center;
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     min-height: 11em;
   }
   p {
     line-height: 1.5em;
-    color: $color_neutral_dark;
+    color: $color_blue;
   }
 }
 
-.steps__step-number {
-  height: 3.5em;
-  width: 3.5em;
-  background-color: $color_blue;
-  box-shadow: 0 1px 2px transparentize($color_black, 0.75);
-  padding: 1em;
-  border-radius: 100%;
-  color: $color_white;
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    left: 50%;
-    margin-left: -1.75em;
-    bottom: -1em;
-    top: auto;
-  }
+.steps__step-icon {
+  margin-bottom: 1.5em;
 }
 
 .learn-more-foi {
@@ -946,17 +951,22 @@ dt {
 }
 
 .homepage-hero {
-  background-color: $color_neutral_dark;
-  background-image: image-url('homepage-background-small.jpg');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  color: $color_white;
-  padding: 2em 0 5em;
+  background-color: $color_yellow;
+  color: $color_blue;
+  padding: 2em 0 3em;
   position: relative;
+  margin-bottom: 3em;
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    padding: 5em 0 8em;
-    background-image: image-url('homepage-background.jpg');
+    padding: 3em 0 4em;
+  }
+
+  h1 {
+    font-size: 1.75em; //28px
+  }
+
+  p {
+    font-weight: bold;
+    max-width: 34em;
   }
 
   a {
@@ -972,6 +982,13 @@ dt {
     @include button-base;
     background-color: $color_secondary;
     color: $color_white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.25em;
+    padding: 0.75em 1em;
+    @include respond-min($main_menu-mobile_menu_cutoff) {
+      font-size: 1.75em;
+    }
     &:hover,
     &:active,
     &:focus {
