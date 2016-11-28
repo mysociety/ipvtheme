@@ -3,7 +3,7 @@ $color_black: #333333;
 $color_orange: #F3A224;
 $color_blue: #11457E;
 $color_blue_dark: darken($color_blue, 5%);
-$color_green: #7DD25D;
+$color_green: #2B9E00;
 $color_yellow: #FFFDE8;
 $color_red: #EC1C23;
 $color_white: #ffffff;
@@ -94,7 +94,7 @@ a {
   }
 }
 
-h1 {
+h1,h2, h3 {
   color: $color_blue_dark;
 }
 
@@ -863,6 +863,7 @@ dt {
 /* Front page */
 /* Drop the extract indentation on small screens */
 #frontpage_examples {
+  @include grid-row;
   .excerpt {
     padding: 0.2em 0 0 0;
     @include respond-min( $main_menu-mobile_menu_cutoff ){
