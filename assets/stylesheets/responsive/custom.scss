@@ -873,7 +873,115 @@ dt {
   p strong a {
     @include button-secondary;
   }
+  #examples_1 {
+    @include grid-column(12, $collapse: true);
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      margin: 0 -0.9375em;
+    }
+    li {
+      border: 0;
+    }
+  }
+  .request-listing {
+    display: flex;
+    flex-flow: row wrap;
+    @include grid-column(12);
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      @include grid-column(6);
+    }
+    &:nth-last-child(2) {
+      @include respond-min( $main_menu-mobile_menu_cutoff ){
+        //we want the asktheEU advert on the left of the bottom row
+        order: 6;
+      }
+    }
+  }
+
+  .request-listing__header {
+    background-color: $color_green;
+    color: $color_white;
+    padding: 1em;
+    flex: 1 100%;
+    h3 {
+      color: $color_white;
+      margin-bottom: 0.25em;
+      font-weight: normal;
+    }
+    a {
+      color: $color_white;
+      font-weight: 500;
+    }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .request-listing__request-body {
+    flex: 1 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-top: 0;
+    margin-left: 0;
+  }
+
+  .request-listing__title {
+    font-weight: 500;
+    font-size: 0.875em;
+  }
+
+  .request-listing__status {
+    text-align: right;
+    margin-top: 1em;
+    font-weight: 500;
+  }
+
+  .icon-standalone {
+    display: inline-block;
+    float: none;
+    position: relative;
+    top: 3px;
+    margin-left: 0.25em;
+  }
+
+  // AsktheEU advert appears in the request list so uses reuest-listing as a base
+  .request-listing__block--ask-the-eu {
+    position: relative;
+    .request-listing__header {
+      background-color: #11457E;
+      h2 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.75em; //28px
+        line-height: 1.35em;
+      }
+    }
+    .request-listing__request-body {
+      background-color: #E2EBE1;
+      p {
+        font-size: 0.9375em; //15px
+        margin-bottom: 0.5625em; //9px
+        max-width: 230px;
+        font-weight: 500px;
+      }
+    }
+    .request-listing__block--ask-the-eu__logo {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      width: 87.5px;
+      @include respond-min( $main_menu-mobile_menu_cutoff ){
+        width: 175px;
+        //we want the asktheEU advert on the left of the bottom row
+        order: 5;
+      }
+    }
+  }
+
 }
+
+
 
 /* How it works section */
 

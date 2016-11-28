@@ -1,0 +1,42 @@
+<div id="examples_1" class="latest-requests">
+  <ul>
+    <% @request_events.each do |event| %>
+      <li class="request-listing request-listing__block">
+        <div class="request-listing__header">
+          <h3 class="request-listing__title"><%= _('Institute') %></h3>
+          <p>
+            <%= _("{{public_body_link}}",
+                :public_body_link => public_body_link(event.info_request.public_body)) %>
+          </p>
+          <h3 class="request-listing__title"><%= _('Request regarding') %></h3>
+          <p>
+            <%= link_to h(event.info_request.title), request_path(event.info_request) %>
+          </p>
+        </div>
+        <div class="request-listing__request-body">
+          <p class="request-listing__desc">
+            <%= excerpt(event.info_request.initial_request_text, "", :radius => 150) %>
+          </p>
+          <p class="request-listing__status">
+            <%= event.info_request.display_status %>
+            <span class="request-listing__request-status-icon bottomline icon_<%= event.info_request.calculate_status %> icon-standalone"></span>
+          </p>
+        </div>
+      </li>
+    <% end %>
+      <li class="request-listing request-listing__block request-listing__block--ask-the-eu">
+        <div class="request-listing__header">
+          <h2 class="request-listing__title">
+            <%= _('Do you have questions for EU authorities?') %>
+          <h2>
+        </div>
+        <div class="request-listing__request-body">
+          <p><%= _('Ask your questions here.') %></p>
+          <p><%= _('Write your query in English, the recipient is required to translate it.') %></p>
+          <a href="https://www.asktheeu.org"><%= image_tag "asktheEU-logo.png", :alt => "AskTheEU", :class => "request-listing__block--ask-the-eu__logo" %></a>
+        </div>
+      </li>
+  </ul>
+
+  <%= link_to _("Browse all requests &rarr;"), request_list_all_path, :class => 'button-secondary' %>
+</div>
