@@ -1143,3 +1143,60 @@ dt {
     background-color: $color_yellow;
   }
 }
+
+/* Sign-in/Sign-up page */
+
+#sign_together {
+  margin-top: 3em;
+  .sign_in_reason {
+    display: none;
+  }
+  #left_half {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+        @include grid-column($columns:6, $float:right);
+    }
+  }
+
+  #right_half {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+        @include grid-column($columns:6, $float:left);
+    }
+  }
+
+  .signup,
+  .sign-in-wrapper {
+    padding: 1.5em;
+    background-color: #F6F6F6;
+  }
+  #left_half h2 {
+    /* Make the h2 appear inside .sign-in-wrapper (rather than having to
+       override a template for a tiny change lets fake it with CSS) */
+    padding-top: 0.857142857em; //24px
+    padding-left: 0.857142857em; //24px
+    background-color: #F6F6F6;
+    margin-bottom: 0;
+    margin-top: 0;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      margin-left: 0.857142857em; //24px
+    }
+  }
+  #signup {
+    margin-top: 0;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      margin-left: 1.5em;
+    }
+  }
+
+  .sign-in-wrapper {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      margin-left: 1.5em;
+    }
+  }
+
+  .form_button {
+    text-align: center;
+    input[type=submit] {
+      font-size: 1.75em;
+    }
+  }
+}
