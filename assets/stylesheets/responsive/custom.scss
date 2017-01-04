@@ -1227,7 +1227,6 @@ dt {
 }
 
 .typeahead_response {
-
   p {
     padding: 2em 2em 0;
     margin: 0;
@@ -1270,4 +1269,27 @@ dt {
   max-width: 16em; //640px
   margin: 0.75em auto 0;
   width: auto;
+}
+
+#request_header_text {
+  background-color: transparent;
+  padding: 0;
+}
+
+#request_form {
+  background-color: #f6f6f6;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  #request_header_subject,
+  > p,
+   {
+     padding: 0 1em;
+  }
+  .form_button {
+    margin: 1.5em 0;
+    text-align: center;
+    input[type=submit] {
+      font-size: 1.25em;
+    }
+  }
 }
