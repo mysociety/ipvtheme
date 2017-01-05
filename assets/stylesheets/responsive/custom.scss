@@ -1254,14 +1254,12 @@ dt {
     padding: 0;
 }
 
-#authority_search_ahead_results {
-  .body_listing {
-    background-color: $color_yellow;
-    border: 0;
-    padding: 1.5em 1.5em 1em;
-    &:last-child {
-      margin-bottom: 2em;
-    }
+.body_listing {
+  background-color: $color_yellow;
+  border: 0;
+  padding: 1.5em 1.5em 1em;
+  &:last-child {
+    margin-bottom: 2em;
   }
   .body-listing__header {
     font-size: 1em;
@@ -1380,7 +1378,6 @@ dt {
   }
  }
 
-
 .action-bar__follow-button .link_button_green {
   @include button-primary;
   color: #fff !important;
@@ -1392,4 +1389,24 @@ dt {
   left: -4px;
   line-height: 1.6em;
   border-left: 0;
+}
+
+/*
+ * Authorities page (browse/search)
+ */
+
+#public_body_list {
+  h1 {
+    background-color: #f6f6f6;
+    margin: 1em 0 0;
+    padding: 0.4em;
+  }
+  #search_form {
+    background-color: #f6f6f6;
+    padding: 1.5em;
+  }
+  .publicbody_results {
+    font-size: 1em;
+    color: $color_black;
+  }
 }
