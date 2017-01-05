@@ -1153,13 +1153,13 @@ dt {
   }
   #left_half {
     @include respond-min( $main_menu-mobile_menu_cutoff ){
-        @include grid-column($columns:6, $float:right);
+      @include grid-column($columns:6, $float:right);
     }
   }
 
   #right_half {
     @include respond-min( $main_menu-mobile_menu_cutoff ){
-        @include grid-column($columns:6, $float:left);
+      @include grid-column($columns:6, $float:left);
     }
   }
 
@@ -1290,6 +1290,65 @@ dt {
     text-align: center;
     input[type=submit] {
       font-size: 1.25em;
+    }
+  }
+}
+
+/*
+ * Browse/search requests
+ */
+#list-filter {
+  background-color: #f6f6f6;
+  padding: 1.5em;
+  #query {
+    width: 100%;
+  }
+}
+
+.request_listing {
+  border: 0;
+  background-color: $color_yellow;
+  padding: 1.5em 1.5em 2em;
+  .request_right,
+  .request_left {
+    width: 100%;
+    float: left;
+  }
+  .desc {
+    padding: 0;
+  }
+}
+
+.results_section {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    @include grid-row;
+  }
+  .foi_results {
+    font-size: 1em;
+    color: $color_black;
+  }
+}
+
+.results_block {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    @include grid-column($columns:8);
+  }
+}
+
+.request_listing {
+  position: relative;
+  .head {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+  .desc {
+    font-size: 0.875em;
+  }
+  .bottomline {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      position: absolute;
+      bottom: -0.5em;
+      right: 1.5em;
     }
   }
 }
