@@ -12,7 +12,7 @@ Povinný subjekt:
 <%= @outgoing_message.info_request.user.address.gsub(/^/, "# Adresa: ") %>
 ===================================================================
 
-<%= @outgoing_message.body.strip %>
+<%= raw @outgoing_message.body.strip %>
 
 Informaci poskytněte elektronicky na email: <%= @outgoing_message.info_request.incoming_email %>
 
