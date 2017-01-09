@@ -33,7 +33,8 @@ end
 
 # Note you should rename the file at "config/custom-routes.rb" to
 # something unique (e.g. yourtheme-custom-routes.rb":
-$alaveteli_route_extensions << 'custom-routes.rb'
+# $alaveteli_route_extensions << 'custom-routes.rb'
+$alaveteli_route_extensions << 'ipvtheme-routes.rb'
 
 # Prepend the asset directories in this theme to the asset path:
 ['stylesheets', 'images', 'javascripts'].each do |asset_type|
