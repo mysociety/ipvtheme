@@ -1,0 +1,36 @@
+
+    <% if !@display_user.get_about_me_for_html_display.empty? || @is_you %>
+        <div class="user_about_me">
+             <%= image_tag "navimg/quote-open.png", :class => "comment_quote" %>
+            <%= @display_user.get_about_me_for_html_display %>
+            <% if @is_you %>
+                (<%= link_to _("edit text about you"), set_profile_about_me_path %>)
+            <% end %>
+    <% if @is_you %>
+            <h4><%= _("Address") %><h4>
+            <pre><%= @display_user.address if !@display_user.address.nil?  %></pre>
+            <h4><%= _("DOB") %><h4>
+            <pre><%=l @display_user.dob if !@display_user.dob.nil? %></pre>
+          <% end %>
+        </div>
+    <% end %>
+
+    <% if @is_you %>
+        <p id="user_change_password_email">
+            <% if @display_user.profile_photo %>
+                <%= link_to _('Change profile photo'), set_profile_photo_path %> |
+            <% end %>
+            <%= link_to _('Change your password'), new_password_change_path %> |
+            <%= link_to _('Change your email'), signchangeemail_path %> |
+            <%= link_to _('Change your address'), signchangeaddress_path %> |
+            <%= link_to _('Change your DOB'), signchangedob_path %>
+            <% if AlaveteliConfiguration.enable_two_factor_auth %>
+            |
+              <% if @display_user.otp_enabled? %>
+                <%= link_to _('View your two factor authentication one time passcode'), one_time_password_path %>
+              <% else %>
+                <%= link_to _('Improve your account security'), one_time_password_path %>
+              <% end %>
+            <% end %>
+        </p>
+    <% end %>

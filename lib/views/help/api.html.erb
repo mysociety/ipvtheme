@@ -8,10 +8,10 @@
 <h2> Introduction </h2>
 
 <p>This page explains how programmers can make other websites and software
-interact with <%= site_name %> via an "API".
+interact with WhatDoTheyKnow via an "API".
 </p>
 
-<p><%= site_name %> does not have a full API yet, but we are gradually adding
+<p>WhatDoTheyKnow does not have a full API yet, but we are gradually adding
 lots of things that are similar in use to an API as they are requested.
 </p>
 
@@ -19,8 +19,8 @@ lots of things that are similar in use to an API as they are requested.
 
 <h2> 1. Linking to new requests </h2>
 
-<p>To encourage your users to make requests to a particular public authority, use URLs of the form:
-<%= link_to new_request_to_body_url(:url_name => "liverpool_city_council") , new_request_to_body_url(:url_name => "liverpool_city_council") %>.
+<p>To encourage your users to make links to a particular public authority, use URLs of the form
+<%= link_to new_request_to_body_url(:url_name => "liverpool_city_council") , new_request_to_body_url(:url_name => "liverpool_city_council") %>. 
 These are the parameters you can add to those URLs, either in the URL or from a form.
 
 <ul>
@@ -38,7 +38,7 @@ These are the parameters you can add to those URLs, either in the URL or from a 
 use to get updates and links in XML format. Find the URL of the Atom feed in
 one of these ways: 
 <ul>
-    <li>Look for the <img src="/images/feed-16.png" alt=""> RSS feed links.</li>
+    <li>Look for the <%= image_tag "feed-16.png", :alt => "RSS icon" %> RSS feed links.</li>
     <li>Examine the <tt>&lt;link rel="alternate" type="application/atom+xml"&gt;</tt> tag in the head of the HTML. </li>
     <li>Add <tt>/feed</tt> to the start of another URL.
 </ul>
@@ -69,7 +69,7 @@ information about the list of events in the feed.
 <h2> 4. Spreadsheet of all authorities </h2>
 
 <p>
-A spreadsheet file listing every body in <%= site_name %> is available:
+A spreadsheet file listing every body in WhatDoTheyKnow is available:
 <%= link_to "all-authorities.csv", all_public_bodies_csv_url() %>
 </p>
 
