@@ -12,7 +12,7 @@
     </div>
 
     <label class="form_label" for="signchangedob_new_dob"> <%= _('New dob:')%></label>
-    <%= text_field 'signchangedob', 'dob', { :value => @user.dob, :size => 20} %>
+    <%= text_field 'signchangedob', 'dob', { :value => @user.dob, :size => 20, :class => 'dob-datepicker' } %>
     </p>
 
     <p>
