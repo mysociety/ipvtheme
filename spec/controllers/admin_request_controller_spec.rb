@@ -5,7 +5,7 @@ describe AdminRequestController do
   describe 'POST generate_upload_url' do
 
     it 'creates a user for the authority with a dummy date of birth' do
-      user = FactoryGirl.create(:user, :dob => '2/2/2000')
+      user = FactoryGirl.create(:user)
       info_request = FactoryGirl.create(:info_request, :user => user)
       post :generate_upload_url, :id => info_request.id
       authority_user = User.where(:email => info_request.public_body.request_email).first
