@@ -1201,6 +1201,10 @@ dt {
     }
   }
 
+  #user_signup_address {
+    width: 100%;
+  }
+
   .sign-in-wrapper {
     @include respond-min( $main_menu-mobile_menu_cutoff ){
       margin-left: 1.5em;
@@ -1409,4 +1413,12 @@ dt {
     font-size: 1em;
     color: $color_black;
   }
+}
+
+/*
+ * Change Address Page
+ *
+ */
+#signchangeaddress_new_address {
+  width: 410px;
 }
