@@ -10,7 +10,7 @@
         <h2><%=_("Support us") %></h2>
         <div class="about__support__blurb">
           <p><%= _('Do you want freedom of information for all? Support us')%></p>
-          <a href="#" class="support-button"><%= _('Support')%></a>
+          <%= link_to _('Support'), AlaveteliConfiguration.donation_url, :class => 'support-button' %>
         </div>
       </div>
     </div>
