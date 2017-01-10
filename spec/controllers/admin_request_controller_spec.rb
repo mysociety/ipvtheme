@@ -8,8 +8,8 @@ describe AdminRequestController do
       user = FactoryGirl.create(:user, :dob => '2/2/2000')
       info_request = FactoryGirl.create(:info_request, :user => user)
       post :generate_upload_url, :id => info_request.id
-      user = User.where(:email => info_request.public_body.request_email).first
-      expect(user.dob).to eq(Date.new(1900, 1, 1 ))
+      authority_user = User.where(:email => info_request.public_body.request_email).first
+      expect(authority_user.dob).to eq(Date.new(1900, 1, 1 ))
     end
 
   end
