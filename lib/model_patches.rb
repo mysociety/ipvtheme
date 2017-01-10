@@ -7,6 +7,15 @@
 #
 Rails.configuration.to_prepare do
   User.class_eval do
+    validates :address, :presence => {
+      :message => _('You must enter an address.')
+    }
+
+    validates :address, :length => {
+      :maximum => 255,
+      :message => _('255 characters is the maximum allowed address length.')
+    }
+
     validate :validate_dob
     def validate_dob
       if !dob.is_a? Date
