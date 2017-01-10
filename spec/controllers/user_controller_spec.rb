@@ -49,6 +49,19 @@ describe UserController do
           expect(response).to redirect_to(expected_url)
         end
 
+        context 'when the address param is not valid' do
+
+          it "displays the address template" do
+            user = FactoryGirl.create(:user)
+            session[:user_id] = user.id
+            get :signchangeaddress, {:submitted_signchangeaddress_do => 1,
+                                     :signchangeaddress =>
+                                       { :new_address => 'a'*256 }}
+            expect(response).to render_template('signchangeaddress')
+          end
+
+        end
+
     end
 
   end

@@ -25,6 +25,7 @@ Rails.configuration.to_prepare do
         user = User.new(:name => name,
                         :email => email,
                         :password => PostRedirect.generate_random_token,
+                        :address => 'Generated in generate_upload_url',
                         :dob => '1/1/1900')
         user.save!
       end
@@ -94,11 +95,15 @@ Rails.configuration.to_prepare do
         return
       else
         logger.debug @user.address = params[:signchangeaddress][:new_address]
-        @user.save!
-
-        # Now clear the circumstance
-        flash[:notice] = _("You have now changed your address used on {{site_name}}",:site_name=>site_name)
-        redirect_to user_url(@user)
+        if not @user.valid?
+          @signchangeaddress = @user
+          render :action => 'signchangeaddress'
+        else
+          @user.save!
+          # Now clear the circumstance
+          flash[:notice] = _("You have now changed your address used on {{site_name}}",:site_name=>site_name)
+          redirect_to user_url(@user)
+        end
       end
     end
 
