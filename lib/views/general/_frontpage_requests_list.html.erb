@@ -33,7 +33,10 @@
         <div class="request-listing__request-body">
           <p><%= _('Ask your questions here.') %></p>
           <p><%= _('Write your query in English, the recipient is required to translate it.') %></p>
-          <a href="https://www.asktheeu.org"><%= image_tag "asktheEU-logo.png", :alt => "AskTheEU", :class => "request-listing__block--ask-the-eu__logo" %></a>
+          <p><%= link_to _('Ask The EU →'), 'http://asktheeu.org/?utm_source=infoprovsechny&utm_medium=banner&utm_content=homepage&utm_campaign=alaveteli-experiments-91' %></p>
+          <a href="http://asktheeu.org/?utm_source=infoprovsechny&utm_medium=banner&utm_content=homepage&utm_campaign=alaveteli-experiments-91">
+            <%= image_tag "asktheEU-logo.png", :alt => "AskTheEU", :class => "request-listing__block--ask-the-eu__logo" %>
+          </a>
         </div>
       </li>
   </ul>
