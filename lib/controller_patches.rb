@@ -7,10 +7,7 @@
 #
 Rails.configuration.to_prepare do
 
-
   AdminRequestController.class_eval do
-
-
 
     def generate_upload_url
 
@@ -134,9 +131,8 @@ Rails.configuration.to_prepare do
 
     # Add our extra params to the sanitized list allowed at signup
     def user_params(key = :user)
-      params[key].slice(:name, :email, :password, :password_confirmation, :dob, :address)
+      params.require(key).permit(:name, :email, :password, :password_confirmation, :dob, :address)
     end
-
 
   end
 
