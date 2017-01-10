@@ -4,7 +4,9 @@
     <div class="row">
       <div class="footer__about__partners">
         <h2><%=_("We work with") %></h2>
-        <%= image_tag 'otevrete.png', :alt => 'Otevřete.cz' %>
+        <%= link_to 'http://www.otevrete.cz/' do %>
+          <%= image_tag 'otevrete.png', :alt => 'Otevřete.cz' %>
+        <% end %>
       </div>
       <div class="footer__about__support">
         <h2><%=_("Support us") %></h2>
