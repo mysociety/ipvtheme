@@ -17,6 +17,9 @@ Rails.configuration.to_prepare do
     }
 
     validate :validate_dob
+
+    private
+
     def validate_dob
       if !dob.is_a? Date
         errors.add(:dob, _("DOB is not a valid date")) if ((DateTime.parse(dob) rescue ArgumentError) == ArgumentError)
