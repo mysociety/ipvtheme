@@ -18,6 +18,24 @@ Rails.configuration.to_prepare do
 
     validate :validate_dob
 
+    def self.internal_admin_user
+      user = User.find_by_email(AlaveteliConfiguration::contact_email)
+      if user.nil?
+        password = PostRedirect.generate_random_token
+        user = User.new(
+          :name => 'Internal admin user',
+          :email => AlaveteliConfiguration.contact_email,
+          :password => password,
+          :password_confirmation => password,
+          :address => 'Generated in User.internal_admin_user',
+          :dob => '1/1/1900'
+        )
+        user.save!
+      end
+
+      user
+    end
+
     private
 
     def validate_dob

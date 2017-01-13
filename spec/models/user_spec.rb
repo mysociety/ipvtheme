@@ -2,6 +2,21 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe User do
 
+  describe '.internal_admin_user' do
+
+    it "creates the internal admin user if it doesn't exist" do
+      described_class.destroy_all
+      expect(described_class.internal_admin_user).to be_persisted
+    end
+
+    it 'finds the internal admin user if it already exists' do
+      described_class.destroy_all
+      user = described_class.internal_admin_user
+      expect(described_class.internal_admin_user).to eq(user)
+    end
+
+  end
+
   describe :address do
 
     it 'requires address' do
