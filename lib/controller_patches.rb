@@ -50,6 +50,25 @@ Rails.configuration.to_prepare do
 
   RequestController.class_eval do
 
+    def make_request_zip(info_request, file_path)
+      Zip::ZipFile.open(file_path, Zip::ZipFile::CREATE) do |zipfile|
+        file_info = make_request_summary_file(info_request)
+        zipfile.get_output_stream(file_info[:filename]) { |f| f.puts(file_info[:data]) }
+        message_index = 0
+        info_request.incoming_messages.each do |message|
+          next unless message.user_can_view?(authenticated_user)
+          message_index += 1
+          message.get_attachments_for_display.each do |attachment|
+            filename = "#{message_index}_#{attachment.url_part_number}_#{attachment.display_filename}"
+            zipfile.get_output_stream(filename) do |f|
+              body = message.apply_masks(attachment.default_body, attachment.content_type)
+              f.puts(body)
+            end
+          end
+        end
+      end
+    end
+
     def authenticate_attachment
       # Test for hidden
       incoming_message = IncomingMessage.find(params[:incoming_message_id])
