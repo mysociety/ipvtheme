@@ -220,8 +220,8 @@ a.link_button_green_large {
 /* Popups */
 
 .popup {
-  background-color: desaturate(lighten($notice-color, 40%),10%);
-  border: 3px solid $notice-color;
+  background-color: desaturate(lighten($notice-color, 50%),50%);
+  border: 0;
 }
 
 
@@ -318,8 +318,8 @@ a.link_button_green_large {
 }
 
 #notice, #request_header_text {
-  background-color: desaturate(lighten($notice-color, 30%),10%);
-  border-color: $notice-color;
+  background-color: desaturate(lighten($notice-color, 50%),50%);
+  border-color: desaturate(lighten($notice-color, 50%),50%);
 }
 
 #error, .errorExplanation, #hidden_request, .warning {
@@ -818,31 +818,6 @@ a.link_to_this {
   */
 }
 
-/* Status lines and icons */
-.icon_waiting_classification,
-.icon_waiting_response,
-.icon_waiting_clarification,
-.icon_requires_admin,
-.icon_waiting_response_overdue,
-.icon_gone_postal,
-.icon_error_message,
-.icon_internal_review,
-.icon_user_withdrawn {
-  color: $status-pending;
-}
-
-.icon_attention_requested,
-.icon_not_held,
-.icon_waiting_response_very_overdue,
-.icon_failed,
-.icon_rejected {
-  color: $status-failure;
-}
-
-.icon_successful,
-.icon_partially_successful {
-  color: $status-success;
-}
 
 /* Attachments*/
 
