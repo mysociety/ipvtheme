@@ -1011,9 +1011,10 @@ dt {
 
 .homepage-how-it-works {
   border: 0;
-  padding: 1.5em 0;
+  padding: 1em 0;
+  margin-bottom: 0;
   @include respond-min( $main_menu-mobile_menu_cutoff ){
-    padding: 2.5em 0;
+    padding: 2em 0;
   }
 }
 
@@ -1094,15 +1095,16 @@ dt {
 .homepage-hero {
   background-color: $color_yellow;
   color: $color_blue;
-  padding: 2em 0 3em;
+  padding: 2em 0 2em;
   position: relative;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    padding: 3em 0 4em;
+    padding: 2.5em 0 3em;
   }
 
   h1 {
     font-size: 1.75em; //28px
+    margin-top: 0;
   }
 
   p {
