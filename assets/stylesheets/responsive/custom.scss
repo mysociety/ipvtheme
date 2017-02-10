@@ -294,6 +294,12 @@ a.link_button_green_large {
   }
 }
 
+/* Match the background color of the hero banner on the homepage */
+.front #navigation li.selected a{
+  @extend %selected-menu-item;
+  background-color: $color_yellow;
+}
+
 .greeting {
   color: $body-bg;
 }
