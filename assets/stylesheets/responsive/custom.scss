@@ -1135,6 +1135,17 @@ dt {
   }
 }
 
+input#reedit_button {
+  background-color: #ccc;
+  color: white;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #aaa
+  }
+}
+
 /* Sign-in/Sign-up page */
 
 #sign_together {
