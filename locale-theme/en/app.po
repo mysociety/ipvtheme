@@ -3,167 +3,90 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Hana Huntova <>, 2012.
-# Jana Kneschke <>, 2012.
-#   <josef.pospisil@laststar.eu>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: version 0.0.1\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-01 18:08+0000\n"
-"PO-Revision-Date: 2012-07-16 11:49+0000\n"
-"Last-Translator: sebbacon <seb.bacon@gmail.com>\n"
-"Language-Team: LANGUAGE <alaveteli-dev@googlegroups.com>\n"
-"Language: cs\n"
+"Project-Id-Version: alaveteli\n"
+"POT-Creation-Date: 2012-09-26 16:35+0100\n"
+"PO-Revision-Date: 2015-01-16 14:21+0000\n"
+"Last-Translator: louisecrow <louise@mysociety.org>\n"
+"Language-Team: English (http://www.transifex.com/mysociety/ipvtheme/language/en/)\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "- or -"
-msgstr ""
-
-msgid ""
-"<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
-msgstr ""
+msgid "<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
+msgstr "<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
 
 msgid "Address"
-msgstr "Adresa"
-
-msgid "Authority has transferred your request to a different public body."
-msgstr ""
+msgstr "Address"
 
 msgid "Change address on {{site_name}}"
-msgstr "Změnit adresu pro {{site_name}}"
+msgstr "Change address on {{site_name}}"
 
 msgid "Change dob on {{site_name}}"
-msgstr "Změnit datum narození pro {{site_name}}"
+msgstr "Change dob on {{site_name}}"
 
 msgid "Change your DOB"
-msgstr "Změňte svoje datum narození"
+msgstr "Change your DOB"
 
 msgid "Change your address"
-msgstr "Změňte svoji adresu"
+msgstr "Change your address"
 
 msgid "Change your address used on {{site_name}}"
-msgstr "Změňte adresu pro {{site_name}}"
+msgstr "Change your address used on {{site_name}}"
 
 msgid "Change your dob used on {{site_name}}"
-msgstr "Změňte datum narození pro {{site_name}}"
+msgstr "Change your dob used on {{site_name}}"
 
 msgid "DOB"
-msgstr "Datum narození"
+msgstr "DOB"
 
 msgid "DOB is not a valid date"
-msgstr ""
-
-msgid "Follow this authority"
-msgstr ""
-
-msgid ""
-"For an unknown reason, it is not possible to make a request to this "
-"authority."
-msgstr ""
-
-msgid "Freedom of information requests to"
-msgstr ""
+msgstr "DOB is not a valid date"
 
 msgid "Help pages"
-msgstr ""
-
-msgid ""
-"Make a new<br/>\\n  <strong>Freedom <span>of</span><br/>\\n  Information<br/>"
-"\\n  request</strong>"
-msgstr ""
-
-msgid "More requests..."
-msgstr ""
-
-msgid "More successful requests..."
-msgstr ""
+msgstr "Help pages"
 
 msgid "New address:"
-msgstr "Nová adresa:"
+msgstr "New address:"
 
 msgid "New dob:"
-msgstr "Nové datum narození:"
-
-msgid "Please sign in or make a new account."
-msgstr ""
-
-msgid ""
-"Remember me</label> (keeps you signed in longer; do not use on a public "
-"computer) "
-msgstr ""
-
-msgid "Search for words in:"
-msgstr ""
-
-msgid ""
-"Search within the {{count}} Freedom of Information requests to "
-"{{public_body_name}}"
-msgid_plural ""
-"Search within the {{count}} Freedom of Information requests made to "
-"{{public_body_name}}"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-msgid ""
-"The response to your request is <strong>long overdue</strong>.   You can say "
-"that, by\\n            law, under all circumstances, the authority should "
-"have responded\\n            by now"
-msgstr ""
+msgstr "New dob:"
 
 msgid "Then you can change your address used on {{site_name}}"
-msgstr ""
+msgstr "Then you can change your address used on {{site_name}}"
 
 msgid "Then you can change your dob used on {{site_name}}"
-msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
+msgstr "Then you can change your dob used on {{site_name}}"
 
 msgid "To change your address used on {{site_name}}"
-msgstr "Změňte adresu pro {{site_name}}"
+msgstr "To change your address used on {{site_name}}"
 
 msgid "To change your dob used on {{site_name}}"
-msgstr "Změňte datum narození pro {{site_name}}"
+msgstr "To change your dob used on {{site_name}}"
 
-msgid "Transferred."
-msgstr ""
+msgid "Today"
+msgstr "Today"
+
+msgid "Wk"
+msgstr "Wk"
 
 msgid "You have now changed your address used on {{site_name}}"
-msgstr "Právě jste změnili svou adresu na {{site_name}}"
+msgstr "You have now changed your address used on {{site_name}}"
 
 msgid "You have now changed your dob used on {{site_name}}"
-msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
+msgstr "You have now changed your dob used on {{site_name}}"
 
-msgid ""
-"Your DOB will also be sent to authorities when you make a request.  We will "
-"not reveal your DOB on the website."
-msgstr ""
+msgid "Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website."
+msgstr "Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website."
 
 msgid "Your DOB:"
-msgstr ""
+msgstr "Your DOB:"
 
-msgid ""
-"Your address will be sent to authorities when you make a request.  We will "
-"not reveal your address on the website."
-msgstr ""
+msgid "Your address will be sent to authorities when you make a request.  We will not reveal your address on the website."
+msgstr "Your address will be sent to authorities when you make a request.  We will not reveal your address on the website."
 
 msgid "Your address:"
-msgstr ""
-
-msgid "{{count}} Freedom of Information request to {{public_body_name}}"
-msgid_plural ""
-"{{count}} Freedom of Information requests to {{public_body_name}}"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-msgid "{{count}} person is following this authority"
-msgid_plural "{{count}} people are following this authority"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-msgid "{{reason}}, please sign in or make a new account."
-msgstr ""
+msgstr "Your address:"
