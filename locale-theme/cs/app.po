@@ -6,13 +6,16 @@
 # Jiří Vírava <appukonrad@gmail.com>, 2012
 # Hana Huntova <>, 2012
 # Jana Kneschke <>, 2012
+# Jiří Vírava <appukonrad@gmail.com>, 2012
+# josefpospisil <josef.pospisil@laststar.eu>, 2012
 # josefpospisil <josef.pospisil@laststar.eu>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
-"POT-Creation-Date: 2012-09-26 16:35+0100\n"
-"PO-Revision-Date: 2015-01-16 14:28+0000\n"
-"Last-Translator: louisecrow <louise@mysociety.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-21 15:05+0000\n"
+"PO-Revision-Date: 2017-02-21 15:05+0000\n"
+"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
 "Language-Team: Czech (http://www.transifex.com/mysociety/ipvtheme/language/cs/)\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -20,17 +23,56 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
+msgid "(You will be asked to sign in as {{user_name}})"
+msgstr ""
+
+msgid "1. Choose the institution your request is for"
+msgstr ""
+
+msgid "2. Enter your request into our form"
+msgstr ""
+
+msgid "255 characters is the maximum allowed address length."
+msgstr ""
+
+msgid "3. Send your request and await a response"
+msgstr ""
+
+msgid "4. We'll notify you of a response, and you can read it here"
+msgstr ""
+
 msgid "<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
 msgstr "<strong>Další informace</strong> z nápovědy pro <a href=\"%s\">FOI úředníky</a>"
 
 msgid "Address"
 msgstr "Adresa"
 
+msgid "Ask The EU →"
+msgstr ""
+
+msgid "Ask a question"
+msgstr ""
+
+msgid "Ask your questions here."
+msgstr ""
+
+msgid "Browse all requests &rarr;"
+msgstr ""
+
+msgid "Browse more than {{number_of_requests}} questions and {{number_of_authorities}} authorities in our directory"
+msgstr ""
+
+msgid "Browse requests"
+msgstr ""
+
 msgid "Change address on {{site_name}}"
 msgstr "Změnit adresu pro {{site_name}}"
 
 msgid "Change dob on {{site_name}}"
 msgstr "Změnit datum narození pro {{site_name}}"
+
+msgid "Change profile photo"
+msgstr ""
 
 msgid "Change your DOB"
 msgstr "Změňte svoje datum narození"
@@ -44,14 +86,86 @@ msgstr "Změňte adresu pro {{site_name}}"
 msgid "Change your dob used on {{site_name}}"
 msgstr "Změňte datum narození pro {{site_name}}"
 
+msgid "Change your email"
+msgstr ""
+
+msgid "Change your password"
+msgstr ""
+
+msgid "Confirm password:"
+msgstr ""
+
+msgid "Contact us"
+msgstr ""
+
+msgid "Create a new account"
+msgstr ""
+
 msgid "DOB"
 msgstr "Datum narození"
 
 msgid "DOB is not a valid date"
 msgstr "Datum narození, není platné datum"
 
+msgid "Do you have questions for EU authorities?"
+msgstr ""
+
+msgid "Do you have questions for state institutions?"
+msgstr ""
+
+msgid "Do you want freedom of information for all? Support us"
+msgstr ""
+
+msgid "Don't have a superuser account yet?"
+msgstr ""
+
+msgid "Don't want to address your message to {{person_or_body}}?  You can also write to:"
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Download original attachment"
+msgstr ""
+
+msgid "Edit and add <strong>more details</strong> to the message above, explaining why you are dissatisfied with their response."
+msgstr ""
+
+#. "Follow ups" in this context means further
+#. messages sent by the requester to the authority after
+#. the initial request
+msgid "Follow ups and new responses to this request have been stopped to prevent spam. Please <a href=\"{{url}}\">contact us</a> if you are {{user_link}} and need to send a follow up."
+msgstr ""
+
+msgid "Forgotten your password?"
+msgstr ""
+
+msgid "Got an account?"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
 msgid "Help pages"
 msgstr "Stránky nápovědy"
+
+msgid "Home"
+msgstr ""
+
+msgid "If you are dissatisfied by the response you got from the public authority, you have the right to complain (<a href=\"{{url}}\">details</a>)."
+msgstr ""
+
+msgid "Improve your account security"
+msgstr ""
+
+msgid "Institute"
+msgstr ""
+
+msgid "Make a request"
+msgstr ""
+
+msgid "Make and browse Freedom of Information (FOI) requests"
+msgstr ""
 
 msgid "New address:"
 msgstr "Nová adresa:"
@@ -59,11 +173,86 @@ msgstr "Nová adresa:"
 msgid "New dob:"
 msgstr "Nové datum narození:"
 
+msgid "Next"
+msgstr ""
+
+msgid "Password:"
+msgstr ""
+
+msgid "Please <strong>only</strong> write messages directly relating to your request {{request_link}}. If you would like to ask for information that was not in your original request, then <a href=\"{{new_request_link}}\">file a new request</a>."
+msgstr ""
+
+msgid "Please create an account or sign in"
+msgstr ""
+
+msgid "Please sign in as {{user_name}}"
+msgstr ""
+
+msgid "Prev"
+msgstr ""
+
+msgid "Preview your message"
+msgstr ""
+
+msgid "Read blog"
+msgstr ""
+
+msgid "Remember me (keeps you signed in longer; do not use on a public computer)"
+msgstr ""
+
+msgid "Request an internal review from {{person_or_body}}"
+msgstr ""
+
+msgid "Request regarding"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Send a public follow up message to {{person_or_body}}"
+msgstr ""
+
+msgid "Send a public reply to {{person_or_body}}"
+msgstr ""
+
+msgid "Sending..."
+msgstr ""
+
+msgid "Sign in"
+msgstr ""
+
+msgid "Sign in as the emergency user"
+msgstr ""
+
+msgid "Sign in or make a new account"
+msgstr ""
+
+msgid "Sign up"
+msgstr ""
+
+msgid "Submit Search"
+msgstr ""
+
+msgid "Support"
+msgstr ""
+
+msgid "Support us"
+msgstr ""
+
+msgid "The response to your request has been <strong>delayed</strong>. You can say that, by law, the authority should normally have responded <strong>promptly</strong> and by <strong>{{date}}</strong>"
+msgstr ""
+
+msgid "The response to your request is <strong>long overdue</strong>. You can say that, by law, under all circumstances, the authority should have responded by now"
+msgstr ""
+
 msgid "Then you can change your address used on {{site_name}}"
 msgstr "Poté můžete změnit vaši adresu použitou na {{site_name}}"
 
 msgid "Then you can change your dob used on {{site_name}}"
 msgstr "Poté můžete změnit své datum narození používané na {{site_name}}"
+
+msgid "This is an HTML version of an attachment to the Freedom of Information request"
+msgstr ""
 
 msgid "To change your address used on {{site_name}}"
 msgstr "Chcete-li změnit vaši adresu použitou na {{site_name}}"
@@ -74,14 +263,38 @@ msgstr "Chcete-li změnit vaše datum narození použité na {{site_name}}"
 msgid "Today"
 msgstr "Dnes"
 
+msgid "Use our form to enact Act no. 106/1999 Coll. By law every institution is obliged to respond."
+msgstr ""
+
+msgid "View authorities"
+msgstr ""
+
+msgid "View your two factor authentication one time passcode"
+msgstr ""
+
+msgid "We will not reveal your email address to anybody unless <a href=\"{{url}}\">you or the law tell us to</a>."
+msgstr ""
+
+msgid "We work with"
+msgstr ""
+
 msgid "Wk"
 msgstr "Týden"
+
+msgid "Write your query in English, the recipient is required to translate it."
+msgstr ""
 
 msgid "You have now changed your address used on {{site_name}}"
 msgstr "Právě jste změnili svou adresu na {{site_name}}"
 
 msgid "You have now changed your dob used on {{site_name}}"
 msgstr "Právě jste změnili svůj datum narození pro {{site_name}}"
+
+msgid "You must enter an address."
+msgstr ""
+
+msgid "Your <strong>name will appear publicly</strong> (<a href=\"{{why_url}}\">why?</a>) on this website and in search engines. <a href=\"{{help_url}}\">Thinking of using a pseudonym?</a>"
+msgstr ""
 
 msgid "Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website."
 msgstr "Váš datum narození bude také zasláno orgánům při podání žádosti. Nebudeme však odhalovat vaše datum narození na webových stránkách."
@@ -94,3 +307,50 @@ msgstr "Vaše adresa bude zaslána orgánům při podání žádosti. Nebudeme v
 
 msgid "Your address:"
 msgstr "Vaše adresa:"
+
+msgid "Your e-mail:"
+msgstr ""
+
+msgid "Your name:"
+msgstr ""
+
+msgid "details"
+msgstr ""
+
+msgid "edit text about you"
+msgstr ""
+
+msgid "internal error"
+msgstr ""
+
+msgid "the main FOI contact address for {{public_body}}"
+msgstr ""
+
+#. This phrase completes the following sentences:
+#. Request an internal review from...
+#. Send a public follow up message to...
+#. Send a public reply to...
+#. Don't want to address your message to... ?
+msgid "the main FOI contact at {{public_body}}"
+msgstr ""
+
+msgid "type your search term here"
+msgstr ""
+
+msgid "unknown status "
+msgstr ""
+
+msgid "{{count}} Attachment"
+msgid_plural "{{count}} Attachments"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "{{public_body_link}}"
+msgstr ""
+
+msgid "{{reason}}, create an account or sign in"
+msgstr ""
+
+msgid "{{reason}}, please sign in as {{user_name}}."
+msgstr ""
