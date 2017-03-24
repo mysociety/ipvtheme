@@ -136,6 +136,7 @@ input.use-datepicker[type=text] {
   display: inline-block;
   font-weight: 600;
   text-decoration: none;
+  text-transform: uppercase;
   transition: background-color 300ms ease-out;
   margin-bottom: 0;
   font-family: $font-family;
