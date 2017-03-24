@@ -24,7 +24,9 @@
           <li>
             <div class="steps__step-box">
               <%= image_tag "step4.png", :alt => "", :class => "steps__step-icon" %>
-              <p><%= _("4. We'll notify you of a response, and you can read it here") %></p>
+              <p><%= _("4. We'll notify you of a response, and you can " \
+                       "<a href=\"{{url}}\">read it here</a>",
+                       :url => request_list_successful_path) %></p>
             </div>
           </li>
         </ol>
