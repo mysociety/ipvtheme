@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-21 15:05+0000\n"
-"PO-Revision-Date: 2017-03-15 20:33+0000\n"
+"PO-Revision-Date: 2017-03-23 20:36+0000\n"
 "Last-Translator: Hana Hunt <hana@hana-hunt.cz>\n"
 "Language-Team: Czech (http://www.transifex.com/mysociety/ipvtheme/language/cs/)\n"
 "Language: cs\n"
@@ -49,7 +49,9 @@ msgid "Address"
 msgstr "Adresa"
 
 msgid "Ask The EU →"
-msgstr "Zeptejte se institucí Evropské Unie"
+msgstr ""
+"Zeptejte se institucí \n"
+"Evropské Unie"
 
 msgid "Ask a question"
 msgstr "Vzneste dotaz"
@@ -190,7 +192,7 @@ msgid "Please sign in as {{user_name}}"
 msgstr "Prosím přihlašte se jako {{user_name}}"
 
 msgid "Prev"
-msgstr ""
+msgstr "Prev"
 
 msgid "Preview your message"
 msgstr "Náhled vašeho dotazu"
@@ -232,10 +234,10 @@ msgid "Sign up"
 msgstr "Registrujte se"
 
 msgid "Submit Search"
-msgstr ""
+msgstr "Hledejte"
 
 msgid "Support"
-msgstr "Podpora"
+msgstr "Podpořit"
 
 msgid "Support us"
 msgstr "Podpořte nás"
@@ -265,7 +267,10 @@ msgid "Today"
 msgstr "Dnes"
 
 msgid "Use our form to enact Act no. 106/1999 Coll. By law every institution is obliged to respond."
-msgstr "Využijte náš formulář a podle Zákona o svobodném přístupu k informacím č. 106/1999 Sb. vám bude každá státní instituce povinna odpovědět."
+msgstr ""
+"Využijte náš formulář a podle Zákona o svobodném přístupu \n"
+"k informacím č. 106/1999 Sb. vám bude každá státní instituce \n"
+"povinna odpovědět."
 
 msgid "View authorities"
 msgstr "Instituce"
@@ -283,7 +288,7 @@ msgid "Wk"
 msgstr "Týden"
 
 msgid "Write your query in English, the recipient is required to translate it."
-msgstr "Napište svůj dotaz v češtině, příjemce je povinnen si ji přeložit. "
+msgstr "Napište svůj dotaz v češtině, příjemce je povinnen si jej přeložit. "
 
 msgid "You have now changed your address used on {{site_name}}"
 msgstr "Právě jste změnili svou adresu na {{site_name}}"
@@ -298,13 +303,13 @@ msgid "Your <strong>name will appear publicly</strong> (<a href=\"{{why_url}}\">
 msgstr "Vaše <strong>jméno bude zveřejněno</strong> (<a href=\"{{why_url}}\">proč?</a>) na těchto stránkách a ve vyhledávačích. <a href=\"{{help_url}}\">Zvažujete použití přezdívky?</a>"
 
 msgid "Your DOB will also be sent to authorities when you make a request.  We will not reveal your DOB on the website."
-msgstr "Váš datum narození bude také zasláno orgánům při podání žádosti. Nebudeme však odhalovat vaše datum narození na webových stránkách."
+msgstr "Vaše datum narození bude při podání žádosti odesláno příslušné instituci. Datum se však neobjeví při uveřejnění dotazu na našich stránkách. "
 
 msgid "Your DOB:"
 msgstr "Vaše datum narození:"
 
 msgid "Your address will be sent to authorities when you make a request.  We will not reveal your address on the website."
-msgstr "Vaše adresa bude zaslána orgánům při podání žádosti. Nebudeme však odhalovat vaši adresu na webových stránkách."
+msgstr "Vaše adresa bude při podání žádosti odeslána příslušné instituci.  Adresa se však neobjeví při uveřejnění dotazu na našich stránkách. "
 
 msgid "Your address:"
 msgstr "Vaše adresa:"
@@ -336,7 +341,7 @@ msgid "the main FOI contact at {{public_body}}"
 msgstr "Hlavní kontakt pro {{public_body}}"
 
 msgid "type your search term here"
-msgstr ""
+msgstr "napište hledaný výraz"
 
 msgid "unknown status "
 msgstr "neznámý stav dotazu"
