@@ -235,6 +235,12 @@ a.link_button_green_large {
   background-color: $color_blue;
 }
 
+#banner .banner_site-title {
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    padding-left: 0;
+  }
+}
+
 .site-title__logo {
   // Smaller logo on mobiles
   width: ($logo-width / 2);
