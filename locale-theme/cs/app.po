@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 15:05+0000\n"
-"PO-Revision-Date: 2017-03-23 20:36+0000\n"
-"Last-Translator: Hana Hunt <hana@hana-hunt.cz>\n"
+"POT-Creation-Date: 2017-03-24 13:44+0000\n"
+"PO-Revision-Date: 2017-03-24 13:46+0000\n"
+"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
 "Language-Team: Czech (http://www.transifex.com/mysociety/ipvtheme/language/cs/)\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -39,11 +39,17 @@ msgstr "Maximální možná délka adresy je 255 znaků. "
 msgid "3. Send your request and await a response"
 msgstr "3. Odešlete dotaz a počkejte na odpověď"
 
-msgid "4. We'll notify you of a response, and you can read it here"
-msgstr "4. Na reakci vás upozorníme e-mailem a můžete ji vidět zde"
+msgid "4. We'll notify you of a response, and you can <a href=\"{{url}}\">read it here</a>"
+msgstr ""
 
 msgid "<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
 msgstr "<strong>Další informace</strong> v nápovědě <a href=\"%s\">pro odpovídající instituce</a>"
+
+msgid "Actions"
+msgstr ""
+
+msgid "Add an annotation"
+msgstr ""
 
 msgid "Address"
 msgstr "Adresa"
@@ -128,6 +134,9 @@ msgstr "Pokud nechcete svou zprávu odeslat {{person_or_body}}, je možné ji ta
 msgid "Done"
 msgstr "Hotovo"
 
+msgid "Download a zip file of all correspondence"
+msgstr ""
+
 msgid "Download original attachment"
 msgstr "Stáhněte původní přílohy"
 
@@ -203,14 +212,26 @@ msgstr "Číst blog"
 msgid "Remember me (keeps you signed in longer; do not use on a public computer)"
 msgstr "Zapamatuj si mne (zůstanete přihlášení; nepoužívejte na počítačích s veřejným přístupem)"
 
+msgid "Report this request"
+msgstr ""
+
+msgid "Request an internal review"
+msgstr ""
+
 msgid "Request an internal review from {{person_or_body}}"
 msgstr "Požádejte o vnitřní přezkum od {{person_or_body}}"
 
 msgid "Request regarding"
 msgstr "Předmět žádosti"
 
+msgid "Respond to request"
+msgstr ""
+
 msgid "Search"
 msgstr "Hledejte"
+
+msgid "Send a followup"
+msgstr ""
 
 msgid "Send a public follow up message to {{person_or_body}}"
 msgstr "Pošlete veřejnou odpověď pro {{person_or_body}}"
@@ -266,6 +287,12 @@ msgstr "Chcete-li změnit vaše datum narození použité na {{site_name}}"
 msgid "Today"
 msgstr "Dnes"
 
+msgid "Unavailable"
+msgstr ""
+
+msgid "Update the status of this request"
+msgstr ""
+
 msgid "Use our form to enact Act no. 106/1999 Coll. By law every institution is obliged to respond."
 msgstr ""
 "Využijte náš formulář a podle Zákona o svobodném přístupu \n"
@@ -274,6 +301,9 @@ msgstr ""
 
 msgid "View authorities"
 msgstr "Instituce"
+
+msgid "View event history details"
+msgstr ""
 
 msgid "View your two factor authentication one time passcode"
 msgstr "Zobrazte si své dvoufaktorové ověřovací heslo"
@@ -286,6 +316,9 @@ msgstr "Spolupracujeme s:"
 
 msgid "Wk"
 msgstr "Týden"
+
+msgid "Write a reply"
+msgstr ""
 
 msgid "Write your query in English, the recipient is required to translate it."
 msgstr "Napište svůj dotaz v češtině, příjemce je povinnen si jej přeložit. "
@@ -352,8 +385,14 @@ msgstr[0] "{{count}} příloha"
 msgstr[1] "{{count}} přílohy"
 msgstr[2] "{{count}} příloh"
 
+msgid "{{info_request_user_name}}"
+msgstr ""
+
 msgid "{{public_body_link}}"
 msgstr "{{public_body_link}}"
+
+msgid "{{public_body_name}}"
+msgstr ""
 
 msgid "{{reason}}, create an account or sign in"
 msgstr "{{reason}}, registrujte se nebo přihlašte se"

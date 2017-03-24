@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 15:05+0000\n"
+"POT-Creation-Date: 2017-03-24 13:44+0000\n"
 "PO-Revision-Date: 2011-10-09 01:10+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,10 +31,16 @@ msgstr ""
 msgid "3. Send your request and await a response"
 msgstr ""
 
-msgid "4. We'll notify you of a response, and you can read it here"
+msgid "4. We'll notify you of a response, and you can <a href=\"{{url}}\">read it here</a>"
 msgstr ""
 
 msgid "<strong>Learn more</strong> from the help for <a href=\"%s\">FOI officers</a>"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Add an annotation"
 msgstr ""
 
 msgid "Address"
@@ -118,6 +124,9 @@ msgstr ""
 msgid "Done"
 msgstr ""
 
+msgid "Download a zip file of all correspondence"
+msgstr ""
+
 msgid "Download original attachment"
 msgstr ""
 
@@ -193,13 +202,25 @@ msgstr ""
 msgid "Remember me (keeps you signed in longer; do not use on a public computer)"
 msgstr ""
 
+msgid "Report this request"
+msgstr ""
+
+msgid "Request an internal review"
+msgstr ""
+
 msgid "Request an internal review from {{person_or_body}}"
 msgstr ""
 
 msgid "Request regarding"
 msgstr ""
 
+msgid "Respond to request"
+msgstr ""
+
 msgid "Search"
+msgstr ""
+
+msgid "Send a followup"
 msgstr ""
 
 msgid "Send a public follow up message to {{person_or_body}}"
@@ -256,10 +277,19 @@ msgstr ""
 msgid "Today"
 msgstr ""
 
+msgid "Unavailable"
+msgstr ""
+
+msgid "Update the status of this request"
+msgstr ""
+
 msgid "Use our form to enact Act no. 106/1999 Coll. By law every institution is obliged to respond."
 msgstr ""
 
 msgid "View authorities"
+msgstr ""
+
+msgid "View event history details"
 msgstr ""
 
 msgid "View your two factor authentication one time passcode"
@@ -272,6 +302,9 @@ msgid "We work with"
 msgstr ""
 
 msgid "Wk"
+msgstr ""
+
+msgid "Write a reply"
 msgstr ""
 
 msgid "Write your query in English, the recipient is required to translate it."
@@ -338,7 +371,13 @@ msgid_plural "{{count}} Attachments"
 msgstr[0] ""
 msgstr[1] ""
 
+msgid "{{info_request_user_name}}"
+msgstr ""
+
 msgid "{{public_body_link}}"
+msgstr ""
+
+msgid "{{public_body_name}}"
 msgstr ""
 
 msgid "{{reason}}, create an account or sign in"
