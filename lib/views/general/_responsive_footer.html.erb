@@ -31,7 +31,7 @@
           <% end %>
           <% unless AlaveteliConfiguration::facebook_username.blank? %>
           <li>
-            <a href="https://facebook.com/<%= AlaveteliConfiguration::facebook_username %>" class="social-link social-link--facebook" onclick="<%= track_analytics_event(AnalyticsEvent::Category::OUTBOUND, AnalyticsEvent::Action::FACEBOOK_EXIT, :label => "Footer link")%>">/<%= AlaveteliConfiguration::facebook_username %></a>
+            <a href="https://facebook.com/<%= AlaveteliConfiguration::facebook_username %>" class="social-link social-link--facebook" onclick="<%= track_analytics_event(AnalyticsEvent::Category::OUTBOUND, AnalyticsEvent::Action::FACEBOOK_EXIT, :label => "Footer link")%>">/<%= AlaveteliConfiguration.site_name %></a>
           </li>
           <% end %>
         </ul>
