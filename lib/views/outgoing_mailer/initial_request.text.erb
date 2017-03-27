@@ -12,7 +12,7 @@ Povinný subjekt:
 <%= @outgoing_message.info_request.user.address.gsub(/^/, "# Adresa: ") %>
 ===================================================================
 
-<%= @outgoing_message.body.strip %>
+<%= raw @outgoing_message.body.strip %>
 
 Informaci poskytněte elektronicky na email: <%= @outgoing_message.info_request.incoming_email %>
 
@@ -25,7 +25,7 @@ S ohledem na to, že Vaše odpověď a poskytnuté informace budou automaticky z
 
 Datum podání:
 
-<%= simple_date(Time.now) %>
+<%= simple_date(Time.now, :format => :text) %>
 -------------------------------------------------------------------
 
 <%= render :partial => 'followup_footer' %>

@@ -1,0 +1,36 @@
+<div class="homepage-how-it-works" id="learn-more">
+  <div class="row">
+    <div class="homepage-how-it-works__hiw-content">
+      <div class="hiw-content__steps">
+        <ol class="steps__list row">
+          <li>
+            <div class="steps__step-box">
+              <%= image_tag "step1.png", :alt => "", :class => "steps__step-icon" %>
+              <p><%= _("1. Choose the institution your request is for") %></p>
+            </div>
+          </li>
+          <li>
+            <div class="steps__step-box">
+              <%= image_tag "step2.png", :alt => "", :class => "steps__step-icon" %>
+              <p><%= _("2. Enter your request into our form") %></p>
+            </div>
+          </li>
+          <li>
+            <div class="steps__step-box">
+              <%= image_tag "step3.png", :alt => "", :class => "steps__step-icon" %>
+              <p><%= _("3. Send your request and await a response") %></p>
+            </div>
+          </li>
+          <li>
+            <div class="steps__step-box">
+              <%= image_tag "step4.png", :alt => "", :class => "steps__step-icon" %>
+              <p><%= _("4. We'll notify you of a response, and you can " \
+                       "<a href=\"{{url}}\">read it here</a>",
+                       :url => request_list_successful_path) %></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

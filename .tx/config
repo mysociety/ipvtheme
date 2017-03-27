@@ -1,0 +1,9 @@
+[main]
+file_filter = locale-theme/<lang>/app.po
+host = https://www.transifex.com
+
+[ipvtheme.ipvtheme]
+file_filter = locale-theme/<lang>/app.po
+source_lang = en
+source_file = locale-theme/app.pot
+type = PO

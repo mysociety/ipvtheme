@@ -12,7 +12,7 @@ describe UserController do
     end
 
     it "displays the address template" do
-      user = FactoryGirl.create(:user, :dob => '2/2/2000')
+      user = FactoryGirl.create(:user)
       session[:user_id] = user.id
       get :signchangeaddress
       expect(response).to render_template('signchangeaddress')
@@ -21,7 +21,7 @@ describe UserController do
     context 'when supplied with the  "submitted_signchangeaddress_do" param' do
 
         it "sets the user's address" do
-          user = FactoryGirl.create(:user, :dob => '2/2/2000')
+          user = FactoryGirl.create(:user)
           session[:user_id] = user.id
           get :signchangeaddress, {:submitted_signchangeaddress_do => 1,
                                    :signchangeaddress =>
@@ -30,7 +30,7 @@ describe UserController do
         end
 
         it 'shows a notice' do
-          user = FactoryGirl.create(:user, :dob => '2/2/2000')
+          user = FactoryGirl.create(:user)
           session[:user_id] = user.id
           get :signchangeaddress, {:submitted_signchangeaddress_do => 1,
                                    :signchangeaddress =>
@@ -40,13 +40,26 @@ describe UserController do
         end
 
         it "redirects to the user's page" do
-          user = FactoryGirl.create(:user, :dob => '2/2/2000')
+          user = FactoryGirl.create(:user)
           session[:user_id] = user.id
           get :signchangeaddress, {:submitted_signchangeaddress_do => 1,
                                    :signchangeaddress =>
                                       {:new_address => 'some address' }}
           expected_url = show_user_path(:url_name => user.url_name)
           expect(response).to redirect_to(expected_url)
+        end
+
+        context 'when the address param is not valid' do
+
+          it "displays the address template" do
+            user = FactoryGirl.create(:user)
+            session[:user_id] = user.id
+            get :signchangeaddress, {:submitted_signchangeaddress_do => 1,
+                                     :signchangeaddress =>
+                                       { :new_address => 'a'*256 }}
+            expect(response).to render_template('signchangeaddress')
+          end
+
         end
 
     end
@@ -57,14 +70,13 @@ describe UserController do
 
     render_views
 
-
     it "redirects an anonymous request to the signin page" do
       get :signchangedob
       expect(response).to redirect_to(signin_path(:token => PostRedirect.last.token))
     end
 
     it "displays the dob template" do
-      user = FactoryGirl.create(:user, :dob => '2/2/2000')
+      user = FactoryGirl.create(:user)
       session[:user_id] = user.id
       get :signchangedob
       expect(response).to render_template('signchangedob')
@@ -106,7 +118,6 @@ describe UserController do
         end
 
         context 'when the dob param is not valid' do
-
 
           it "displays the dob template" do
             user = FactoryGirl.create(:user, :dob => '2/2/2000')

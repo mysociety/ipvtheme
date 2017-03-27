@@ -6,7 +6,7 @@ describe RequestController do
 
     it "returns RecordNotFound if the message body contains the
         requester's details" do
-        user = FactoryGirl.create(:user, :dob => '2/2/2000')
+        user = FactoryGirl.create(:user)
         info_request = FactoryGirl.create(:info_request, :user => user)
         incoming_message = FactoryGirl.create(:incoming_message_with_html_attachment,
                                               :info_request => info_request)

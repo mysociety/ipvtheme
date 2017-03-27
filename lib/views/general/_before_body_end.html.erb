@@ -1,0 +1,29 @@
+<script>
+  jQuery('#user_locale_switcher').find('.locale-list-trigger').each(function() {
+    jQuery(this).click(function(){
+      jQuery(this).parent().toggleClass('active');
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  $(function() {
+     $(".dob-datepicker").datepicker(
+            {changeMonth: true,
+             changeYear: true,
+             yearRange: "1900:2010",
+             closeText: '<%= _("Done") %>',
+             prevText: '<%= _("Prev") %>',
+             nextText: '<%= _("Next") %>',
+             currentText: '<%= _("Today") %>',
+             monthNames: <%= raw I18n.translate('date.month_names')[1..-1].to_json %>,
+             monthNamesShort: <%= raw I18n.translate('date.abbr_month_names')[1..-1].to_json %>,
+             dayNames: <%= raw I18n.translate('date.day_names').to_json %>,
+             dayNamesShort: <%= raw I18n.translate('date.abbr_day_names').to_json %>,
+             dayNamesMin: <%= raw I18n.translate('date.abbr_day_names').collect{|x| x[0..0]}.to_json %>,
+             weekHeader: '<%= _("Wk") %>',
+             dateFormat: '<%= raw I18n.translate('date.formats.default').sub("%Y", "yy").sub("%m", "mm").sub("%d", "dd").gsub("-", "/") %>'}
+  );
+  });
+</script>
+
