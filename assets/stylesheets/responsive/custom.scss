@@ -1,0 +1,1481 @@
+$color_sand: #f4f4f4;
+$color_black: #333333;
+$color_orange: #F3A224;
+$color_blue: #11457E;
+$color_blue_dark: darken($color_blue, 5%);
+$color_green: #2B9E00;
+$color_yellow: #FFFDE8;
+$color_red: #EC1C23;
+$color_white: #ffffff;
+
+$color_neutral_light: $color_white;
+$color_neutral_dark: $color_black;
+$color_primary: $color_blue_dark;
+$color_secondary: $color_red;
+
+$body-bg: $color_neutral_light;
+
+$body-font-color: $color_neutral_dark;
+$link-color: $color_blue;
+$font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$form_input-bg: $color_white;
+
+$button-bg: $color_red;
+$button-color: $color_white;
+
+$status-success: $color_green;
+$status-failure: $color_red;
+$status-pending: $color_orange;
+
+$notice-color: $color_green;
+$error-color: $color_red;
+$action-color: $color_orange;
+
+/* Mixin styles */
+
+/* Hide text when it's replaced by an image */
+.image-replacement {
+  overflow: hidden;
+  text-indent: 150%;
+  white-space: nowrap;
+}
+
+/* General styling of nav menu items */
+%menu-item {
+  text-decoration: none;
+  color: transparentize($color_white, 0.2);
+  @include ie8 {
+    color: $color_white;
+  }
+  transition: background-color 0.5s ease-out;
+  &:hover{
+    background-color: darken($color_primary, 15%);
+    color: $color_white;
+  }
+
+}
+
+/* Selected menu item */
+%selected-menu-item {
+  font-weight: bold;
+  color: $color_primary;
+  background-color: $color_neutral_light;
+  &:hover{
+      background-color: $color_neutral_light;
+  }
+}
+
+/* General styles */
+body{
+  background-color: $body-bg;
+  color: $body-font-color;
+}
+
+.entirebody {
+  font-family: $font-family;
+}
+
+a {
+  &:link,
+  &:visited {
+    color: $link-color;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken($link-color, 10%);
+  }
+}
+
+/* Let h1s be a little smaller on small screens */
+@media( max-width: $main_menu-mobile_menu_cutoff ){
+  h1 {
+    font-size: 2em;
+  }
+}
+
+h1,h2, h3 {
+  color: $color_blue_dark;
+}
+
+h2 {
+  font-size: 1.75em;
+  font-weight: bold;
+}
+
+/* Square corners for text type inputs */
+form input[type="text"],
+form input[type="password"],
+form input[type="search"],
+form input[type="email"],
+form input[type="url"],
+form input[type="tel"],
+form input[type="number"] {
+    border-radius: 0;
+    background-color: $form_input-bg;
+    /* Set a fixed height for text inputs in older IE 8 */
+    @include ie8{
+        height: 2.3125em;
+    }
+    /* Do the same in px for IE < 7 */
+    @include lte-ie7{
+        height: 22px;
+    }
+}
+
+input.use-datepicker[type=text] {
+  width: 130px;
+  background:image-url('calendar.png') no-repeat 100px 5px $form_input-bg;
+}
+
+/* Button styles */
+
+@mixin button-base($size: normal, $disabled: false) {
+  padding: 0.5em 1.25em;
+  border-radius: 0;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 300ms ease-out;
+  margin-bottom: 0;
+  font-family: $font-family;
+  @if $size == large {
+    font-size: 2.2em;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    transition: background-color 300ms ease-out;
+  }
+  @if $disabled {
+    opacity: 0.333;
+    transition: none;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: inherit;
+      color: inherit;
+      cursor: default;
+      transition: none;
+    }
+  }
+}
+
+@mixin button-primary($args...) {
+  @include button-base($args...);
+  color: $color_white;
+  background-color: $button-bg;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited:hover,
+  &:visited:active,
+  &:visited:focus {
+    background-color: darken($button-bg, 10%);
+    color: $color_white;
+    text-decoration: none;
+  }
+}
+
+@mixin button-secondary($args...) {
+  @include button-base($args...);
+  background-color: desaturate(darken($color_sand, 10%), 5%);
+  color: $color_black !important; //beat the specificity of the old a.link_button_green
+  font-weight: normal;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color_black;
+    background-color: desaturate(darken($color_sand, 20%), 5%);
+  }
+}
+
+@mixin button-tertiary($args...) {
+  @include button-base($args...);
+  background-color: desaturate(darken($color_sand, 5%), 5%);;
+  color: $color_black;
+  font-weight: normal;
+  border: 1px solid desaturate(darken($color_sand, 15%),5%);
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($color_sand, 7.5%);
+    border: 1px solid desaturate(darken($color_sand, 25%),5%);
+  }
+}
+
+form input[type=submit], a.link_button_green, a.link_button_green_large {
+  @include button-primary;
+  text-decoration: none;
+}
+
+a.link_button_green_large {
+  @include button-primary($size: large);
+}
+
+/* Popups */
+
+.popup {
+  background-color: desaturate(lighten($notice-color, 50%),50%);
+  border: 0;
+}
+
+
+/* Header */
+
+#banner_inner {
+  background-color: $color_blue;
+}
+
+#topnav {
+  background-color: $color_blue;
+}
+
+#banner .banner_site-title {
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    padding-left: 0;
+  }
+}
+
+.site-title__logo {
+  // Smaller logo on mobiles
+  width: ($logo-width / 2);
+  height: ($logo-height / 2);
+  background-size: ($logo-width / 2) ($logo-height / 2);
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    width: $logo-width;
+    height: $logo-height;
+    background-size: $logo-width $logo-height;
+  }
+}
+
+#navigation{
+  border-bottom: none;
+  a {
+    @extend %menu-item;
+  }
+  li {
+    font-size: 0.9375em; //15px
+    text-transform: uppercase;
+    font-weight: 500; //semibold
+  }
+  /* Show which section is currently selected */
+  li.selected a{
+    @extend %selected-menu-item;
+  }
+
+  /* Vertically align the search box */
+  #navigation_search{
+    input{
+      margin-top:0.313em;
+      margin-bottom:0.313em;
+      height: 1.875em;
+      @include ie8 {
+        height: 33px;
+        font-size: 1.1em;
+        padding: 0;
+      }
+    }
+  }
+
+  /* Vertically align the label image for older IE*/
+  @include ie8 {
+    img {
+      margin-top: 0.626em;
+    }
+  }
+
+  #navigation_search_button{
+    background-color: $color_white;
+    border: none;
+    transition: all 0.3s ease-out;
+    color: $color_primary;
+    border-radius: 0;
+    font-size: inherit;
+  }
+}
+
+/* Match the background color of the hero banner on the homepage */
+.front #navigation li.selected a{
+  @extend %selected-menu-item;
+  background-color: $color_yellow;
+}
+
+.greeting {
+  color: $body-bg;
+}
+/* Notices, errors */
+
+#notice, #error, .errorExplanation, #request_header_text, #hidden_request, .describe_state_form form, .undescribed_requests, .warning {
+  font-size: 1em;
+  margin:1em 0;
+  padding: 1.5em;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom:0;
+  }
+
+  ul {
+    margin: 0;
+  }
+}
+
+#notice, #request_header_text {
+  background-color: desaturate(lighten($notice-color, 50%),50%);
+  border-color: desaturate(lighten($notice-color, 50%),50%);
+}
+
+#error, .errorExplanation, #hidden_request, .warning {
+  background-color: desaturate(lighten($error-color, 30%),10%);
+  border-color: $error-color;
+
+}
+
+.undescribed_requests {
+  background-color: desaturate(lighten($action-color, 30%),10%);
+  border-color: $action-color;
+}
+
+/* Logged and local options act like submenus */
+#logged_in_bar{
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    top: 0;
+  }
+
+  a {
+    @extend %menu-item;
+    background-color: transparent;
+    font-weight: normal;
+    color: $color_white;
+    font-size: 0.8125em; //14px
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+  #logged_in_links {
+    a {
+      font-weight: normal;
+    }
+  }
+}
+
+/* LANGUAGE SWITCHER */
+#user_locale_switcher {
+  background-color: $color_primary;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: transparent;
+  }
+}
+
+/* Dropdown list for switching locale */
+.locale-list {
+  border-bottom: 0;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    position: absolute;
+    left: ($logo-width + 40px);
+    top: 3.2em;
+    right: auto;
+  }
+  .locale-list-trigger {
+    margin-bottom: 0;
+    color: $color_white;
+    color: transparentize($color_white, 0.8);
+    @include respond-min($main_menu-mobile_menu_cutoff) {
+      margin-top: 0;
+      border: 1px solid desaturate(lighten($color_primary, 5%), 5%);
+      border-radius: 3px;
+      color: $link-color;
+      padding: 0;
+    }
+  }
+}
+
+.locale-list-trigger .current-locale {
+  position: relative;
+  z-index: 999;
+  border-radius: 3px;
+  color: $color_white;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    padding: 0.66em 2em 0.66em 0.66em;
+  }
+}
+
+.locale-list-trigger .current-locale:after {
+  display: block;
+  position: absolute;
+  content: '';
+  right: 10px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  @include ie8 {
+    border-top: 5px solid $color_white;
+  }
+  border-top: 5px solid transparentize($color_white, 0.6);
+}
+
+.locale-list-trigger .current-locale,
+.locale-list .available-languages a {
+  display: block;
+  cursor: pointer;
+  font-weight: normal;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    font-size: 0.8125em;
+    line-height: 1em;
+  }
+}
+
+.locale-list .available-languages {
+  display: none;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 0.8125em;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    z-index: 1000;
+    border-radius: 3px;
+    font-size: 1em;
+    min-width: 100%;
+  }
+
+}
+
+.locale-list li {
+  list-style-type: none;
+  border-bottom: 1px solid desaturate(lighten($color_primary, 3%), 5%);
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    border-bottom-color: $color_neutral_dark;
+    display: block;
+  }
+  &:last-child {
+    @include respond-min($main_menu-mobile_menu_cutoff) {
+      border-bottom: 0;
+      a {
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+    }
+  }
+}
+
+.locale-list .available-languages a,
+.locale-list .available-languages a:link,
+.locale-list .available-languages a:visited {
+  display: block;
+  background-color: $color_primary;
+  padding: 0.66em 1em;
+  width: 100%;
+  text-decoration: none;
+  color: transparentize($color_white, 0.2);
+  @include ie8 {
+    color: $color_white;
+  }
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: lighten($color_neutral_dark, 6%);
+  }
+  transition: background-color 0.5s ease-out;
+}
+
+.locale-list .available-languages a:hover,
+.locale-list .available-languages a:focus {
+  border-bottom: none;
+  background-color: darken($color_primary, 5%);
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: $color_neutral_dark
+  }
+  color: $color_white;
+
+}
+
+/* JS interactivity */
+.no-js .locale-list .available-languages,
+.locale-list.active .available-languages {
+  display: block;
+}
+
+.locale-list.active .current-locale {
+  background-color: $color_primary;
+  color: $color_white;
+  border-color: $color_primary;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: lighten($color_neutral_dark, 6%);
+    border-bottom: 1px solid lighten($color_neutral_dark, 2%);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.locale-list.active .current-locale:after {
+  @include ie8 {
+    border-top-color: $color_white;
+  }
+  border-top-color: transparentize($color_white, 0.6);
+}
+
+
+.locale-list.active .locale-list-trigger {
+  border-color: transparent;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    border-color: $color_neutral_dark;
+  }
+}
+
+
+#banner {
+
+  /* Hide the greeting on smaller devices */
+  .greeting {
+    display: none;
+  }
+
+  .rsp_menu_button{
+    position: absolute;
+    top: 5px; // vertically centre the button in the header
+    right: 4px; // 15px for margin minus 9 for background offset
+    @extend .image-replacement;
+    background-image: image-url('hamburger.png');
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    background-size: 28px 26px;
+    width: 44px;
+    height: 38px;
+    padding: 0;
+    /* Make sure clickable area covers image */
+    a {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:target {
+    .rsp_menu_button {
+      top: 5px;
+      right: 4px;
+    }
+  }
+
+  /* Pad evenly top and bottom on smaller devices */
+  #logo_wrapper{
+
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      @include lte-ie7 {
+        padding-bottom: 2em;
+      }
+    }
+    @media(max-width: $main_menu-mobile_menu_cutoff ){
+      padding: 0.5em 0 0.5em 0.9375em;
+      img {
+        height: 30px;
+      }
+    }
+  }
+
+}
+
+
+/* Footer */
+#footer {
+  background-color: transparent;
+  color: $color_black;
+  padding: 0;
+  border: 0;
+  a {
+    text-decoration: none;
+    color: $color_white;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  .support-button {
+    //this needs to next inside #footer, due to bad specificity in Alaveteli
+    @include button-primary();
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color_white;
+      text-decoration: 0;
+    }
+  }
+}
+
+.footer--light {
+  background-color: $color_white;
+  h2 {
+    color: $color_blue;
+  }
+  a {
+    text-decoration: none;
+    color: $link-color;
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($link-color, 10%);
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer--dark {
+  background-color: $color_blue;
+  color: $color_white;
+  padding: 1.5em;
+  a {
+    text-decoration: none;
+    color: $color_white;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      color: $color_white;
+      text-decoration: underline;
+    }
+  }
+  .row {
+    border: 0;
+  }
+}
+
+.footer__about__partners {
+  @include grid-column(12);
+  @media (min-width: 32em) {
+    border-top: 1px solid #e9e9e9;
+    @include grid-column(6);
+    margin: 2em 0;
+    padding-top: 1.5em;
+  }
+}
+
+.footer__about__support {
+  @include grid-column(12);
+  @media (min-width: 32em) {
+    border-top: 1px solid #e9e9e9;
+    @include grid-column(6);
+    margin: 2em 0;
+    padding-top: 1.5em;
+  }
+}
+
+.about__support__blurb {
+  background-color: $color_yellow;
+  padding: 2em;
+  margin-bottom: 2em;
+  p {
+    font-weight: bold;
+    color: $color_blue_dark;
+  }
+}
+
+.social-link--contact {
+  background-image: url(/assets/contact.png);
+}
+
+.final__social-links {
+  text-align: center;
+  > ul li {
+    display: inline-block;
+    float: none;
+  }
+  a {
+
+  }
+}
+
+.social-link--facebook {
+  background-size: 10px 19px;
+  padding-left: 1.5em;
+}
+
+.social-link--twitter {
+  background-size: 20px 16px;
+  padding-left: 2em;
+}
+
+/* Request page */
+div.correspondence {
+  background-color: $color_white;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 2em;
+  a.link_to_this {
+    background-color: $color_primary;
+  }
+  h2 {
+    text-align: left;
+  }
+}
+
+.incoming.correspondence {
+  background-color: #f6f6f6;
+}
+
+.outgoing.correspondence {
+  background-color: $color_yellow;
+}
+
+.outgoing.correspondence .correspondence__header,
+.outgoing.correspondence .correspondence__footer {
+  background-color: darken($color_yellow, 5%);
+  border-color: darken(desaturate($color_yellow, 20%),20%);
+}
+
+.describe_state_form input[type="radio"] + label {
+  display:inline;
+}
+
+a.link_to_this {
+  background-image: image-url('link-icon.png');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+     background-image:image-url('link-icon@2.png');
+  }
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+#link_box {
+  font-family: $font-family;
+  border-radius: 0;
+  border: 1px solid $color_neutral_dark;
+  .close-button {
+    background-color: $color_secondary;
+    float: right;
+  }
+}
+
+.new-request__title,
+.new-request__description {
+  color: $color_black;
+}
+
+.new-request__make-new-requests {
+  @include button-base;
+  background-color: $color_secondary;
+  color: $color_white !important;
+  text-transform: uppercase;
+  font-weight: 500;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($color_secondary, 10%);
+  }
+}
+
+.after_actions {
+  font-size: 0.875em; //14px
+  h2 {
+    font-size: 1em; //14px
+  }
+}
+
+.describe_state_form {
+  padding: 0;
+
+  form{
+    background-color: desaturate(lighten($action-color, 30%),10%);
+    border-color: $action-color;
+    h2 {
+      margin-top: 0;
+    }
+    hr {
+      border-color: $action-color;
+    }
+  }
+}
+
+.feed_link_sidebar .link_button_green {
+  @include button-primary();
+}
+
+.sidebar {
+  font-size: 0.875em; //14px
+  h2 {
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.142857143em; //16px
+  }
+  h3 {
+    font-size: 1em; //14px
+  }
+
+}
+
+.report-this-request {
+  @include button-secondary();
+  color: $color_black !important;
+  /* Using !important here as a temporary fix for a bad declaration (a:link)
+    in Alaveteli core. When this is fixed it can be removed.
+  */
+}
+
+
+/* Attachments*/
+
+.view_html_prefix {
+  font-family: $font-family;
+  background-color: $color_primary;
+  color: transparentize($color_white, 0.2);
+  @include ie8 {
+    color: $color_white;
+  }
+  a {
+    color: $color_white;
+  }
+  .view_html_logo, .view_html_description {
+    padding-top: 1em;
+  }
+}
+
+#header_right {
+  .link_button_green {
+    @include button-secondary;
+  }
+}
+
+/* User page */
+#user_photo_on_profile {
+  img, #set_photo {
+    margin-top:0.5em;
+  }
+}
+
+/* Help pages */
+
+dt {
+  font-weight: 700;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    font-size: 2em;
+    line-height: 1.1em;
+  }
+}
+
+/* Front page */
+/* Drop the extract indentation on small screens */
+#frontpage_examples {
+  @include grid-row;
+  .excerpt {
+    padding: 0.2em 0 0 0;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      padding: 0 0 0 2em;
+    }
+  }
+  p strong a {
+    @include button-secondary;
+  }
+  #examples_1 {
+    @include grid-column(12, $collapse: true);
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      margin: 0 -0.9375em;
+    }
+    li {
+      border: 0;
+    }
+  }
+  .request-listing {
+    display: flex;
+    flex-flow: row wrap;
+    @include grid-column(12);
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      @include grid-column(6);
+    }
+    &:nth-last-child(2) {
+      @include respond-min( $main_menu-mobile_menu_cutoff ){
+        //we want the asktheEU advert on the left of the bottom row
+        order: 6;
+      }
+    }
+  }
+
+  .request-listing__header {
+    background-color: $color_green;
+    color: $color_white;
+    padding: 1em;
+    flex: 1 100%;
+    h3 {
+      color: $color_white;
+      margin-bottom: 0.25em;
+      font-weight: normal;
+    }
+    a {
+      color: $color_white;
+      font-weight: 500;
+    }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .request-listing__request-body {
+    flex: 1 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-top: 0;
+    margin-left: 0;
+  }
+
+  .request-listing__title {
+    font-weight: 500;
+    font-size: 0.875em;
+  }
+
+  .request-listing__status {
+    text-align: right;
+    margin-top: 1em;
+    font-weight: 500;
+  }
+
+  .icon-standalone {
+    display: inline-block;
+    float: none;
+    position: relative;
+    top: 3px;
+    margin-left: 0.25em;
+  }
+
+  // AsktheEU advert appears in the request list so uses reuest-listing as a base
+  .request-listing__block--ask-the-eu {
+    position: relative;
+    .request-listing__header {
+      background-color: #11457E;
+      h2 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.75em; //28px
+        line-height: 1.35em;
+      }
+    }
+    .request-listing__request-body {
+      background-color: #E2EBE1;
+      p {
+        font-size: 0.9375em; //15px
+        margin-bottom: 0.5625em; //9px
+        max-width: 230px;
+        font-weight: 500px;
+      }
+    }
+    .request-listing__block--ask-the-eu__logo {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      width: 87.5px;
+      @include respond-min( $main_menu-mobile_menu_cutoff ){
+        width: 175px;
+        //we want the asktheEU advert on the left of the bottom row
+        order: 5;
+      }
+    }
+  }
+
+}
+
+
+
+/* How it works section */
+
+.homepage-how-it-works {
+  border: 0;
+  padding: 1em 0;
+  margin-bottom: 0;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    padding: 2em 0;
+  }
+}
+
+.homepage-how-it-works__hiw-content {
+  width: 100%;
+  margin-left: 0 !important;
+}
+
+.steps__list {
+  padding: 0;
+  li {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      width: 22.75%;
+      margin-right: 3%;
+      margin-left: 0 !important;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.steps__step-box {
+  text-align: center;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    min-height: 11em;
+  }
+  p {
+    line-height: 1.5em;
+    color: $color_blue;
+  }
+}
+
+.steps__step-icon {
+  margin-bottom: 1.5em;
+}
+
+.learn-more-foi {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    margin-top: 3em;
+  }
+  a {
+    @include button-secondary;
+  }
+}
+
+.learn-more-foi {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    margin-top: 3em;
+  }
+  a {
+    @include button-secondary;
+  }
+}
+
+.latest-requests {
+  .button-secondary {
+    @include button-secondary;
+  }
+}
+
+/* Authority page */
+.action-bar__follower-count {
+  padding: 3px;
+  font-size: 1.1rem;
+}
+
+.action-bar__follow-button {
+  .link_button_green {
+    @include button-secondary();
+  }
+}
+
+.authority__body__sidebar form input[type=submit] {
+  @include button-secondary();
+}
+
+.homepage-hero {
+  background-color: $color_yellow;
+  color: $color_blue;
+  padding: 2em 0 2em;
+  position: relative;
+  margin-bottom: 2em;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    padding: 2.5em 0 3em;
+  }
+
+  h1 {
+    font-size: 1.75em; //28px
+    margin-top: 0;
+  }
+
+  p {
+    font-weight: bold;
+    max-width: 34em;
+  }
+
+  a {
+    color: $color_secondary;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color_white;
+    }
+  }
+
+  .new-request__content {
+    background-color: $color_neutral_dark;
+    border-radius: 5px;
+    padding: 1.888888889em;
+  }
+
+  .new-request__title {
+    color: $color_white;
+    font-size: 1.4375em;
+    margin: 0 0 0.5em;
+  }
+
+  .new-request__description {
+    color: transparentize($color_white, 0.2);
+    @include ie8 {
+      color: $color_white;
+    }
+  }
+
+  .new-request__make-new-requests {
+    font-size: 1.25em;
+    padding: 0.75em 1em;
+    @include respond-min($main_menu-mobile_menu_cutoff) {
+      font-size: 1.75em;
+    }
+  }
+}
+
+.intro__title {
+  color: $color_white;
+  text-shadow: 0 1px 2px transparentize($color_black, 0.7);
+}
+
+.preview-pane {
+  .correspondence {
+    background-color: $color_yellow;
+  }
+}
+
+input#reedit_button {
+  background-color: #ccc;
+  color: white;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #aaa
+  }
+}
+
+/* Sign-in/Sign-up page */
+
+#sign_together {
+  margin-top: 3em;
+  .sign_in_reason {
+    display: none;
+  }
+  #left_half {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      @include grid-column($columns:6, $float:right);
+    }
+  }
+
+  #right_half {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      @include grid-column($columns:6, $float:left);
+    }
+  }
+
+  .signup,
+  .sign-in-wrapper {
+    padding: 1.5em;
+    background-color: #F6F6F6;
+  }
+  #left_half h2 {
+    /* Make the h2 appear inside .sign-in-wrapper (rather than having to
+       override a template for a tiny change lets fake it with CSS) */
+    padding-top: 0.857142857em; //24px
+    padding-left: 0.857142857em; //24px
+    background-color: #F6F6F6;
+    margin-bottom: 0;
+    margin-top: 0;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      margin-left: 0.857142857em; //24px
+    }
+  }
+  #signup {
+    margin-top: 0;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      margin-left: 1.5em;
+    }
+  }
+
+  #user_signup_address {
+    width: 100%;
+  }
+
+  .sign-in-wrapper {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      margin-left: 1.5em;
+    }
+  }
+
+  .form_button {
+    text-align: center;
+    input[type=submit] {
+      font-size: 1.75em;
+    }
+  }
+}
+
+/* Make request process */
+
+#authority_selection,
+#authority_selection form,
+#select_authority_help,
+#authority_selection .authority_search_ahead_results_container {
+  max-width: 40em; //640px
+  margin: 0 auto;
+  float: none;
+  width: auto;
+}
+
+#authority_selection form,
+#select_authority_help {
+  background-color: #F6F6F6;
+  padding: 0 2em 0.75em;
+  form {
+    margin: 0;
+  }
+}
+
+#select_authority_help {
+  padding-top: 0.75em;
+}
+
+.typeahead_response {
+  p {
+    padding: 2em 2em 0;
+    margin: 0;
+  }
+}
+
+.typeahead_response
+
+#authority_search_ahead_results,
+#authority_selection .cant_find_results {
+    padding: 0;
+}
+
+.body_listing {
+  background-color: $color_yellow;
+  border: 0;
+  padding: 1.5em 1.5em 1em;
+  &:last-child {
+    margin-bottom: 2em;
+  }
+  .body-listing__header {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+}
+
+.body_listing__request-button {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    right: 1.5em;
+    top: 1.5em;
+  }
+}
+
+#request_select_authority h1 {
+  background-color: #F6F6F6;
+  padding: 0.75em; //30px
+  margin: 0;
+  max-width: 16em; //640px
+  margin: 0.75em auto 0;
+  width: auto;
+}
+
+#request_header_text {
+  background-color: transparent;
+  padding: 0;
+}
+
+#request_form {
+  background-color: #f6f6f6;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  #request_header_subject,
+  > p,
+   {
+     padding: 0 1em;
+  }
+  .form_button {
+    margin: 1.5em 0;
+    text-align: center;
+    input[type=submit] {
+      font-size: 1.25em;
+    }
+  }
+}
+
+/*
+ * Browse/search requests
+ */
+#list-filter {
+  background-color: #f6f6f6;
+  padding: 1.5em;
+  #query {
+    width: 100%;
+  }
+}
+
+.request_listing {
+  border: 0;
+  background-color: $color_yellow;
+  padding: 1.5em 1.5em 2em;
+  .request_right,
+  .request_left {
+    width: 100%;
+    float: left;
+  }
+  .desc {
+    padding: 0;
+  }
+}
+
+.results_section {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    @include grid-row;
+  }
+  .foi_results {
+    font-size: 1em;
+    color: $color_black;
+  }
+}
+
+.results_block {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    @include grid-column($columns:8);
+  }
+}
+
+.request_listing {
+  position: relative;
+  .head {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+  .desc {
+    font-size: 0.875em;
+  }
+  .bottomline {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      position: absolute;
+      bottom: -0.5em;
+      right: 1.5em;
+    }
+  }
+}
+
+/*
+ * Action menu
+ */
+
+.action-menu__button {
+  @include button-secondary;
+  padding-right: 1.5em;
+  &:after {
+    border-color: #aaa transparent transparent transparent;
+    right: 0.75em;
+  }
+ }
+
+.action-bar__follow-button .link_button_green {
+  @include button-primary;
+  color: #fff !important;
+}
+.request-header__action-bar .after-actions__action-menu {
+  font-size: 0.8em;
+}
+.request-header__action-bar .action-bar__follow-button {
+  font-size: 0.8em;
+}
+.request-header__action-bar .action-bar__follower-count {
+  padding: 0.56em 1.25em;
+  border: 1px solid #e9e9e9;
+  position: relative;
+  left: -4px;
+  line-height: 1.1em;
+  border-left: 0;
+  font-size: 1em;
+}
+.request-footer__action-bar__actions .action-menu__button {
+  @extend .button-secondary;
+  padding-right: 2em;
+  &:after {
+    border-color: #a5a5a5 transparent transparent transparent;
+    right: 7%;
+  }
+}
+
+.request-footer__action-bar__actions .action-bar__follower-count {
+  padding: 0.56em 1.25em;
+  border: 1px solid #e9e9e9;
+  position: relative;
+  left: -4px;
+  line-height: 1.1em;
+  border-left: 0;
+}
+
+/*
+ * Authorities page (browse/search)
+ */
+
+#public_body_list {
+  h1 {
+    background-color: #f6f6f6;
+    margin: 1em 0 0;
+    padding: 0.4em;
+  }
+  #search_form {
+    background-color: #f6f6f6;
+    padding: 1.5em;
+  }
+  .publicbody_results {
+    font-size: 1em;
+    color: $color_black;
+  }
+  #right_column_flip {
+    background-color: #f6f6f6;
+    margin-top: 2.5em;
+  }
+}
+
+.authority__header__action-bar .action-bar__follower-count {
+  padding: 0.56em 1.25em;
+  border: 1px solid #e9e9e9;
+  position: relative;
+  left: -4px;
+  line-height: 1.1em;
+  border-left: 0;
+}
+
+/*
+ * Change Address Page
+ *
+ */
+#signchangeaddress_new_address {
+  width: 410px;
+}
+
+/*
+ * Help pages
+ */
+.help-page-nav {
+  background-color: #f6f6f6;
+  padding: 0.5em 1.25em;
+  margin-bottom: 2em;
+  h2 {
+    font-size: 1em;
+  }
+  a {
+    color: #000;
+    font-size: 0.875em;
+  }
+}
+
+#contact {
+  font-size: 1em;
+}

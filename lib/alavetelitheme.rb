@@ -1,20 +1,7 @@
 # -*- encoding : utf-8 -*-
-THEME_DIR = File.expand_path("../..", __FILE__)
-ALAVETELI_DIR = File.expand_path("../../../", THEME_DIR)
-THEME_NAME = File.split(THEME_DIR)[1]
-
-# Prepend the asset directories in this theme to the asset path:
-['stylesheets', 'images', 'javascripts'].each do |asset_type|
-  theme_asset_path = File.join(File.dirname(__FILE__),
-                               '..',
-                               'assets',
-                               asset_type)
-  Rails.application.config.assets.paths.unshift theme_asset_path
-end
-
-Rails.application.config.assets.precompile += ['popup.css',
-                                               'vendor.css',
-                                               'vendor-print.css']
+theme_name = File.split(File.expand_path("../..", __FILE__))[1]
+theme_name.gsub!('-', '_')
+THEME_NAME = theme_name
 
 class ActionController::Base
   # The following prepends the path of the current theme's views to
@@ -44,7 +31,19 @@ for patch in ['controller_patches.rb',
   require File.expand_path "../#{patch}", __FILE__
 end
 
-$alaveteli_route_extensions << "ipvtheme-routes.rb"
+# Note you should rename the file at "config/custom-routes.rb" to
+# something unique (e.g. yourtheme-custom-routes.rb":
+# $alaveteli_route_extensions << 'custom-routes.rb'
+$alaveteli_route_extensions << 'ipvtheme-routes.rb'
+
+# Prepend the asset directories in this theme to the asset path:
+['stylesheets', 'images', 'javascripts'].each do |asset_type|
+  theme_asset_path = File.join(File.dirname(__FILE__),
+                               '..',
+                               'assets',
+                               asset_type)
+  Rails.application.config.assets.paths.unshift theme_asset_path
+end
 
 # Tell FastGettext about the theme's translations: look in the theme's
 # locale-theme directory for a translation in the first place, and if

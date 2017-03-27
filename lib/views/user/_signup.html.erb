@@ -1,105 +1,84 @@
-<script type="text/javascript">
-  $(function() {
-     $(".dob-datepicker").datepicker(
-            {changeMonth: true,
-             changeYear: true,
-             yearRange: "1900:2010",
-             closeText: '<%= _("Done") %>',
-             prevText: '<%= _("Prev") %>',
-             nextText: '<%= _("Next") %>',
-             currentText: '<%= _("Today") %>',
-             monthNames: <%= raw I18n.translate('date.month_names')[1..-1].to_json %>,
-             monthNamesShort: <%= raw I18n.translate('date.abbr_month_names')[1..-1].to_json %>,
-             dayNames: <%= raw I18n.translate('date.day_names').to_json %>,
-             dayNamesShort: <%= raw I18n.translate('date.abbr_day_names').to_json %>,
-             dayNamesMin: <%= raw I18n.translate('date.abbr_day_names').collect{|x| x[0..0]}.to_json %>,
-             weekHeader: '<%= _("Wk") %>',
-             dateFormat: '<%= raw I18n.translate('date.formats.default').sub("%Y", "yy").sub("%m", "mm").sub("%d", "dd").gsub("-", "/") %>'}
-  );
-  });
-</script>
-
-
-<div id="signup">
-
-<%= form_tag({:action => "signup"}, {:id => "signup_form"}) do %>
+<div id="signup" class="signup">
+  <%= form_tag({:action => "signup"}, {:id => "signup_form"}) do %>
     <%= foi_error_messages_for :user_signup %>
 
     <p>
-        <label class="form_label" for="user_signup_email"><%= _('Your e-mail:') %></label>
-        <%= text_field 'user_signup', 'email', { :size => 20,
-                                                 :tabindex => 10,
-                                                 :autocomplete => "off" } %>
+      <label class="form_label" for="user_signup_email"><%= _('Your e-mail:') %></label>
+      <%= text_field 'user_signup', 'email', { :size => 20,
+                                               :tabindex => 60,
+                                               :autocomplete => "off" } %>
     </p>
+
     <div class="form_item_note">
-        <%= _('We will not reveal your email address to anybody unless ' \
-        '<a href="{{url}}">you or the law tell us to</a>.',
-        :url => help_privacy_path) %>
+      <%= _('We will not reveal your email address to anybody unless ' \
+      '<a href="{{url}}">you or the law tell us to</a>.',
+      :url => help_privacy_path) %>
     </div>
 
     <p>
-        <label class="form_label" for="user_signup_name"> <%= _('Your name:') %></label>
-        <%= text_field 'user_signup', 'name', { :size => 20,
-                                                :tabindex => 20,
-                                                :autocomplete => "off" } %>
+      <label class="form_label" for="user_signup_name"> <%= _('Your name:') %></label>
+      <%= text_field 'user_signup', 'name', { :size => 20,
+                                              :tabindex => 70,
+                                              :autocomplete => "off" } %>
     </p>
+
     <div class="form_item_note">
       <%= _('Your <strong>name will appear publicly</strong> ' \
             '(<a href="{{why_url}}">why?</a>) on this website and in search ' \
             'engines. <a href="{{help_url}}">Thinking of using a ' \
             'pseudonym?</a>',
-            :why_url => (help_privacy_path+"#public_request").html_safe,
-            :help_url => (help_privacy_path+"#real_name").html_safe) %>
+            :why_url => help_privacy_path(:anchor => "public_request").html_safe,
+            :help_url => help_privacy_path(:anchor => "real_name").html_safe) %>
     </div>
 
     <p>
-        <label class="form_label" for="user_signup_address"><%= _('Your address:') %></label>
-        <%= text_area 'user_signup', 'address', { :cols => 20,
-                                                  :rows => 6,
-                                                  :tabindex => 30 } %>
+      <label class="form_label" for="user_signup_address"><%= _('Your address:') %></label>
+      <%= text_area 'user_signup', 'address', { :cols => 20,
+                                                :rows => 6,
+                                                :tabindex => 80 } %>
     </p>
+
     <div class="form_item_note">
         <%= _('Your address will be sent to authorities when you make a request.  ' \
               'We will not reveal your address on the website.') %>
     </div>
 
     <p>
-        <label class="form_label" for="user_signup_dob"><%= _('Your DOB:') %></label>
-        <%= text_field 'user_signup', 'dob', { :size => 20,
-                                               :class => 'dob-datepicker',
-                                               :tabindex => 40 } %>
+      <label class="form_label" for="user_signup_dob"><%= _('Your DOB:') %></label>
+      <%= text_field 'user_signup', 'dob', { :size => 20,
+                                             :class => 'dob-datepicker',
+                                             :tabindex => 90 } %>
     </p>
+
     <div class="form_item_note">
-        <%= _('Your DOB will also be sent to authorities when you make a request.  ' \
-              'We will not reveal your DOB on the website.') %>
-    </div>
+      <%= _('Your DOB will also be sent to authorities when you make a request.  ' \
+            'We will not reveal your DOB on the website.') %>
+      </div>
 
     <p>
-        <label class="form_label" for="user_signup_password"> <%= _('Password:') %></label>
-        <%= password_field 'user_signup', 'password', { :size => 15,
-                                                        :tabindex => 50,
-                                                        :autocomplete => "off" } %>
+      <label class="form_label" for="user_signup_password"> <%= _('Password:') %></label>
+      <%= password_field 'user_signup', 'password', { :size => 15,
+                                                      :tabindex => 100,
+                                                      :autocomplete => "off" } %>
     </p>
 
     <p>
-        <label class="form_label" for="user_signup_password_confirmation">
-            <%= _('Confirm password:')%>
-        </label>
-        <%= password_field 'user_signup', 'password_confirmation', { :size => 15,
-                                                                     :tabindex => 60,
-                                                                     :autocomplete => "off" } %>
+      <label class="form_label" for="user_signup_password_confirmation">
+          <%= _('Confirm password:')%>
+      </label>
+      <%= password_field 'user_signup', 'password_confirmation', { :size => 15,
+                                                                   :tabindex => 110,
+                                                                   :autocomplete => "off" } %>
     </p>
 
     <% if @request_from_foreign_country %>
-    <%= recaptcha_tags %>
+      <%= recaptcha_tags %>
     <% end %>
 
     <div class="form_button">
-        <%= hidden_field_tag 'token', params[:token], {:id => 'signup_token' } %>
-        <%= hidden_field_tag :modal, params[:modal], {:id => 'signup_modal' } %>
-        <%= submit_tag _('Sign up'), :tabindex => 70, :disable_with => _("Sending...") %>
+      <%= hidden_field_tag 'token', params[:token], {:id => 'signup_token' } %>
+      <%= hidden_field_tag :modal, params[:modal], {:id => 'signup_modal' } %>
+      <%= submit_tag _('Sign up'), :tabindex => 120, :disable_with => _("Sending...") %>
     </div>
-
-<% end %>
-
+  <% end %>
 </div>
