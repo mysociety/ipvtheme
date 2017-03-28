@@ -40,7 +40,7 @@ Rails.configuration.to_prepare do
 
     def validate_dob
       if !dob.is_a? Date
-        errors.add(:dob, _("DOB is not a valid date")) if ((DateTime.parse(dob) rescue ArgumentError) == ArgumentError)
+        errors.add(:dob, _("DOB is not a valid date")) if ((Time.zone.parse(dob) rescue ArgumentError) == ArgumentError)
       end
     end
   end
