@@ -1,3 +1,7 @@
+<li class="<%= 'selected' if controller?('general') and action?('frontpage') %>">
+  <%= link_to _("Home"), frontpage_path %>
+</li>
+
 <li class="<%= 'selected' if controller?('request') && action?('new', 'select_authority') %>">
   <%= link_to _("Make a request"), select_authority_path, :id => 'make-request-link' %>
 </li>
