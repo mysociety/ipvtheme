@@ -56,7 +56,7 @@ Rails.configuration.to_prepare do
         zipfile.get_output_stream(file_info[:filename]) { |f| f.puts(file_info[:data]) }
         message_index = 0
         info_request.incoming_messages.each do |message|
-          next unless message.user_can_view?(authenticated_user)
+          next unless can?(:read, message)
           message_index += 1
           message.get_attachments_for_display.each do |attachment|
             filename = "#{message_index}_#{attachment.url_part_number}_#{attachment.display_filename}"
@@ -80,17 +80,18 @@ Rails.configuration.to_prepare do
       # hide the attachment.
       raise ActiveRecord::RecordNotFound.new("Attachment is hidden") if body =~ /Your name and address: /
 
-      if !incoming_message.info_request.user_can_view?(authenticated_user)
+      if cannot?(:read, incoming_message.info_request)
         @info_request = incoming_message.info_request # used by view
         return render_hidden
       end
-      if !incoming_message.user_can_view?(authenticated_user)
+      if cannot?(:read, incoming_message)
         @incoming_message = incoming_message # used by view
         return render_hidden('request/hidden_correspondence')
       end
       # Is this a completely public request that we can cache attachments for
       # to be served up without authentication?
-      if incoming_message.info_request.all_can_view? && incoming_message.all_can_view?
+      if incoming_message.info_request.prominence(:decorate => true).is_public? &&
+        incoming_message.is_public?
         @files_can_be_cached = true
       end
     end
