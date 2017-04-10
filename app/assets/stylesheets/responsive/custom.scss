@@ -260,11 +260,7 @@ a.link_button_green_large {
 
 /* Header */
 
-#banner_inner {
-  background-color: $color_blue;
-}
-
-#topnav {
+#banner {
   background-color: $color_blue;
 }
 
@@ -333,15 +329,101 @@ a.link_button_green_large {
   }
 }
 
+
+.js-loaded {
+  .account-link {
+    padding-right: 2em;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      //make it appear like it's aligned with the grid, even though it isn't
+      margin-right: 0.935em;
+      &:after {
+        right: 3em;
+      }
+    }
+  }
+
+}
+
+.logged-in-menu {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    color: black;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.dashboard-profile__email {
+  color: #787774;
+}
+
+.account-link {
+  border-color: rgba(255,255,255,0.2);
+}
+
+.banner--pro {
+  .account-link {
+    background: transparent;
+  }
+}
+
+#navigation .logged-in-menu a,
+#navigation .logged-in-menu__signout-link a {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    color: $link-color;
+    text-decoration: none;
+    transition: none;
+    .alaveteli-pro & {
+      color: $color_pro_blue;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color_black;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+}
+
+.no-js {
+  .navigation .logged-in-menu a,
+  .navigation .logged-in-menu__signout-link a {
+    @extend %menu-item;
+  }
+}
+
+.js-loaded {
+    .navigation .logged-in-menu__signout-link a {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.8em;
+      color: #888;
+      &:hover {
+        color: #888;
+      }
+    }
+  }
+}
+
+.pro-pill {
+  color: #ffffff;
+  font-weight: 600;
+  background-color: $color_red;
+}
+
+
+
 /* Match the background color of the hero banner on the homepage */
 .front #navigation li.selected a{
   @extend %selected-menu-item;
   background-color: $color_yellow;
 }
 
-.greeting {
-  color: $body-bg;
+.banner--pro {
+  background-color: #4C888F;
+  background-image: linear-gradient(-46deg, #4C888F 0%, #4C888F 9%, #365B74 63%);
 }
+
 /* Notices, errors */
 
 #notice, #error, .errorExplanation, #request_header_text, #hidden_request, .describe_state_form form, .undescribed_requests, .warning {
@@ -378,30 +460,7 @@ a.link_button_green_large {
   border-color: $action-color;
 }
 
-/* Logged and local options act like submenus */
-#logged_in_bar{
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    top: 0;
-  }
 
-  a {
-    @extend %menu-item;
-    background-color: transparent;
-    font-weight: normal;
-    color: $color_white;
-    font-size: 0.8125em; //14px
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: transparent;
-    }
-  }
-  #logged_in_links {
-    a {
-      font-weight: normal;
-    }
-  }
-}
 
 /* LANGUAGE SWITCHER */
 #user_locale_switcher {
