@@ -449,6 +449,14 @@ a.link_button_green_large {
   background-image: linear-gradient(-46deg, #4C888F 0%, #4C888F 9%, #365B74 63%);
 }
 
+.banner--pro .site-title__logo {
+  background-image: image-url("alaveteli-pro/logo.png");
+
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    background-image: image-url("alaveteli-pro/logo@2.png");
+  }
+}
+
 /* Notices, errors */
 
 #notice, #error, .errorExplanation, #request_header_text, #hidden_request, .describe_state_form form, .undescribed_requests, .warning {
