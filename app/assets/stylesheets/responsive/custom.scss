@@ -297,6 +297,13 @@ a.link_button_green_large {
 }
 
 
+#navigation_search {
+  padding: 0 0.935rem;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    top: 1.5em;
+  }
+}
+
 #navigation{
   border-bottom: none;
   a {
