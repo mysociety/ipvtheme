@@ -182,6 +182,18 @@ input.use-datepicker[type=text] {
     color: $color_white;
     text-decoration: none;
   }
+  .alaveteli-pro & {
+    background-image: linear-gradient(-180deg, #4C858D 0%, #3E6D75 100%);
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.22);
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited:hover,
+    &:visited:active,
+    &:visited:focus {
+      box-shadow: 0 1px 0 0 rgba(0,0,0,0.22);
+    }
+  }
 }
 
 @mixin button-secondary($args...) {
@@ -216,8 +228,18 @@ form input[type=submit], a.link_button_green, a.link_button_green_large {
   text-decoration: none;
 }
 
+a.button,
+.button,
+.button:visited{
+  @include button-primary;
+}
+
 a.link_button_green_large {
   @include button-primary($size: large);
+}
+
+.button-tertiary {
+  @include button-tertiary;
 }
 
 /* Popups */
