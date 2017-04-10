@@ -51,7 +51,9 @@ $action-color: $color_orange;
     color: $color_white;
   }
   transition: background-color 0.5s ease-out;
-  &:hover{
+  &:hover,
+  &:active,
+  &:focus{
     background-color: darken($color_primary, 15%);
     color: $color_white;
   }
@@ -63,7 +65,9 @@ $action-color: $color_orange;
   font-weight: bold;
   color: $color_primary;
   background-color: $color_neutral_light;
-  &:hover{
+  &:hover,
+  &:active,
+  &:focus {
       background-color: $color_neutral_light;
   }
 }
