@@ -7,6 +7,7 @@ $color_green: #2B9E00;
 $color_yellow: #FFFDE8;
 $color_red: #EC1C23;
 $color_white: #ffffff;
+$color_pro_blue: #5A7687;
 
 $color_neutral_light: $color_white;
 $color_neutral_dark: $color_black;
@@ -64,6 +65,13 @@ $action-color: $color_orange;
   background-color: $color_neutral_light;
   &:hover{
       background-color: $color_neutral_light;
+  }
+}
+
+.topnav--pro {
+  // change this for alaveteli pro
+  .selected-menu-item {
+    color: $color_pro_blue;
   }
 }
 
