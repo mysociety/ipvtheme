@@ -50,8 +50,18 @@ end
 # locale-theme directory for a translation in the first place, and if
 # it isn't found, look in the Alaveteli locale directory next:
 repos = [
-  FastGettext::TranslationRepository.build('app', :path=>File.join(File.dirname(__FILE__), '..', 'locale-theme'), :type => :po),
-  FastGettext::TranslationRepository.build('app', :path=>'locale', :type => :po)
+  FastGettext::TranslationRepository.build('app',
+    :path => File.join(File.dirname(__FILE__), '..', 'locale-theme'),
+    :type => :po),
+  FastGettext::TranslationRepository.build('app',
+    :path => 'locale',
+    :type => :po)
 ]
-FastGettext.add_text_domain 'app', :type=>:chain, :chain=>repos
-FastGettext.default_text_domain = 'app'
+if AlaveteliConfiguration::enable_alaveteli_pro
+  pro_repo = FastGettext::TranslationRepository.build('app',
+    :path => 'locale_alaveteli_pro',
+    :type => :po)
+  repos << pro_repo
+end
+
+AlaveteliLocalization.set_default_text_domain('app', repos)
