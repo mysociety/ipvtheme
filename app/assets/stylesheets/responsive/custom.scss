@@ -1609,7 +1609,14 @@ input#reedit_button {
   font-size: 1em;
 }
 
+/*
+* Request list
+*/
 
+a.new-request-button,
+a.new-request-button:visited {
+  color: #fff;
+}
 /*
 * Houdini customisations
 */
