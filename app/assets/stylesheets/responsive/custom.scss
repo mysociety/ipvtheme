@@ -1617,6 +1617,19 @@ a.new-request-button,
 a.new-request-button:visited {
   color: #fff;
 }
+
+/*
+ * Czech words for "sort by" and "last updated" are much longer, so push the
+ * sorting options onto two lines. This makes the best of that.
+ */
+.requests__sort {
+  padding-left: 0.6em;
+  text-align: left;
+}
+.requests__sort select {
+  max-width: 100%;
+}
+
 /*
 * Houdini customisations
 */
