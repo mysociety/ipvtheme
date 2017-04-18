@@ -1631,6 +1631,17 @@ a.new-request-button:visited {
 }
 
 /*
+ * Raleway (the IPV theme's font) has old style numerals, meaning they have
+ * different heights and baselines. This makes the pagination (a
+ * list of numbers) look pretty weird. This CSS property makes it use lining
+ * numerals instead. They're included in the font but you have to enable them.
+ * See: https://github.com/theleagueof/raleway/issues/5
+ */
+.pagination {
+  font-variant-numeric: lining-nums;
+}
+
+/*
 * Houdini customisations
 */
 
