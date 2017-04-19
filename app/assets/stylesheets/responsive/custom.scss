@@ -300,15 +300,14 @@ a.link_button_green_large {
   }
 }
 
-
-#navigation_search {
+.navigation_search {
   padding: 0 0.935rem;
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     top: 1.5em;
   }
 }
 
-#navigation{
+.navigation{
   border-bottom: none;
   a {
     @extend %menu-item;
@@ -324,7 +323,7 @@ a.link_button_green_large {
   }
 
   /* Vertically align the search box */
-  #navigation_search{
+  .navigation_search{
     input{
       margin-top:0.313em;
       margin-bottom:0.313em;
@@ -344,7 +343,7 @@ a.link_button_green_large {
     }
   }
 
-  #navigation_search_button{
+  .navigation_search_button{
     background-color: $color_white;
     border: none;
     transition: all 0.3s ease-out;
@@ -390,8 +389,8 @@ a.link_button_green_large {
   }
 }
 
-#navigation .logged-in-menu a,
-#navigation .logged-in-menu__signout-link a {
+.navigation .logged-in-menu a,
+.navigation .logged-in-menu__signout-link a {
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     color: $link-color;
     text-decoration: none;
@@ -439,7 +438,7 @@ a.link_button_green_large {
 
 
 /* Match the background color of the hero banner on the homepage */
-.front #navigation li.selected a{
+.front .navigation li.selected a{
   @extend %selected-menu-item;
   background-color: $color_yellow;
 }
