@@ -46,11 +46,15 @@ $action-color: $color_orange;
 /* General styling of nav menu items */
 %menu-item {
   text-decoration: none;
-  color: transparentize($color_white, 0.2);
-  @include ie8 {
-    color: $color_white;
-  }
   transition: background-color 0.5s ease-out;
+  &,
+  &:link,
+  &:visited {
+    color: transparentize($color_white, 0.2);
+    @include ie8 {
+      color: $color_white;
+    }
+  }
   &:hover,
   &:active,
   &:focus{
