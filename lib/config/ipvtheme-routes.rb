@@ -3,7 +3,11 @@
 
 Rails.application.routes.draw do
   scope '/profile' do
-    match '/change_address' => 'user#signchangeaddress', :as => :signchangeaddress
-    match '/change_dob' => 'user#signchangedob', :as => :signchangedob
+    match '/change_address' => 'user#signchangeaddress',
+          :as => :signchangeaddress,
+          :via => [:get, :post]
+    match '/change_dob' => 'user#signchangedob',
+          :as => :signchangedob,
+          :via => [:get, :post]
   end
 end

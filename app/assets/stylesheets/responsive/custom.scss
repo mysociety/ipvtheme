@@ -7,6 +7,7 @@ $color_green: #2B9E00;
 $color_yellow: #FFFDE8;
 $color_red: #EC1C23;
 $color_white: #ffffff;
+$color_pro_blue: #5A7687;
 
 $color_neutral_light: $color_white;
 $color_neutral_dark: $color_black;
@@ -31,6 +32,8 @@ $notice-color: $color_green;
 $error-color: $color_red;
 $action-color: $color_orange;
 
+@import "responsive/houdini";
+
 /* Mixin styles */
 
 /* Hide text when it's replaced by an image */
@@ -43,12 +46,18 @@ $action-color: $color_orange;
 /* General styling of nav menu items */
 %menu-item {
   text-decoration: none;
-  color: transparentize($color_white, 0.2);
-  @include ie8 {
-    color: $color_white;
-  }
   transition: background-color 0.5s ease-out;
-  &:hover{
+  &,
+  &:link,
+  &:visited {
+    color: transparentize($color_white, 0.2);
+    @include ie8 {
+      color: $color_white;
+    }
+  }
+  &:hover,
+  &:active,
+  &:focus{
     background-color: darken($color_primary, 15%);
     color: $color_white;
   }
@@ -60,8 +69,17 @@ $action-color: $color_orange;
   font-weight: bold;
   color: $color_primary;
   background-color: $color_neutral_light;
-  &:hover{
+  &:hover,
+  &:active,
+  &:focus {
       background-color: $color_neutral_light;
+  }
+}
+
+.topnav--pro {
+  // change this for alaveteli pro
+  .selected-menu-item {
+    color: $color_pro_blue;
   }
 }
 
@@ -180,6 +198,18 @@ input.use-datepicker[type=text] {
     color: $color_white;
     text-decoration: none;
   }
+  .alaveteli-pro & {
+    background-image: linear-gradient(-180deg, #4C858D 0%, #3E6D75 100%);
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.22);
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited:hover,
+    &:visited:active,
+    &:visited:focus {
+      box-shadow: 0 1px 0 0 rgba(0,0,0,0.22);
+    }
+  }
 }
 
 @mixin button-secondary($args...) {
@@ -214,8 +244,18 @@ form input[type=submit], a.link_button_green, a.link_button_green_large {
   text-decoration: none;
 }
 
+a.button,
+.button,
+.button:visited{
+  @include button-primary;
+}
+
 a.link_button_green_large {
   @include button-primary($size: large);
+}
+
+.button-tertiary {
+  @include button-tertiary;
 }
 
 /* Popups */
@@ -228,11 +268,7 @@ a.link_button_green_large {
 
 /* Header */
 
-#banner_inner {
-  background-color: $color_blue;
-}
-
-#topnav {
+#banner {
   background-color: $color_blue;
 }
 
@@ -255,7 +291,27 @@ a.link_button_green_large {
   }
 }
 
-#navigation{
+
+.topnav--pro {
+  background-color: rgba(0,0,0,0.1);
+  box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1);
+  .navigation a {
+    &:hover,
+    &:active,
+    &:focus {
+      background: rgba(0,0,0,0.2);
+    }
+  }
+}
+
+.navigation_search {
+  padding: 0 0.935rem;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    top: 1.5em;
+  }
+}
+
+.navigation{
   border-bottom: none;
   a {
     @extend %menu-item;
@@ -271,7 +327,7 @@ a.link_button_green_large {
   }
 
   /* Vertically align the search box */
-  #navigation_search{
+  .navigation_search{
     input{
       margin-top:0.313em;
       margin-bottom:0.313em;
@@ -291,7 +347,7 @@ a.link_button_green_large {
     }
   }
 
-  #navigation_search_button{
+  .navigation_search_button{
     background-color: $color_white;
     border: none;
     transition: all 0.3s ease-out;
@@ -301,15 +357,109 @@ a.link_button_green_large {
   }
 }
 
+
+.js-loaded {
+  .account-link {
+    padding-right: 2em;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      //make it appear like it's aligned with the grid, even though it isn't
+      margin-right: 0.935em;
+      &:after {
+        right: 3em;
+      }
+    }
+  }
+
+}
+
+.logged-in-menu {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    color: black;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.dashboard-profile__email {
+  color: #787774;
+}
+
+.account-link {
+  border-color: rgba(255,255,255,0.2);
+}
+
+.banner--pro {
+  .account-link {
+    background: transparent;
+  }
+}
+
+.navigation .logged-in-menu a,
+.navigation .logged-in-menu__signout-link a {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    color: $link-color;
+    text-decoration: none;
+    transition: none;
+    .alaveteli-pro & {
+      color: $color_pro_blue;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color_black;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+}
+
+.no-js {
+  .navigation .logged-in-menu a,
+  .navigation .logged-in-menu__signout-link a {
+    @extend %menu-item;
+  }
+}
+
+.js-loaded {
+    .navigation .logged-in-menu__signout-link a {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.8em;
+      color: #888;
+      &:hover {
+        color: #888;
+      }
+    }
+  }
+}
+
+.pro-pill {
+  color: #ffffff;
+  font-weight: 600;
+  background-color: $color_red;
+}
+
+
+
 /* Match the background color of the hero banner on the homepage */
-.front #navigation li.selected a{
+.front .navigation li.selected a{
   @extend %selected-menu-item;
   background-color: $color_yellow;
 }
 
-.greeting {
-  color: $body-bg;
+.banner--pro {
+  background-color: #4C888F;
+  background-image: linear-gradient(-46deg, #4C888F 0%, #4C888F 9%, #365B74 63%);
 }
+
+.banner--pro .site-title__logo {
+  background-image: image-url("alaveteli-pro/logo.png");
+
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    background-image: image-url("alaveteli-pro/logo@2.png");
+  }
+}
+
 /* Notices, errors */
 
 #notice, #error, .errorExplanation, #request_header_text, #hidden_request, .describe_state_form form, .undescribed_requests, .warning {
@@ -346,30 +496,7 @@ a.link_button_green_large {
   border-color: $action-color;
 }
 
-/* Logged and local options act like submenus */
-#logged_in_bar{
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    top: 0;
-  }
 
-  a {
-    @extend %menu-item;
-    background-color: transparent;
-    font-weight: normal;
-    color: $color_white;
-    font-size: 0.8125em; //14px
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: transparent;
-    }
-  }
-  #logged_in_links {
-    a {
-      font-weight: normal;
-    }
-  }
-}
 
 /* LANGUAGE SWITCHER */
 #user_locale_switcher {
@@ -638,6 +765,11 @@ a.link_button_green_large {
   background-color: $color_blue;
   color: $color_white;
   padding: 1.5em;
+  .alaveteli-pro & {
+    background-color: #4C888F;
+    background-image: linear-gradient(-46deg, #4C888F 0%, #4C888F 9%, #365B74 63%);
+  }
+
   a {
     text-decoration: none;
     color: $color_white;
@@ -1310,6 +1442,10 @@ input#reedit_button {
   }
 }
 
+.alaveteli-pro #request_form {
+  background-color: transparent;
+}
+
 /*
  * Browse/search requests
  */
@@ -1478,4 +1614,49 @@ input#reedit_button {
 
 #contact {
   font-size: 1em;
+}
+
+/*
+* Request list
+*/
+
+a.new-request-button,
+a.new-request-button:visited {
+  color: #fff;
+}
+
+/*
+ * Czech words for "sort by" and "last updated" are much longer, so push the
+ * sorting options onto two lines. This makes the best of that.
+ */
+.requests__sort {
+  padding-left: 0.6em;
+  text-align: left;
+}
+.requests__sort select {
+  max-width: 100%;
+}
+
+/*
+ * Raleway (the IPV theme's font) has old style numerals, meaning they have
+ * different heights and baselines. This makes the pagination (a
+ * list of numbers) look pretty weird. This CSS property makes it use lining
+ * numerals instead. They're included in the font but you have to enable them.
+ * See: https://github.com/theleagueof/raleway/issues/5
+ */
+.pagination {
+  font-variant-numeric: lining-nums;
+}
+
+/*
+* Houdini customisations
+*/
+
+.houdini-label {
+ color: $color_pro_blue;
+ text-decoration: underline;
+}
+
+.houdini-target {
+ margin-top: 1.5em;
 }
