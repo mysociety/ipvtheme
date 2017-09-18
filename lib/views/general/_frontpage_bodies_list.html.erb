@@ -1,6 +1,11 @@
 
   <h2>
-    <%= _('Browse more than {{number_of_requests}} questions and {{number_of_authorities}} authorities in our directory',
-      :number_of_requests => number_with_delimiter(@number_of_requests),
-      :number_of_authorities => number_with_delimiter(PublicBody.visible.count)) %>
+    <%= n_('Browse more than {{number_of_requests}} question and ' \
+           '{{number_of_authorities}} authorities in our directory',
+           'Browse more than {{number_of_requests}} questions and ' \
+           '{{number_of_authorities}} authorities in our directory',
+           @number_of_requests,
+           :number_of_requests => number_with_delimiter(@number_of_requests),
+           :number_of_authorities => number_with_delimiter(
+                                       PublicBody.visible.count)) %>
   </h2>
