@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-24 13:44+0000\n"
-"PO-Revision-Date: 2017-08-03 19:29+0000\n"
-"Last-Translator: Hana Hunt <hana@hana-hunt.cz>\n"
+"POT-Creation-Date: 2017-09-19 11:26+0000\n"
+"PO-Revision-Date: 2017-09-19 11:30+0000\n"
+"Last-Translator: Liz Conlan <liz@mysociety.org>\n"
 "Language-Team: Czech (http://www.transifex.com/mysociety/ipvtheme/language/cs/)\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -69,8 +69,11 @@ msgstr "Zde můžete vznést svůj dotaz"
 msgid "Browse all requests &rarr;"
 msgstr "Prohledávejte všechny dotazy &rarr;"
 
-msgid "Browse more than {{number_of_requests}} questions and {{number_of_authorities}} authorities in our directory"
-msgstr "Prohledávejte více než {{number_of_requests}} dotazů vznesených na {{number_of_authorities}} institucí"
+msgid "Browse more than {{number_of_requests}} question and {{number_of_authorities}} authorities in our directory"
+msgid_plural "Browse more than {{number_of_requests}} questions and {{number_of_authorities}} authorities in our directory"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 msgid "Browse requests"
 msgstr "Zobrazit dotazy"
@@ -108,9 +111,6 @@ msgstr "Potvrdit heslo"
 msgid "Contact us"
 msgstr "Kontaktujte nás"
 
-msgid "Create a new account"
-msgstr "Registrovat se"
-
 msgid "DOB"
 msgstr "Datum narození"
 
@@ -125,9 +125,6 @@ msgstr "Máte otázky na veřejné instituce?"
 
 msgid "Do you want freedom of information for all? Support us"
 msgstr "Chcete, aby byly svobodné informace dostupné všem? Podpořte nás"
-
-msgid "Don't have a superuser account yet?"
-msgstr "Ještě nemáte \"Superuser\" účet?"
 
 msgid "Don't want to address your message to {{person_or_body}}?  You can also write to:"
 msgstr "Pokud nechcete svou zprávu odeslat {{person_or_body}}, je možné ji také odeslat na:"
@@ -152,9 +149,6 @@ msgstr "Zprávy a komentáře u této žádosti byly pozastaveny v rámci protis
 
 msgid "Forgotten your password?"
 msgstr "Zapomněli jste své heslo?"
-
-msgid "Got an account?"
-msgstr "Máte účet?"
 
 msgid "Help"
 msgstr "Nápověda"
@@ -195,12 +189,6 @@ msgstr "Heslo:"
 msgid "Please <strong>only</strong> write messages directly relating to your request {{request_link}}. If you would like to ask for information that was not in your original request, then <a href=\"{{new_request_link}}\">file a new request</a>."
 msgstr "Prosím pište <strong>pouze</strong> zprávy které se přímo týkají vašeho vzneseného dotazu {{request_link}}. Pokud potřebujete další informace <a href=\"{{new_request_link}}\">vzneste další dotaz</a>."
 
-msgid "Please create an account or sign in"
-msgstr "Prosím zaregistrujte se nebo přihlašte se"
-
-msgid "Please sign in as {{user_name}}"
-msgstr "Prosím přihlašte se jako {{user_name}}"
-
 msgid "Prev"
 msgstr "Prev"
 
@@ -219,44 +207,29 @@ msgstr "Nahlásit tento dotaz"
 msgid "Request an internal review"
 msgstr "Požádat o doplnění dotazu"
 
-msgid "Request an internal review from {{person_or_body}}"
-msgstr "Požádejte o vnitřní přezkum od {{person_or_body}}"
-
 msgid "Request regarding"
 msgstr "Předmět žádosti"
 
 msgid "Respond to request"
 msgstr "Odpovědět na dotaz"
 
-msgid "Search"
-msgstr "Hledejte"
-
 msgid "Send a followup"
 msgstr "Odpovědět"
-
-msgid "Send a public follow up message to {{person_or_body}}"
-msgstr "Pošlete veřejnou odpověď pro {{person_or_body}}"
-
-msgid "Send a public reply to {{person_or_body}}"
-msgstr "Pošlete veřejnou zprávu pro {{person_or_body}}"
 
 msgid "Sending..."
 msgstr "Odesíláme..."
 
+msgid "Show all attachments"
+msgstr ""
+
+msgid "Show fewer attachments"
+msgstr ""
+
 msgid "Sign in"
 msgstr "Přihlásit se"
 
-msgid "Sign in as the emergency user"
-msgstr "Přihlašte se jako uživatel v nouzovém režimu"
-
-msgid "Sign in or make a new account"
-msgstr "Přihlašte se nebo registrujte se"
-
 msgid "Sign up"
 msgstr "Registrujte se"
-
-msgid "Submit Search"
-msgstr "Hledejte"
 
 msgid "Support"
 msgstr "Podpořit"
@@ -374,9 +347,6 @@ msgstr "hlavní kontaktní adresa nebo podatelna pro {{public_body}}"
 msgid "the main FOI contact at {{public_body}}"
 msgstr "Hlavní kontakt pro {{public_body}}"
 
-msgid "type your search term here"
-msgstr "napište hledaný výraz"
-
 msgid "unknown status "
 msgstr "neznámý stav dotazu"
 
@@ -394,9 +364,3 @@ msgstr "{{public_body_link}}"
 
 msgid "{{public_body_name}}"
 msgstr "{{public_body_name}}"
-
-msgid "{{reason}}, create an account or sign in"
-msgstr "{{reason}}, registrujte se nebo přihlašte se"
-
-msgid "{{reason}}, please sign in as {{user_name}}."
-msgstr "{{reason}}, prosím přihlašte se {{user_name}}."

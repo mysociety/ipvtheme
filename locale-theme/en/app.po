@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-24 13:44+0000\n"
-"PO-Revision-Date: 2017-03-24 13:46+0000\n"
-"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
+"POT-Creation-Date: 2017-09-19 11:26+0000\n"
+"PO-Revision-Date: 2017-09-19 11:29+0000\n"
+"Last-Translator: Liz Conlan <liz@mysociety.org>\n"
 "Language-Team: English (http://www.transifex.com/mysociety/ipvtheme/language/en/)\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -59,8 +59,10 @@ msgstr "Ask your questions here."
 msgid "Browse all requests &rarr;"
 msgstr "Browse all requests &rarr;"
 
-msgid "Browse more than {{number_of_requests}} questions and {{number_of_authorities}} authorities in our directory"
-msgstr "Browse more than {{number_of_requests}} questions and {{number_of_authorities}} authorities in our directory"
+msgid "Browse more than {{number_of_requests}} question and {{number_of_authorities}} authorities in our directory"
+msgid_plural "Browse more than {{number_of_requests}} questions and {{number_of_authorities}} authorities in our directory"
+msgstr[0] "Browse more than {{number_of_requests}} question and {{number_of_authorities}} authorities in our directory"
+msgstr[1] "Browse more than {{number_of_requests}} questions and {{number_of_authorities}} authorities in our directory"
 
 msgid "Browse requests"
 msgstr "Browse requests"
@@ -98,9 +100,6 @@ msgstr "Confirm password:"
 msgid "Contact us"
 msgstr "Contact us"
 
-msgid "Create a new account"
-msgstr "Create a new account"
-
 msgid "DOB"
 msgstr "DOB"
 
@@ -115,9 +114,6 @@ msgstr "Do you have questions for state institutions?"
 
 msgid "Do you want freedom of information for all? Support us"
 msgstr "Do you want freedom of information for all? Support us"
-
-msgid "Don't have a superuser account yet?"
-msgstr "Don't have a superuser account yet?"
 
 msgid "Don't want to address your message to {{person_or_body}}?  You can also write to:"
 msgstr "Don't want to address your message to {{person_or_body}}?  You can also write to:"
@@ -142,9 +138,6 @@ msgstr "Follow ups and new responses to this request have been stopped to preven
 
 msgid "Forgotten your password?"
 msgstr "Forgotten your password?"
-
-msgid "Got an account?"
-msgstr "Got an account?"
 
 msgid "Help"
 msgstr "Help"
@@ -185,12 +178,6 @@ msgstr "Password:"
 msgid "Please <strong>only</strong> write messages directly relating to your request {{request_link}}. If you would like to ask for information that was not in your original request, then <a href=\"{{new_request_link}}\">file a new request</a>."
 msgstr "Please <strong>only</strong> write messages directly relating to your request {{request_link}}. If you would like to ask for information that was not in your original request, then <a href=\"{{new_request_link}}\">file a new request</a>."
 
-msgid "Please create an account or sign in"
-msgstr "Please create an account or sign in"
-
-msgid "Please sign in as {{user_name}}"
-msgstr "Please sign in as {{user_name}}"
-
 msgid "Prev"
 msgstr "Prev"
 
@@ -209,44 +196,29 @@ msgstr "Report this request"
 msgid "Request an internal review"
 msgstr "Request an internal review"
 
-msgid "Request an internal review from {{person_or_body}}"
-msgstr "Request an internal review from {{person_or_body}}"
-
 msgid "Request regarding"
 msgstr "Request regarding"
 
 msgid "Respond to request"
 msgstr "Respond to request"
 
-msgid "Search"
-msgstr "Search"
-
 msgid "Send a followup"
 msgstr "Send a followup"
-
-msgid "Send a public follow up message to {{person_or_body}}"
-msgstr "Send a public follow up message to {{person_or_body}}"
-
-msgid "Send a public reply to {{person_or_body}}"
-msgstr "Send a public reply to {{person_or_body}}"
 
 msgid "Sending..."
 msgstr "Sending..."
 
+msgid "Show all attachments"
+msgstr "Show all attachments"
+
+msgid "Show fewer attachments"
+msgstr "Show fewer attachments"
+
 msgid "Sign in"
 msgstr "Sign in"
 
-msgid "Sign in as the emergency user"
-msgstr "Sign in as the emergency user"
-
-msgid "Sign in or make a new account"
-msgstr "Sign in or make a new account"
-
 msgid "Sign up"
 msgstr "Sign up"
-
-msgid "Submit Search"
-msgstr "Submit Search"
 
 msgid "Support"
 msgstr "Support"
@@ -361,9 +333,6 @@ msgstr "the main FOI contact address for {{public_body}}"
 msgid "the main FOI contact at {{public_body}}"
 msgstr "the main FOI contact at {{public_body}}"
 
-msgid "type your search term here"
-msgstr "type your search term here"
-
 msgid "unknown status "
 msgstr "unknown status "
 
@@ -380,9 +349,3 @@ msgstr "{{public_body_link}}"
 
 msgid "{{public_body_name}}"
 msgstr "{{public_body_name}}"
-
-msgid "{{reason}}, create an account or sign in"
-msgstr "{{reason}}, create an account or sign in"
-
-msgid "{{reason}}, please sign in as {{user_name}}."
-msgstr "{{reason}}, please sign in as {{user_name}}."
