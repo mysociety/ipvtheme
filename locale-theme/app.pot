@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-24 13:44+0000\n"
+"POT-Creation-Date: 2017-09-19 11:26+0000\n"
 "PO-Revision-Date: 2011-10-09 01:10+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,8 +58,10 @@ msgstr ""
 msgid "Browse all requests &rarr;"
 msgstr ""
 
-msgid "Browse more than {{number_of_requests}} questions and {{number_of_authorities}} authorities in our directory"
-msgstr ""
+msgid "Browse more than {{number_of_requests}} question and {{number_of_authorities}} authorities in our directory"
+msgid_plural "Browse more than {{number_of_requests}} questions and {{number_of_authorities}} authorities in our directory"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "Browse requests"
 msgstr ""
@@ -97,9 +99,6 @@ msgstr ""
 msgid "Contact us"
 msgstr ""
 
-msgid "Create a new account"
-msgstr ""
-
 msgid "DOB"
 msgstr ""
 
@@ -113,9 +112,6 @@ msgid "Do you have questions for state institutions?"
 msgstr ""
 
 msgid "Do you want freedom of information for all? Support us"
-msgstr ""
-
-msgid "Don't have a superuser account yet?"
 msgstr ""
 
 msgid "Don't want to address your message to {{person_or_body}}?  You can also write to:"
@@ -140,9 +136,6 @@ msgid "Follow ups and new responses to this request have been stopped to prevent
 msgstr ""
 
 msgid "Forgotten your password?"
-msgstr ""
-
-msgid "Got an account?"
 msgstr ""
 
 msgid "Help"
@@ -184,12 +177,6 @@ msgstr ""
 msgid "Please <strong>only</strong> write messages directly relating to your request {{request_link}}. If you would like to ask for information that was not in your original request, then <a href=\"{{new_request_link}}\">file a new request</a>."
 msgstr ""
 
-msgid "Please create an account or sign in"
-msgstr ""
-
-msgid "Please sign in as {{user_name}}"
-msgstr ""
-
 msgid "Prev"
 msgstr ""
 
@@ -208,43 +195,28 @@ msgstr ""
 msgid "Request an internal review"
 msgstr ""
 
-msgid "Request an internal review from {{person_or_body}}"
-msgstr ""
-
 msgid "Request regarding"
 msgstr ""
 
 msgid "Respond to request"
 msgstr ""
 
-msgid "Search"
-msgstr ""
-
 msgid "Send a followup"
-msgstr ""
-
-msgid "Send a public follow up message to {{person_or_body}}"
-msgstr ""
-
-msgid "Send a public reply to {{person_or_body}}"
 msgstr ""
 
 msgid "Sending..."
 msgstr ""
 
+msgid "Show all attachments"
+msgstr ""
+
+msgid "Show fewer attachments"
+msgstr ""
+
 msgid "Sign in"
 msgstr ""
 
-msgid "Sign in as the emergency user"
-msgstr ""
-
-msgid "Sign in or make a new account"
-msgstr ""
-
 msgid "Sign up"
-msgstr ""
-
-msgid "Submit Search"
 msgstr ""
 
 msgid "Support"
@@ -360,9 +332,6 @@ msgstr ""
 msgid "the main FOI contact at {{public_body}}"
 msgstr ""
 
-msgid "type your search term here"
-msgstr ""
-
 msgid "unknown status "
 msgstr ""
 
@@ -378,10 +347,4 @@ msgid "{{public_body_link}}"
 msgstr ""
 
 msgid "{{public_body_name}}"
-msgstr ""
-
-msgid "{{reason}}, create an account or sign in"
-msgstr ""
-
-msgid "{{reason}}, please sign in as {{user_name}}."
 msgstr ""
