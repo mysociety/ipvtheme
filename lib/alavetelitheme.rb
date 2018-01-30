@@ -49,19 +49,20 @@ end
 # Tell FastGettext about the theme's translations: look in the theme's
 # locale-theme directory for a translation in the first place, and if
 # it isn't found, look in the Alaveteli locale directory next:
-repos = [
-  FastGettext::TranslationRepository.build('app',
-    :path => File.join(File.dirname(__FILE__), '..', 'locale-theme'),
-    :type => :po),
-  FastGettext::TranslationRepository.build('app',
-    :path => 'locale',
-    :type => :po)
-]
+repos = [ FastGettext::TranslationRepository.
+            build('app',
+                  :path => File.join(File.dirname(__FILE__), '..', 'locale-theme'),
+                  :type => :po)
+        ]
 if AlaveteliConfiguration::enable_alaveteli_pro
   pro_repo = FastGettext::TranslationRepository.build('app',
     :path => 'locale_alaveteli_pro',
     :type => :po)
   repos << pro_repo
 end
+repos << FastGettext::TranslationRepository.build(
+           'app',
+           :path => 'locale',
+           :type => :po)
 
 AlaveteliLocalization.set_default_text_domain('app', repos)
