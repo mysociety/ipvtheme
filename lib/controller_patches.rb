@@ -164,7 +164,7 @@ Rails.configuration.to_prepare do
 
     PublicBodyController.class_eval do
 
-      before_filter :get_czech_alphabet, :only => [:list]
+      before_action :get_czech_alphabet, :only => [:list]
 
       def get_czech_alphabet
         # incorporate PublicBody.none_starting_with_letter?() to get current, unpredicted state
