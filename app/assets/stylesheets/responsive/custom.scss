@@ -1,4 +1,3 @@
-@import "responsive/houdini";
 
 /* Mixin styles */
 
@@ -12,18 +11,14 @@
 /* General styling of nav menu items */
 %menu-item {
   text-decoration: none;
-  transition: background-color 0.5s ease-out;
-  &,
-  &:link,
-  &:visited {
-    color: transparentize($color_white, 0.2);
-    @include ie8 {
-      color: $color_white;
-    }
+  color: transparentize($color_white, 0.2);
+  @include ie8 {
+    color: $color_white;
   }
+  transition: background-color 0.5s ease-out;
   &:hover,
   &:active,
-  &:focus{
+  &:focus {
     background-color: darken($color_primary, 15%);
     color: $color_white;
   }
@@ -38,14 +33,7 @@
   &:hover,
   &:active,
   &:focus {
-      background-color: $color_neutral_light;
-  }
-}
-
-.topnav--pro {
-  // change this for alaveteli pro
-  .selected-menu-item {
-    color: $color_pro_blue;
+    background-color: $color_neutral_light;
   }
 }
 
@@ -119,9 +107,9 @@
 }
 
 .pro-pill {
-  color: #567386;
+  color: #ffffff;
   font-weight: 600;
-  background-color: #FFFF00;
+  background-color: $color_red;
 }
 
 /* General styles */
@@ -239,24 +227,12 @@ input.use-datepicker[type=text] {
     color: $color_white;
     text-decoration: none;
   }
-  .alaveteli-pro & {
-    background-image: linear-gradient(-180deg, #4C858D 0%, #3E6D75 100%);
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.22);
-    &:hover,
-    &:active,
-    &:focus,
-    &:visited:hover,
-    &:visited:active,
-    &:visited:focus {
-      box-shadow: 0 1px 0 0 rgba(0,0,0,0.22);
-    }
-  }
 }
 
 @mixin button-secondary($args...) {
   @include button-base($args...);
   background-color: desaturate(darken($color_sand, 10%), 5%);
-  color: $color_black !important; //beat the specificity of the old a.link_button_green
+  color: $color_black;
   font-weight: normal;
   &:hover,
   &:active,
@@ -330,14 +306,24 @@ a.link_button_green_large {
 
 /* Header */
 
-#banner_inner {
+.topnav {
   background-color: $color_blue;
+
+  &.topnav--pro {
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1);
+    .navigation a {
+      &:hover,
+      &:active,
+      &:focus {
+        background: rgba(0,0,0,0.2);
+      }
+    }
+  }
 }
 
-#banner .banner_site-title {
-  @include respond-min( $main_menu-mobile_menu_cutoff ) {
-    padding-left: 0;
-  }
+#banner_inner {
+  background-color: $color_blue;
 }
 
 .site-title__logo {
@@ -350,25 +336,6 @@ a.link_button_green_large {
     width: $logo-width;
     height: $logo-height;
     background-size: $logo-width $logo-height;
-  }
-}
-
-.topnav--pro {
-  background-color: rgba(0,0,0,0.1);
-  box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1);
-  .navigation a {
-    &:hover,
-    &:active,
-    &:focus {
-      background: rgba(0,0,0,0.2);
-    }
-  }
-}
-
-.navigation_search {
-  padding: 0 0.935rem;
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    top: 1.5em;
   }
 }
 
@@ -410,107 +377,8 @@ a.link_button_green_large {
   font-size: inherit;
 }
 
-
-.js-loaded {
-  .account-link {
-    padding-right: 2em;
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      //make it appear like it's aligned with the grid, even though it isn't
-      margin-right: 0.935em;
-      &:after {
-        right: 3em;
-      }
-    }
-  }
-
-}
-
-.logged-in-menu {
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    color: black;
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
-  }
-}
-
-.dashboard-profile__email {
-  color: #787774;
-}
-
-.account-link {
-  border-color: rgba(255,255,255,0.2);
-}
-
-.banner--pro {
-  .account-link {
-    background: transparent;
-  }
-}
-
-.navigation .logged-in-menu a,
-.navigation .logged-in-menu__signout-link a {
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    color: $link-color;
-    text-decoration: none;
-    transition: none;
-    .alaveteli-pro & {
-      color: $color_pro_blue;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color_black;
-      background-color: transparent;
-      text-decoration: underline;
-    }
-  }
-}
-
-.no-js {
-  .navigation .logged-in-menu a,
-  .navigation .logged-in-menu__signout-link a {
-    @extend %menu-item;
-  }
-}
-
-.js-loaded {
-    .navigation .logged-in-menu__signout-link a {
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 0.8em;
-      color: #888;
-      &:hover {
-        color: #888;
-      }
-    }
-  }
-}
-
-.pro-pill {
-  color: #ffffff;
-  font-weight: 600;
-  background-color: $color_red;
-}
-
-
-
-/* Match the background color of the hero banner on the homepage */
-.front .navigation li.selected a{
-  @extend %selected-menu-item;
-  background-color: $color_yellow;
-}
-
-.banner--pro {
-  background-color: #4C888F;
-  background-image: linear-gradient(-46deg, #4C888F 0%, #4C888F 9%, #365B74 63%);
-}
-
-.banner--pro .site-title__logo {
-  background-image: image-url("alaveteli-pro/logo.png");
-
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    background-image: image-url("alaveteli-pro/logo@2.png");
-  }
+.greeting {
+  color: $body-bg;
 }
 
 /* Notices, errors */
@@ -760,12 +628,6 @@ p.locale-list-trigger {
   .support-button {
     //this needs to next inside #footer, due to bad specificity in Alaveteli
     @include button-primary();
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color_white;
-      text-decoration: 0;
-    }
   }
 }
 
@@ -790,11 +652,6 @@ p.locale-list-trigger {
   background-color: $color_blue;
   color: $color_white;
   padding: 1.5em;
-  .alaveteli-pro & {
-    background-color: #4C888F;
-    background-image: linear-gradient(-46deg, #4C888F 0%, #4C888F 9%, #365B74 63%);
-  }
-
   a {
     text-decoration: none;
     color: $color_white;
@@ -841,33 +698,17 @@ p.locale-list-trigger {
   }
 }
 
-.social-link--contact {
-  background-image: url(/assets/contact.png);
-}
-
 .final__social-links {
   text-align: center;
   > ul li {
     display: inline-block;
     float: none;
   }
-  a {
-
-  }
-}
-
-.social-link--facebook {
-  background-size: 10px 19px;
-  padding-left: 1.5em;
-}
-
-.social-link--twitter {
-  background-size: 20px 16px;
-  padding-left: 2em;
 }
 
 /* Request page */
-.request-header__action-bar__actions {
+.request-header__action-bar__actions,
+.request-footer__action-bar__actions {
   .action-menu__button {
     @include button-secondary();
     &:after {
@@ -888,18 +729,32 @@ p.locale-list-trigger {
   }
 }
 
+.request-header__action-bar__actions {
+  font-size: 0.8em;
+
+  .action-bar__follow-button {
+    .track__action {
+      font-size: 0.8em;
+    }
+  }
+
+  .action-bar__follower-count {
+    font-size: 0.8em;
+  }
+}
+
+.request-footer__action-bar__actions {
+  .action-menu__button {
+    padding-right: 2em;
+  }
+}
+
 div.correspondence {
   background-color: $color_white;
   box-shadow: none;
   border: none;
   border-radius: 0;
   margin-bottom: 2em;
-  a.link_to_this {
-    background-color: $color_primary;
-  }
-  h2 {
-    text-align: left;
-  }
 }
 
 .incoming.correspondence {
@@ -943,11 +798,6 @@ a.link_to_this {
   }
 }
 
-.new-request__title,
-.new-request__description {
-  color: $color_black;
-}
-
 .new-request__make-new-requests {
   @include button-base;
   background-color: $color_secondary;
@@ -958,13 +808,6 @@ a.link_to_this {
   &:active,
   &:focus {
     background-color: darken($color_secondary, 10%);
-  }
-}
-
-.after_actions {
-  font-size: 0.875em; //14px
-  h2 {
-    font-size: 1em; //14px
   }
 }
 
@@ -984,6 +827,16 @@ a.link_to_this {
 }
 
 .sidebar {
+  font-size: 0.875em; //14px
+  h2 {
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.142857143em; //16px
+  }
+  h3 {
+    font-size: 1em; //14px
+  }
+
   .new-request-cta {
     .new-request__make-new-requests {
       @include button-primary();
@@ -995,25 +848,38 @@ a.link_to_this {
   @include button-primary();
 }
 
-.sidebar {
-  font-size: 0.875em; //14px
-  h2 {
-    text-transform: none;
-    font-weight: bold;
-    font-size: 1.142857143em; //16px
-  }
-  h3 {
-    font-size: 1em; //14px
-  }
-
-}
-
 .report-this-request {
   @include button-secondary();
   color: $color_black !important;
   /* Using !important here as a temporary fix for a bad declaration (a:link)
     in Alaveteli core. When this is fixed it can be removed.
   */
+}
+
+/* Status lines and icons */
+.icon_waiting_classification,
+.icon_waiting_response,
+.icon_waiting_clarification,
+.icon_requires_admin,
+.icon_waiting_response_overdue,
+.icon_gone_postal,
+.icon_error_message,
+.icon_internal_review,
+.icon_user_withdrawn {
+  color: $status-pending;
+}
+
+.icon_attention_requested,
+.icon_not_held,
+.icon_waiting_response_very_overdue,
+.icon_failed,
+.icon_rejected {
+  color: $status-failure;
+}
+
+.icon_successful,
+.icon_partially_successful {
+  color: $status-success;
 }
 
 .request-status-message {
@@ -1338,25 +1204,9 @@ dt {
   background-color: desaturate(darken($color_secondary, 10%), 5%);
 }
 
-.preview-pane {
-  .correspondence {
-    background-color: $color_yellow;
-  }
-}
-
-input#reedit_button {
-  background-color: #ccc;
-  color: white;
-  text-decoration: none;
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: #aaa
-  }
-}
-
-/* Sign-in/Sign-up page */
-
+/*
+ * Sign-in/Sign-up page
+ */
 #sign_together {
   margin-top: 3em;
   .sign_in_reason {
@@ -1416,8 +1266,9 @@ input#reedit_button {
   }
 }
 
-/* Make request process */
-
+/*
+ * Make request process
+ */
 #authority_selection,
 #authority_selection form,
 #select_authority_help,
@@ -1449,7 +1300,6 @@ input#reedit_button {
 }
 
 .typeahead_response
-
 #authority_search_ahead_results,
 #authority_selection .cant_find_results {
     padding: 0;
@@ -1512,6 +1362,19 @@ input#reedit_button {
 }
 
 /*
+ * Preview request page
+ */
+.preview-pane {
+  .correspondence {
+    background-color: $color_yellow;
+  }
+}
+
+input#reedit_button {
+  @include button-tertiary;
+}
+
+/*
  * Browse/search requests
  */
 #list-filter {
@@ -1571,56 +1434,6 @@ input#reedit_button {
 }
 
 /*
- * Action menu
- */
-
-.action-menu__button {
-  @include button-secondary;
-  padding-right: 1.5em;
-  &:after {
-    border-color: #aaa transparent transparent transparent;
-    right: 0.75em;
-  }
- }
-
-.action-bar__follow-button .link_button_green {
-  @include button-primary;
-  color: #fff !important;
-}
-.request-header__action-bar .after-actions__action-menu {
-  font-size: 0.8em;
-}
-.request-header__action-bar .action-bar__follow-button {
-  font-size: 0.8em;
-}
-.request-header__action-bar .action-bar__follower-count {
-  padding: 0.56em 1.25em;
-  border: 1px solid #e9e9e9;
-  position: relative;
-  left: -4px;
-  line-height: 1.1em;
-  border-left: 0;
-  font-size: 1em;
-}
-.request-footer__action-bar__actions .action-menu__button {
-  @extend .button-secondary;
-  padding-right: 2em;
-  &:after {
-    border-color: #a5a5a5 transparent transparent transparent;
-    right: 7%;
-  }
-}
-
-.request-footer__action-bar__actions .action-bar__follower-count {
-  padding: 0.56em 1.25em;
-  border: 1px solid #e9e9e9;
-  position: relative;
-  left: -4px;
-  line-height: 1.1em;
-  border-left: 0;
-}
-
-/*
  * Authorities page (browse/search)
  */
 
@@ -1642,15 +1455,6 @@ input#reedit_button {
     background-color: #f6f6f6;
     margin-top: 2.5em;
   }
-}
-
-.authority__header__action-bar .action-bar__follower-count {
-  padding: 0.56em 1.25em;
-  border: 1px solid #e9e9e9;
-  position: relative;
-  left: -4px;
-  line-height: 1.1em;
-  border-left: 0;
 }
 
 /*
@@ -1711,17 +1515,4 @@ a.new-request-button:visited {
  */
 .pagination {
   font-variant-numeric: lining-nums;
-}
-
-/*
-* Houdini customisations
-*/
-
-.houdini-label {
- color: $color_pro_blue;
- text-decoration: underline;
-}
-
-.houdini-target {
- margin-top: 1.5em;
 }
