@@ -22,8 +22,26 @@
       <div class="final__social-links">
         <ul>
           <li>
-            <%= link_to _('Contact us'), help_contact_path, :class => "social-link social-link--contact" %>
+            <%= link_to _('Contact us'), help_contact_path %>
           </li>
+          <li>
+            <%= link_to _('Help'), help_path %>
+          </li>
+          <li>
+            <%= link_to _('Privacy and cookies'), help_privacy_path %>
+          </li>
+          <li>
+            <%= link_to _('API'), help_api_path %>
+          </li>
+          <% if feature_enabled?(:pro_pricing) %>
+          <li>
+            <%= link_to _('{{pro_site_name}} Terms',
+                          pro_site_name: AlaveteliConfiguration.pro_site_name),
+                          pro_page_path(:id => 'legal') %>
+          </li>
+          <% end %>
+        </ul>
+        <ul>
           <% unless AlaveteliConfiguration::twitter_username.blank? %>
           <li>
             <a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>" class="social-link social-link--twitter" onclick="<%= track_analytics_event(AnalyticsEvent::Category::OUTBOUND, AnalyticsEvent::Action::TWITTER_EXIT, :label => "Footer link")%>">@<%= AlaveteliConfiguration::twitter_username %></a>
