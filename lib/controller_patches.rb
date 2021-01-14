@@ -51,7 +51,7 @@ Rails.configuration.to_prepare do
   RequestController.class_eval do
 
     def make_request_zip(info_request, file_path)
-      Zip::File.open(file_path, Zip::ZipFile::CREATE) do |zipfile|
+      Zip::File.open(file_path, Zip::File::CREATE) do |zipfile|
         file_info = make_request_summary_file(info_request)
         zipfile.get_output_stream(file_info[:filename]) { |f| f.puts(file_info[:data]) }
         message_index = 0
