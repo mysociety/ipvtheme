@@ -14,6 +14,6 @@ if !column_exists?(:users, :dob) || !column_exists?(:users, :address)
 end
 
 # Create any necessary global Censor rules
-require File.expand_path(File.dirname(__FILE__) + '/lib/censor_rules')
+load File.expand_path(File.dirname(__FILE__) + '/lib/censor_rules.rb')
 
 
