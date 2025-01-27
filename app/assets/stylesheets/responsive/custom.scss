@@ -122,17 +122,20 @@ body{
   font-family: $font-family;
 }
 
-a {
-  &:link,
-  &:visited {
-    color: $link-color;
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    color: darken($link-color, 10%);
+@mixin default-anchor-styles {
+  a {
+    &:link,
+    &:visited {
+      color: $link-color;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($link-color, 10%);
+    }
   }
 }
+@include default-anchor-styles();
 
 /* Let h1s be a little smaller on small screens */
 @media( max-width: $main_menu-mobile_menu_cutoff ){
@@ -301,6 +304,8 @@ a.link_button_green_large {
 .popup {
   background-color: desaturate(lighten($notice-color, 50%),50%);
   border: 0;
+  color: $color_neutral_dark;
+  @include default-anchor-styles();
 }
 
 
@@ -572,7 +577,7 @@ p.locale-list-trigger {
       border: 0;
       padding: 0;
     }
-  } 
+  }
 
 
 #banner {
