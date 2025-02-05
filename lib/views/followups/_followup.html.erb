@@ -39,18 +39,18 @@
       <ul>
         <% @info_request.who_can_followup_to(incoming_message).each do |name, email, id|  %>
           <% if id.nil? && !incoming_message.nil? && incoming_message.valid_to_reply_to? %>
-            <li><%= link_to(_("the main FOI contact address for {{public_body}}", :public_body => name), new_request_followup_path(:request_id => @info_request.id)) %></li>
+            <li><%= link_to(_("the main FOI contact address for {{public_body}}", :public_body => name), new_request_followup_path(@info_request.url_title)) %></li>
           <% else %>
             <% if !id.nil? %>
               <% if @info_request.public_body.request_email == email %>
                 <% if !incoming_message.nil? %>
-                  <li><%= link_to(_("the main FOI contact address for {{public_body}}", :public_body => name), new_request_followup_path(:request_id => @info_request.id)) %></li>
+                  <li><%= link_to(_("the main FOI contact address for {{public_body}}", :public_body => name), new_request_followup_path(@info_request.url_title)) %></li>
                 <% end %>
               <% else %>
-                <li><%= link_to name, new_request_incoming_followup_path(:request_id => @info_request.id, :incoming_message_id => id)%></li>
+                <li><%= link_to name, new_request_incoming_followup_path(@info_request.url_title, incoming_message_id: id)%></li>
               <% end %>
             <% else %>
-              <li><%= link_to(_("the main FOI contact address for {{public_body}}", :public_body => name), new_request_followup_path(:request_id => @info_request.id)) %></li>
+              <li><%= link_to(_("the main FOI contact address for {{public_body}}", :public_body => name), new_request_followup_path(@info_request.url_title)) %></li>
             <% end %>
           <% end %>
         <% end %>
